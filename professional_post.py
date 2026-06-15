@@ -321,9 +321,9 @@ def apply_professional_chain(master_path, stems_dir, output_dir, song_name, bpm)
                 pass
     
     # === STEP 2b: HUGE REVERB ON MELODIC ELEMENTS ===
-    # 3-second reverb tail for massive space and atmosphere
+    # 1.5-second reverb tail for massive space (still huge, 4x faster than 3s)
     print(f"    2b. Huge reverb on melodic elements (stabs, acid, pad, arp)...")
-    long_ir = create_long_reverb_ir(sr, decay_ms=3000, pre_delay_ms=30)  # 3-second tail
+    long_ir = create_long_reverb_ir(sr, decay_ms=1500, pre_delay_ms=25)  # 1.5-second tail
     for stem_name in ['stab', 'acid', 'pad', 'arp']:
         for f in os.listdir(stems_dir):
             if stem_name in f.lower() and f.endswith('.wav'):
@@ -338,12 +338,10 @@ def apply_professional_chain(master_path, stems_dir, output_dir, song_name, bpm)
                                 fftconvolve(melodic[:, 0], long_ir)[:len(melodic)],
                                 fftconvolve(melodic[:, 1], long_ir)[:len(melodic)]
                             ])
-                        # Mix at 45% wet for huge space and atmosphere
                         wet_level = 0.45
                         reverb_mixed = melodic * (1 - wet_level) + reverb * wet_level
-                        # Overwrite stem with reverb-processed version
                         sf.write(path, reverb_mixed, sr, subtype='PCM_24')
-                        print(f"      ✓ Long reverb on {f} (2s tail, {wet_level*100:.0f}% wet)")
+                        print(f"      ✓ Long reverb on {f} (1.5s tail, {wet_level*100:.0f}% wet)")
                 except:
                     pass
     

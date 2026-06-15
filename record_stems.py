@@ -743,15 +743,47 @@ def _play_midi_and_record(midi_path: str, output_path: str,
     # Sort by absolute time
     all_msgs.sort(key=lambda x: x[0])
     
-    # Play with busy-wait timing
+    # Play with busy-wait timing + SysEx automation
     start_perf = time.perf_counter()
+    
+    # Build automation events for this pass
+    try:
+        from sysex_automation import AutomationScheduler, build_buildup_automation
+        # Get track info for automation
+        auto_events = []
+        for track_info in tracks:
+            part_idx = track_info.get('part_idx', 0)
+            category = track_info.get('category', 'other')
+            events = build_buildup_automation(part_idx, category, 128, bpm)
+            auto_events.extend(events)
+        
+        if auto_events:
+            scheduler = AutomationScheduler(outport, auto_events, bpm)
+            print(f"    Automation: {len(auto_events)} events scheduled")
+        else:
+            scheduler = None
+    except Exception as e:
+        print(f"    Automation skipped: {e}")
+        scheduler = None
+    
+    # Count-in duration (4 beats)
+    count_in_sec = 4 * 60.0 / bpm
+    
     for abs_time, msg in all_msgs:
         target = start_perf + abs_time
         while time.perf_counter() < target:
             pass  # Busy-wait for precise timing
+        
+        # Fire automation events at the right time
+        if scheduler:
+            scheduler.check_and_fire(time.perf_counter(), count_in_sec)
+        
         outport.send(msg)
     
     elapsed = time.perf_counter() - start_perf
+    if scheduler:
+        stats = scheduler.get_stats()
+        print(f"    Automation: {stats['fired_events']}/{stats['total_events']} events fired")
     outport.close()
     print(f"    MIDI done ({elapsed:.1f}s, {len(all_msgs)} messages)")
 
