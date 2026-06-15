@@ -333,60 +333,81 @@ def main():
                         {'time': at + ad, 'note': an, 'vel': 0}
                     ])
 
-        # === ARPEGGIO PATTERNS (psychedelic, in-time modulation) ===
-        # Arpeggios cycle through chord tones with different rhythms
+        # === ARPEGGIO PATTERNS (moody, broody, sophisticated) ===
+        # Not just 1-3-5 — use 7ths, 9ths, chromatic passing tones, varied rhythms
         if is_drop and bar_in_drop >= 4:
-            arp_notes = harmony.chord_tones[:3]  # Root, 3rd, 5th
-            if len(arp_notes) >= 2:
-                # Build arpeggio pattern: up-down cycle
-                arp_pattern = []
-                for n in arp_notes:
-                    arp_pattern.append(clamp_to_register(n + 12, 'pad'))
-                for n in reversed(arp_notes[1:-1]):
-                    arp_pattern.append(clamp_to_register(n + 12, 'pad'))
-                
-                # Choose rhythm style
-                arp_style = random.choice(['eighth', 'sixteenth', 'syncopated'])
-                
-                if arp_style == 'eighth':
-                    # 8th note arpeggio — 8 notes per bar, tight velocity
-                    for i in range(8):
-                        note = arp_pattern[i % len(arp_pattern)]
-                        vel = int(80 * energy)  # Consistent velocity (no accent variation)
-                        t = bs + i * 240  # 8th note spacing
-                        dur = 180  # Short staccato
-                        if t + dur <= bs + bar_length:
-                            pad_ev.extend([
-                                {'time': t, 'note': note, 'vel': vel},
-                                {'time': t + dur, 'note': note, 'vel': 0}
-                            ])
-                
-                elif arp_style == 'sixteenth':
-                    # 16th note arpeggio — tight, hypnotic
-                    for i in range(16):
-                        note = arp_pattern[i % len(arp_pattern)]
-                        vel = int(70 * energy)  # Consistent velocity
-                        t = bs + i * 120  # 16th note spacing
-                        dur = 90  # Very short
-                        if t + dur <= bs + bar_length:
-                            pad_ev.extend([
-                                {'time': t, 'note': note, 'vel': vel},
-                                {'time': t + dur, 'note': note, 'vel': 0}
-                            ])
-                
-                elif arp_style == 'syncopated':
-                    # Syncopated arpeggio — offbeat emphasis
-                    positions = [0, 120, 360, 480, 600, 840, 960, 1080, 1320, 1440, 1560, 1800]
-                    for i, pos in enumerate(positions):
-                        note = arp_pattern[i % len(arp_pattern)]
-                        vel = int((65 + (pos % 480 == 0) * 20) * energy)
-                        t = bs + pos
-                        dur = 120
-                        if t + dur <= bs + bar_length:
-                            pad_ev.extend([
-                                {'time': t, 'note': note, 'vel': vel},
-                                {'time': t + dur, 'note': note, 'vel': 0}
-                            ])
+            chord = harmony.chord_tones
+            root = chord[0] if chord else harmony.root
+            
+            # Build moody note pool — minor intervals, chromatic tension
+            arp_pool = []
+            # Chord tones (extended — 7ths, 9ths)
+            for n in chord[:4]:  # Root, 3rd, 5th, 7th
+                arp_pool.append(clamp_to_register(n + 12, 'pad'))
+            # Add 9th (2nd octave up)
+            if len(chord) >= 1:
+                arp_pool.append(clamp_to_register(root + 14, 'pad'))
+            # Chromatic passing tones (moody tension)
+            arp_pool.append(clamp_to_register(root + 11, 'pad'))  # maj7 below octave
+            arp_pool.append(clamp_to_register(root + 13, 'pad'))  # b9
+            
+            # Build varied rhythm patterns (not all equal notes)
+            arp_patterns = {
+                'dotted': [  # Dotted rhythms — moody, swaying
+                    (0, 360), (360, 120), (480, 240), (720, 120),
+                    (960, 360), (1320, 120), (1440, 240), (1680, 120),
+                ],
+                'long_short': [  # Long-short — brooding, hypnotic
+                    (0, 480), (480, 120), (600, 480), (1080, 120),
+                    (1200, 480), (1680, 120),
+                ],
+                'sparse': [  # Sparse — space and atmosphere
+                    (0, 240), (480, 240), (960, 240), (1440, 240),
+                ],
+                'triplet': [  # Triplet feel — rolling, hypnotic
+                    (0, 160), (160, 160), (320, 160), (480, 160),
+                    (640, 160), (800, 160), (960, 160), (1120, 160),
+                    (1280, 160), (1440, 160), (1600, 160), (1760, 160),
+                ],
+                'reverse': [  # Reverse feel — starts sparse, gets dense
+                    (0, 480), (480, 240), (720, 240), (960, 120),
+                    (1080, 120), (1200, 120), (1320, 120), (1440, 120),
+                    (1560, 120), (1680, 120), (1800, 120),
+                ],
+                'offbeat': [  # Offbeat emphasis — tension before resolution
+                    (120, 240), (360, 240), (600, 240), (840, 240),
+                    (1080, 240), (1320, 240), (1560, 240), (1800, 240),
+                ],
+            }
+            
+            pattern_name = random.choice(list(arp_patterns.keys()))
+            pattern = arp_patterns[pattern_name]
+            
+            # Choose note sequence — not just cycling through chord tones
+            note_sequences = [
+                # Up-down through extended chord
+                arp_pool,
+                # Descending (dark, broody)
+                list(reversed(arp_pool)),
+                # Root-5th-7th-9th (open, spacey)
+                [arp_pool[0], arp_pool[2], arp_pool[3] if len(arp_pool) > 3 else arp_pool[0], arp_pool[4] if len(arp_pool) > 4 else arp_pool[1]],
+                # Chromatic descent (tension)
+                [arp_pool[i] for i in range(len(arp_pool)-1, -1, -1)],
+                # Random from pool (varied)
+                [random.choice(arp_pool) for _ in range(len(arp_pool))],
+            ]
+            note_seq = random.choice(note_sequences)
+            
+            for i, (pos, dur) in enumerate(pattern):
+                note = note_seq[i % len(note_seq)]
+                # Velocity varies by position — downbeats louder
+                vel = int((60 + (pos % 480 == 0) * 25 + (pos % 240 == 0) * 10) * energy)
+                t = bs + pos
+                if t + dur <= bs + bar_length:
+                    pad_ev.extend([
+                        {'time': t, 'note': note, 'vel': vel},
+                        {'time': t + dur, 'note': note, 'vel': 0}
+                    ])
 
         # === CHORD STABS (staggered: enter at bar 4+ of drop) ===
         if is_drop and bar_in_drop >= 4:
