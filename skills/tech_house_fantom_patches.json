@@ -1,0 +1,106 @@
+{
+  "tech_house_bass": {
+    "acid": [
+      {"name": "SL-TB Saw 4", "msb": 87, "lsb": 68, "pc": 89, "note": "Classic 303 saw, moderate harmonics"},
+      {"name": "SL-TB Saw 5", "msb": 87, "lsb": 68, "pc": 91, "note": "Brighter 303 saw, more bite"},
+      {"name": "SL-TB Saw 6", "msb": 87, "lsb": 68, "pc": 93, "note": "Screaming 303 saw, high harmonics"},
+      {"name": "SL-TB Sqr 3", "msb": 87, "lsb": 68, "pc": 99, "note": "Hollow 303 square, sub-focused"},
+      {"name": "SL-TB Sqr 5", "msb": 87, "lsb": 68, "pc": 103, "note": "Bright 303 square"},
+      {"name": "TB Bass 1", "msb": 87, "lsb": 74, "pc": 46, "note": "TB-style bass"},
+      {"name": "TB Bass 2", "msb": 87, "lsb": 74, "pc": 47, "note": "TB-style bass variant"},
+      {"name": "TB Dist Bs 1", "msb": 87, "lsb": 74, "pc": 48, "note": "Distorted 303, aggressive"},
+      {"name": "TB Dist Bs 2", "msb": 87, "lsb": 74, "pc": 49, "note": "Distorted 303 variant"}
+    ],
+    "sub": [
+      {"name": "Dirt Sub 1", "msb": 87, "lsb": 92, "pc": 104, "note": "Clean sub, minimal harmonics"},
+      {"name": "Dirt Sub 2", "msb": 87, "lsb": 93, "pc": 94, "note": "Sub variant"},
+      {"name": "Dirt Sub 3", "msb": 87, "lsb": 93, "pc": 95, "note": "Sub variant"},
+      {"name": "Dust Sub", "msb": 87, "lsb": 93, "pc": 96, "note": "Gritty sub"},
+      {"name": "Spread Sub 1", "msb": 87, "lsb": 93, "pc": 97, "note": "Wide sub"},
+      {"name": "Spread Sub 2", "msb": 87, "lsb": 93, "pc": 98, "note": "Wide sub variant"},
+      {"name": "Sub Zero", "msb": 87, "lsb": 83, "pc": 66, "note": "Deep sub"},
+      {"name": "SL-Jn60sub3", "msb": 87, "lsb": 68, "pc": 66, "note": "Juno-60 sub"},
+      {"name": "SL-Jn60sub4", "msb": 87, "lsb": 68, "pc": 67, "note": "Juno-60 sub variant"},
+      {"name": "Bit Sub", "msb": 87, "lsb": 92, "pc": 105, "note": "Lo-fi sub"}
+    ],
+    "house": [
+      {"name": "S.C House Bass", "msb": 87, "lsb": 92, "pc": 122, "note": "Sidechain-style house bass"},
+      {"name": "House Bs", "msb": 87, "lsb": 74, "pc": 41, "note": "Classic house bass"},
+      {"name": "106 Bass 1", "msb": 87, "lsb": 73, "pc": 121, "note": "Juno-106 style"},
+      {"name": "106 Bass 2", "msb": 87, "lsb": 73, "pc": 122, "note": "Juno-106 style"},
+      {"name": "106 Bass 3", "msb": 87, "lsb": 73, "pc": 123, "note": "Juno-106 style"},
+      {"name": "Reso Pumper Bass", "msb": 87, "lsb": 92, "pc": 119, "note": "Resonant pumping bass"},
+      {"name": "24Db Mini Ladder", "msb": 87, "lsb": 92, "pc": 112, "note": "Moog ladder filter style"},
+      {"name": "Noisy Haus Bass", "msb": 87, "lsb": 92, "pc": 111, "note": "Noisy house bass"},
+      {"name": "Electro Leg Bass", "msb": 87, "lsb": 92, "pc": 110, "note": "Electro legato bass"},
+      {"name": "SL-JP Bass1", "msb": 87, "lsb": 68, "pc": 18, "note": "JP-8000 style"},
+      {"name": "SL-JP Bass2", "msb": 87, "lsb": 68, "pc": 19, "note": "JP-8000 style"},
+      {"name": "SL-SH101 4", "msb": 87, "lsb": 68, "pc": 110, "note": "SH-101 style"},
+      {"name": "SL-SH101 6", "msb": 87, "lsb": 68, "pc": 112, "note": "SH-101 style"},
+      {"name": "MC202 Bs 1", "msb": 87, "lsb": 73, "pc": 128, "note": "MC-202 style"},
+      {"name": "MC202 Bs 2", "msb": 87, "lsb": 74, "pc": 1, "note": "MC-202 style"},
+      {"name": "JunoSqr Bs 1", "msb": 87, "lsb": 74, "pc": 44, "note": "Juno square bass"},
+      {"name": "JunoSqr Bs 2", "msb": 87, "lsb": 74, "pc": 45, "note": "Juno square bass"}
+    ],
+    "wobble": [
+      {"name": "Future Wobble", "msb": 87, "lsb": 92, "pc": 123, "note": "LFO-modulated wobble"},
+      {"name": "Madness Wobble", "msb": 87, "lsb": 92, "pc": 124, "note": "Aggressive wobble"},
+      {"name": "LFO Lazor Bass", "msb": 87, "lsb": 92, "pc": 121, "note": "Laser-style LFO bass"},
+      {"name": "Step Mod Bass", "msb": 87, "lsb": 92, "pc": 125, "note": "Step-modulated bass"},
+      {"name": "SuperSawBs 1", "msb": 87, "lsb": 75, "pc": 25, "note": "Supersaw bass"},
+      {"name": "SuperSawBs 2", "msb": 87, "lsb": 75, "pc": 26, "note": "Supersaw bass variant"}
+    ]
+  },
+  "tech_house_drums": [
+    {"name": "TR-909", "msb": 86, "lsb": 65, "pc": 45, "note": "Classic 909 — THE tech house kit"},
+    {"name": "TR-909 comp", "msb": 86, "lsb": 65, "pc": 46, "note": "909 with compression"},
+    {"name": "TR-909 w comp", "msb": 86, "lsb": 65, "pc": 47, "note": "909 with wide compression"},
+    {"name": "House Kit", "msb": 86, "lsb": 65, "pc": 38, "note": "Optimized for house"},
+    {"name": "House Kit w", "msb": 86, "lsb": 65, "pc": 39, "note": "House kit wide"},
+    {"name": "Techno Kit", "msb": 86, "lsb": 65, "pc": 36, "note": "Techno-oriented"},
+    {"name": "Techno Kit w", "msb": 86, "lsb": 65, "pc": 37, "note": "Techno kit wide"},
+    {"name": "TR-808", "msb": 86, "lsb": 65, "pc": 48, "note": "808 variant"},
+    {"name": "TR-808 comp", "msb": 86, "lsb": 65, "pc": 49, "note": "808 compressed"},
+    {"name": "TR-707&727", "msb": 86, "lsb": 65, "pc": 51, "note": "707/727 combo"}
+  ],
+  "tech_house_stab": [
+    {"name": "Gabba Stabber", "msb": 87, "lsb": 92, "pc": 85, "note": "Hard stab, aggressive"},
+    {"name": "Brassy VA Lead", "msb": 87, "lsb": 92, "pc": 82, "note": "Brass-style stab"},
+    {"name": "Power Sync", "msb": 87, "lsb": 92, "pc": 87, "note": "Sync stab, cutting"},
+    {"name": "Saw Super Sync", "msb": 87, "lsb": 92, "pc": 83, "note": "Saw sync stab"},
+    {"name": "Sync Metals", "msb": 87, "lsb": 92, "pc": 86, "note": "Metallic stab"},
+    {"name": "Future Sync Lead", "msb": 87, "lsb": 92, "pc": 69, "note": "Sync lead stab"},
+    {"name": "OSC Sync 1", "msb": 87, "lsb": 64, "pc": 68, "note": "Oscillator sync"},
+    {"name": "OSC Sync 2", "msb": 87, "lsb": 64, "pc": 69, "note": "Oscillator sync variant"},
+    {"name": "XMod JP", "msb": 87, "lsb": 92, "pc": 90, "note": "Cross-mod JP style"}
+  ],
+  "tech_house_acid_lead": [
+    {"name": "SL-TB Saw 6", "msb": 87, "lsb": 68, "pc": 93, "note": "Screaming 303 lead"},
+    {"name": "SL-SH101 9", "msb": 87, "lsb": 68, "pc": 115, "note": "SH-101 lead"},
+    {"name": "SL-SH101 10", "msb": 87, "lsb": 68, "pc": 116, "note": "SH-101 lead variant"},
+    {"name": "Future Sync Lead", "msb": 87, "lsb": 92, "pc": 69, "note": "Sync lead"},
+    {"name": "XMod2 Oct Bs 1", "msb": 87, "lsb": 92, "pc": 107, "note": "Octave bass/lead"}
+  ],
+  "tech_house_pad": [
+    {"name": "Soft Saw Pad", "msb": 87, "lsb": 65, "pc": 26, "note": "Soft saw pad, dark"},
+    {"name": "Sawchestra", "msb": 87, "lsb": 92, "pc": 29, "note": "Orchestral saw pad"},
+    {"name": "Sawtooth Str", "msb": 87, "lsb": 65, "pc": 32, "note": "Sawtooth strings"},
+    {"name": "JP8 Strings1", "msb": 87, "lsb": 69, "pc": 1, "note": "JP-8 strings"},
+    {"name": "JP8 Strings2", "msb": 87, "lsb": 69, "pc": 2, "note": "JP-8 strings variant"},
+    {"name": "JX Strings", "msb": 87, "lsb": 65, "pc": 45, "note": "JX strings"},
+    {"name": "Ambien", "msb": 87, "lsb": 92, "pc": 26, "note": "Ambient pad"},
+    {"name": "Formant Pad", "msb": 87, "lsb": 92, "pc": 27, "note": "Formant pad, vocal-like"},
+    {"name": "Phase Super Saw", "msb": 87, "lsb": 65, "pc": 51, "note": "Phased supersaw pad"},
+    {"name": "Teary Strings", "msb": 87, "lsb": 92, "pc": 49, "note": "Emotional strings"}
+  ],
+  "mfx_presets": {
+    "acid_filter": {"type": 5, "name": "Super Filter", "params": {"cutoff": 75, "resonance": 30, "sync": "1/4", "depth": 20}},
+    "bass_compress": {"type": 45, "name": "LOFI Compress", "params": {"pre_filter": 3, "balance": 70}},
+    "sub_enhance": {"type": 7, "name": "Enhancer", "params": {"sensitivity": 25, "mix": 20}},
+    "stab_chorus": {"type": 23, "name": "Chorus", "params": {"rate_sync": "1/4", "depth": 25, "wet": 25}},
+    "acid_wah": {"type": 8, "name": "Auto Wah", "params": {"manual": 50, "peak": 25, "sync": "1/8"}},
+    "pad_flange": {"type": 24, "name": "Flanger", "params": {"depth": 15, "feedback": 50, "wet": 20}},
+    "drum_crush": {"type": 46, "name": "Bit Crusher", "params": {"sample_rate": 60, "bit_down": 10, "filter": 50}},
+    "drum_lofi": {"type": 45, "name": "LOFI Compress", "params": {"pre_filter": 4, "lofi_type": 5, "lpf": 2000}}
+  }
+}

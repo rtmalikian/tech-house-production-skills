@@ -1,0 +1,8620 @@
+{
+  "bass": [
+    {
+      "name": "TB-Slayer",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 100
+    },
+    {
+      "name": "Fizzle Pop",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 101
+    },
+    {
+      "name": "Decay Bounce",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 102
+    },
+    {
+      "name": "XMod2 Soft Bs",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 103
+    },
+    {
+      "name": "Dirt Sub 1",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 104
+    },
+    {
+      "name": "Bit Sub",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 105
+    },
+    {
+      "name": "XMod2 LoBit Bs",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 106
+    },
+    {
+      "name": "XMod2 Oct Bs 1",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 107
+    },
+    {
+      "name": "XMod2 Oct Bs 2",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 108
+    },
+    {
+      "name": "XMod2 Rubber Bs",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 109
+    },
+    {
+      "name": "Electro Leg Bass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 110
+    },
+    {
+      "name": "Noisy Haus Bass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 111
+    },
+    {
+      "name": "24Db Mini Ladder",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 112
+    },
+    {
+      "name": "Bass or Lead ?",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 113
+    },
+    {
+      "name": "Water Hose Bass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 114
+    },
+    {
+      "name": "Crizzle Bass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 115
+    },
+    {
+      "name": "808 Lo-Bass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 116
+    },
+    {
+      "name": "Cone Pressure",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 117
+    },
+    {
+      "name": "Auto JP",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 118
+    },
+    {
+      "name": "Reso Pumper Bass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 119
+    },
+    {
+      "name": "Marked Bell",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 120
+    },
+    {
+      "name": "LFO Lazor Bass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 121
+    },
+    {
+      "name": "S.C House Bass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 122
+    },
+    {
+      "name": "Future Wobble",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 123
+    },
+    {
+      "name": "Madness Wobble",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 124
+    },
+    {
+      "name": "Step Mod Bass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 125
+    },
+    {
+      "name": "Dirt Sub 2",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 94
+    },
+    {
+      "name": "Dirt Sub 3",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 95
+    },
+    {
+      "name": "Dust Sub",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 96
+    },
+    {
+      "name": "Spread Sub 1",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 97
+    },
+    {
+      "name": "Spread Sub 2",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 98
+    },
+    {
+      "name": "Lurking Bass",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 99
+    },
+    {
+      "name": "SL-Jn60sub3",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 66
+    },
+    {
+      "name": "SL-Jn60sub4",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 67
+    },
+    {
+      "name": "SL-JP8 6",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 6
+    },
+    {
+      "name": "SL-JP8 7",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 7
+    },
+    {
+      "name": "SL-JP8 9",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 9
+    },
+    {
+      "name": "SL-JP Bass1",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 18
+    },
+    {
+      "name": "SL-JP Bass2",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 19
+    },
+    {
+      "name": "SL-JP Bass3",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 20
+    },
+    {
+      "name": "SL-TB Saw3A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 88
+    },
+    {
+      "name": "SL-TB Saw 4",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 89
+    },
+    {
+      "name": "SL-TB Saw4A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 90
+    },
+    {
+      "name": "SL-TB Saw 5",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 91
+    },
+    {
+      "name": "SL-TB Saw5A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 92
+    },
+    {
+      "name": "SL-TB Saw 6",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 93
+    },
+    {
+      "name": "SL-TB Saw6A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 94
+    },
+    {
+      "name": "SL-TB Sqr 1",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 95
+    },
+    {
+      "name": "SL-TB Sqr1A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 96
+    },
+    {
+      "name": "SL-TB Sqr 2",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 97
+    },
+    {
+      "name": "SL-TB Sqr2A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 98
+    },
+    {
+      "name": "SL-TB Sqr 3",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 99
+    },
+    {
+      "name": "SL-TB Sqr3A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 100
+    },
+    {
+      "name": "SL-TB Sqr 4",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 101
+    },
+    {
+      "name": "SL-TB Sqr4A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 102
+    },
+    {
+      "name": "SL-TB Sqr 5",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 103
+    },
+    {
+      "name": "SL-TB Sqr5A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 104
+    },
+    {
+      "name": "SL-TB Sqr 6",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 105
+    },
+    {
+      "name": "SL-TB Sqr6A",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 106
+    },
+    {
+      "name": "SL-SH101 4",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 110
+    },
+    {
+      "name": "SL-SH101 6",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 112
+    },
+    {
+      "name": "SL-SH101 7",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 113
+    },
+    {
+      "name": "SL-SH101 9",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 115
+    },
+    {
+      "name": "SL-SH101 10",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 116
+    },
+    {
+      "name": "SL-SH101 12",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 118
+    },
+    {
+      "name": "Flat6Bs",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 116
+    },
+    {
+      "name": "Decay Bs 1",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 117
+    },
+    {
+      "name": "Decay Bs 2",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 118
+    },
+    {
+      "name": "Decay Bs 3",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 119
+    },
+    {
+      "name": "Decay Bs 4",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 120
+    },
+    {
+      "name": "106 Bass 1",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 121
+    },
+    {
+      "name": "106 Bass 2",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 122
+    },
+    {
+      "name": "106 Bass 3",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 123
+    },
+    {
+      "name": "106 Bass 4",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 124
+    },
+    {
+      "name": "106 Bass 5",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 125
+    },
+    {
+      "name": "Breakdown Bs",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 126
+    },
+    {
+      "name": "Dopebass",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 127
+    },
+    {
+      "name": "MC202 Bs 1",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 128
+    },
+    {
+      "name": "MC202 Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 1
+    },
+    {
+      "name": "Pulse Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 2
+    },
+    {
+      "name": "Pulse Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 3
+    },
+    {
+      "name": "Pulse Bs 3",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 4
+    },
+    {
+      "name": "Pulse Bs 4",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 5
+    },
+    {
+      "name": "FM Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 6
+    },
+    {
+      "name": "FM Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 7
+    },
+    {
+      "name": "JP Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 8
+    },
+    {
+      "name": "Compu Bass 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 9
+    },
+    {
+      "name": "Compu Bass 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 10
+    },
+    {
+      "name": "Detune Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 11
+    },
+    {
+      "name": "Detune Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 12
+    },
+    {
+      "name": "Detune Bs 3",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 13
+    },
+    {
+      "name": "Detune Bs 4",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 14
+    },
+    {
+      "name": "Intrusive Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 15
+    },
+    {
+      "name": "SH-101 Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 16
+    },
+    {
+      "name": "SH-101 Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 17
+    },
+    {
+      "name": "Sweep Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 18
+    },
+    {
+      "name": "Sweep Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 19
+    },
+    {
+      "name": "Sweep Bs 3",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 20
+    },
+    {
+      "name": "Sweep Bs 4",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 21
+    },
+    {
+      "name": "Sweep Bs 5",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 22
+    },
+    {
+      "name": "Sweep Bs 6",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 23
+    },
+    {
+      "name": "Sweep Bs 7",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 24
+    },
+    {
+      "name": "Rubbertouch",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 25
+    },
+    {
+      "name": "P5 Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 26
+    },
+    {
+      "name": "P5 Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 27
+    },
+    {
+      "name": "P5 Bs 3",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 28
+    },
+    {
+      "name": "P5 Bs 4",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 29
+    },
+    {
+      "name": "P5 Bs 5",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 30
+    },
+    {
+      "name": "Juno60 Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 31
+    },
+    {
+      "name": "D-50 Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 32
+    },
+    {
+      "name": "MKS-50 Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 33
+    },
+    {
+      "name": "Wide Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 34
+    },
+    {
+      "name": "Wide Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 35
+    },
+    {
+      "name": "Wide Bs 3",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 36
+    },
+    {
+      "name": "Wide Bs 4",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 37
+    },
+    {
+      "name": "BASSH 10",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 38
+    },
+    {
+      "name": "Chow Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 39
+    },
+    {
+      "name": "Chow Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 40
+    },
+    {
+      "name": "House Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 41
+    },
+    {
+      "name": "JP-4 Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 42
+    },
+    {
+      "name": "SH Square Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 43
+    },
+    {
+      "name": "JunoSqr Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 44
+    },
+    {
+      "name": "JunoSqr Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 45
+    },
+    {
+      "name": "TB Bass 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 46
+    },
+    {
+      "name": "TB Bass 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 47
+    },
+    {
+      "name": "TB Dist Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 48
+    },
+    {
+      "name": "TB Dist Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 49
+    },
+    {
+      "name": "Agresso Bass",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 50
+    },
+    {
+      "name": "Show Me Low",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 51
+    },
+    {
+      "name": "Organ Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 52
+    },
+    {
+      "name": "Muffled Bass",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 53
+    },
+    {
+      "name": "Garage Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 54
+    },
+    {
+      "name": "Soft Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 122
+    },
+    {
+      "name": "Slow Bs",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 123
+    },
+    {
+      "name": "Square Bs 1",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 124
+    },
+    {
+      "name": "Square Bs 2",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 125
+    },
+    {
+      "name": "Square Bs 3",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 126
+    },
+    {
+      "name": "Square Bs 4",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 127
+    },
+    {
+      "name": "Squaresville",
+      "msb": 87,
+      "lsb": 74,
+      "pc": 128
+    },
+    {
+      "name": "PWM Bass 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 1
+    },
+    {
+      "name": "PWM Bass 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 2
+    },
+    {
+      "name": "Modular Bs 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 3
+    },
+    {
+      "name": "Modular Bs 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 4
+    },
+    {
+      "name": "Modular Bs 3",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 5
+    },
+    {
+      "name": "Modular Bs 4",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 6
+    },
+    {
+      "name": "Modular Bs 5",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 7
+    },
+    {
+      "name": "Modular Bs 6",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 8
+    },
+    {
+      "name": "Unison Bs 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 9
+    },
+    {
+      "name": "Unison Bs 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 10
+    },
+    {
+      "name": "Unison Bs 3",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 11
+    },
+    {
+      "name": "Unison Bs 4",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 12
+    },
+    {
+      "name": "Monster Bs 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 13
+    },
+    {
+      "name": "Monster Bs 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 14
+    },
+    {
+      "name": "Monster Bs 3",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 15
+    },
+    {
+      "name": "Monster Bs 4",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 16
+    },
+    {
+      "name": "Monster Bs 5",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 17
+    },
+    {
+      "name": "Monster Bs 6",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 18
+    },
+    {
+      "name": "Monster Bs 7",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 19
+    },
+    {
+      "name": "Monster Bs 8",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 20
+    },
+    {
+      "name": "Bit Bs 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 21
+    },
+    {
+      "name": "Bit Bs 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 22
+    },
+    {
+      "name": "Bit Bs 3",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 23
+    },
+    {
+      "name": "Bit Bs 4",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 24
+    },
+    {
+      "name": "SuperSawBs 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 25
+    },
+    {
+      "name": "SuperSawBs 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 26
+    },
+    {
+      "name": "SuperSawBs 3",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 27
+    },
+    {
+      "name": "SuperSawBs 4",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 28
+    },
+    {
+      "name": "SuperSawBs 5",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 29
+    },
+    {
+      "name": "Sync Bs 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 30
+    },
+    {
+      "name": "Sync Bs 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 31
+    },
+    {
+      "name": "Sync Bs 3",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 32
+    },
+    {
+      "name": "Sync Bs 4",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 33
+    },
+    {
+      "name": "SubOSC Bs 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 34
+    },
+    {
+      "name": "SubOSC Bs 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 35
+    },
+    {
+      "name": "Ramp Bs",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 36
+    },
+    {
+      "name": "LFO Bs 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 37
+    },
+    {
+      "name": "LFO Bs 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 38
+    },
+    {
+      "name": "LFO Bs 3",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 39
+    },
+    {
+      "name": "LFO Bs 4",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 40
+    },
+    {
+      "name": "Crackbass",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 41
+    },
+    {
+      "name": "Basschunk",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 42
+    },
+    {
+      "name": "Hi-Energy Bs",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 43
+    },
+    {
+      "name": "ResoMoist Bs",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 64
+    },
+    {
+      "name": "Kickin’ Bass",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 65
+    },
+    {
+      "name": "Sub Zero",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 66
+    },
+    {
+      "name": "Liquid Bass",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 67
+    },
+    {
+      "name": "Hefty Bass",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 68
+    },
+    {
+      "name": "Severe Ow Bs",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 69
+    },
+    {
+      "name": "Punch Bass",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 84
+    },
+    {
+      "name": "COSM Bass",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 85
+    }
+  ],
+  "bell": [
+    {
+      "name": "Lost Box",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 109
+    },
+    {
+      "name": "AX Vibraphone",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 82
+    },
+    {
+      "name": "AX Marimba",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 83
+    },
+    {
+      "name": "AX Xylophone",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 84
+    },
+    {
+      "name": "AX Steel Drums",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 85
+    },
+    {
+      "name": "AX Ethno Keys",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 86
+    },
+    {
+      "name": "Bell 1",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 2
+    },
+    {
+      "name": "Bell 2",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 3
+    },
+    {
+      "name": "Bell 3",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 4
+    },
+    {
+      "name": "Bell 4",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 5
+    },
+    {
+      "name": "Bell 5",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 6
+    },
+    {
+      "name": "Bell 6",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 7
+    },
+    {
+      "name": "Bell 7",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 8
+    },
+    {
+      "name": "Bell 8",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 9
+    },
+    {
+      "name": "Bell 9",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 10
+    },
+    {
+      "name": "Bell 10",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 11
+    },
+    {
+      "name": "Bell 11",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 12
+    },
+    {
+      "name": "Bell 12",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 13
+    },
+    {
+      "name": "Bell 13",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 14
+    },
+    {
+      "name": "Bell 14",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 15
+    },
+    {
+      "name": "Bell 15",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 16
+    },
+    {
+      "name": "Bell 16",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 17
+    },
+    {
+      "name": "Bell 17",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 18
+    },
+    {
+      "name": "Bell 18",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 19
+    },
+    {
+      "name": "Bell 19",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 20
+    },
+    {
+      "name": "Bell 20",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 21
+    },
+    {
+      "name": "Bell 21",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 22
+    },
+    {
+      "name": "Bell 22",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 23
+    },
+    {
+      "name": "Tower Bell",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 24
+    },
+    {
+      "name": "Tubular Bell",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 25
+    },
+    {
+      "name": "OrganBell 1",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 26
+    },
+    {
+      "name": "OrganBell 2",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 27
+    },
+    {
+      "name": "OrganBell 3",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 28
+    },
+    {
+      "name": "Kalimbell",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 29
+    },
+    {
+      "name": "JP80 Bell",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 30
+    },
+    {
+      "name": "Glass Amb",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 31
+    },
+    {
+      "name": "Digi Crystal",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 32
+    },
+    {
+      "name": "Icy Keys",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 33
+    },
+    {
+      "name": "JP-8 PatchH1",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 34
+    },
+    {
+      "name": "Childlike",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 81
+    },
+    {
+      "name": "Music Box",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 82
+    },
+    {
+      "name": "Toy Box",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 83
+    },
+    {
+      "name": "Wave Bells",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 84
+    },
+    {
+      "name": "Tria Bells",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 85
+    },
+    {
+      "name": "Beauty Bells",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 86
+    },
+    {
+      "name": "Music Bells",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 87
+    },
+    {
+      "name": "Pretty Bells",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 88
+    },
+    {
+      "name": "Wide Tubular",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 90
+    },
+    {
+      "name": "AmbienceVibe",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 91
+    },
+    {
+      "name": "Warm Vibes",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 92
+    },
+    {
+      "name": "Dyna Marimba",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 93
+    },
+    {
+      "name": "Bass Marimba",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 94
+    },
+    {
+      "name": "Nomad Perc",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 95
+    },
+    {
+      "name": "Ethno Metals",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 96
+    },
+    {
+      "name": "Islands Mlt",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 97
+    },
+    {
+      "name": "Steelin Keys",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 98
+    },
+    {
+      "name": "Steel Drums",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 99
+    },
+    {
+      "name": "Hammer Bell",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 61
+    },
+    {
+      "name": "Chime Bells",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 70
+    },
+    {
+      "name": "Stream Bell",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 86
+    },
+    {
+      "name": "Shuffle Bell",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 87
+    },
+    {
+      "name": "Echo Vibe",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 88
+    },
+    {
+      "name": "Tremolo Vibe",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 89
+    },
+    {
+      "name": "True Vibe",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 90
+    },
+    {
+      "name": "Marimbula",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 91
+    }
+  ],
+  "brass": [
+    {
+      "name": "FUTURE BRASS",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 62
+    },
+    {
+      "name": "Runner CS Brass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 63
+    },
+    {
+      "name": "Soft Brass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 64
+    },
+    {
+      "name": "Bit Brass",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 65
+    },
+    {
+      "name": "XMod2 Soft Brs",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 66
+    },
+    {
+      "name": "JX Cream",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 61
+    },
+    {
+      "name": "Bendy Mod",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 100
+    },
+    {
+      "name": "Wide Syn Brass",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 118
+    },
+    {
+      "name": "Juno Brass",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 119
+    },
+    {
+      "name": "Poly Brass 2",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 121
+    },
+    {
+      "name": "AX Mood Strings 87 65 60 Strings PR-B 0250 Syn Brass 1",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 122
+    },
+    {
+      "name": "Juno P18 Brass",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 123
+    },
+    {
+      "name": "Apolis Brass",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 124
+    },
+    {
+      "name": "AX JP Brass",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 125
+    },
+    {
+      "name": "Oct Brass",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 126
+    },
+    {
+      "name": "Bright Syn Brass",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 128
+    },
+    {
+      "name": "AX Strings Stacc 87 65 64 PR-B 0257 Filter Env Brass",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 1
+    },
+    {
+      "name": "80s Brass 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 2
+    },
+    {
+      "name": "80s Brass 3",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 3
+    },
+    {
+      "name": "Syn Brass 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 4
+    },
+    {
+      "name": "Soft Brass 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 5
+    },
+    {
+      "name": "SL-JP8 13",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 13
+    },
+    {
+      "name": "SL-JP8 14",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 14
+    },
+    {
+      "name": "SL-JP8 15",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 15
+    },
+    {
+      "name": "JP8 Brs 1",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 3
+    },
+    {
+      "name": "JP8 Brs 2",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 4
+    },
+    {
+      "name": "JP8 Brs 3",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 5
+    },
+    {
+      "name": "JP8 Brs 4",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 6
+    },
+    {
+      "name": "JP8 Brs 5",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 7
+    },
+    {
+      "name": "JP8 Brs 6",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 8
+    },
+    {
+      "name": "JUNO Brs 1",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 9
+    },
+    {
+      "name": "JUNO Brs 2",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 10
+    },
+    {
+      "name": "JUNO Brs 3",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 11
+    },
+    {
+      "name": "JUNO Brs 4",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 12
+    },
+    {
+      "name": "JUNO Brs 5",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 13
+    },
+    {
+      "name": "JUNO Brs 6",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 14
+    },
+    {
+      "name": "JUNO Brs 7",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 15
+    },
+    {
+      "name": "JUNO Brs 8",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 16
+    },
+    {
+      "name": "JUNO Brs 9",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 17
+    },
+    {
+      "name": "JUNO Brs 10",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 18
+    },
+    {
+      "name": "JP8000 Brs 1",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 19
+    },
+    {
+      "name": "JP8000 Brs 2",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 20
+    },
+    {
+      "name": "80s Brs 1",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 21
+    },
+    {
+      "name": "80s Brs 2",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 22
+    },
+    {
+      "name": "80s Brs 3",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 23
+    },
+    {
+      "name": "80s Brs 4",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 24
+    },
+    {
+      "name": "80s Brs 5",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 25
+    },
+    {
+      "name": "80s Brs 6",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 26
+    },
+    {
+      "name": "80s Brs 7",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 27
+    },
+    {
+      "name": "80s Brs 8",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 28
+    },
+    {
+      "name": "80s Brs 9",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 29
+    },
+    {
+      "name": "80s Brs 10",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 30
+    },
+    {
+      "name": "80s Brs 11",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 31
+    },
+    {
+      "name": "SynBrs Str",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 32
+    },
+    {
+      "name": "Analog Brs 1",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 33
+    },
+    {
+      "name": "Analog Brs 2",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 34
+    },
+    {
+      "name": "Analog Brs 3",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 35
+    },
+    {
+      "name": "Analog Brs 4",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 36
+    },
+    {
+      "name": "Poly Brass",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 68
+    },
+    {
+      "name": "Afro Horns",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 67
+    },
+    {
+      "name": "P5 Polymod",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 61
+    },
+    {
+      "name": "Triumph Brs",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 62
+    },
+    {
+      "name": "JupiterHorns",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 107
+    },
+    {
+      "name": "Soaring Hrns",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 113
+    }
+  ],
+  "choir": [
+    {
+      "name": "Data Cram",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 40
+    },
+    {
+      "name": "Electro Birds",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 41
+    },
+    {
+      "name": "Chloroform",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 42
+    },
+    {
+      "name": "Step SQ1 /Mod",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 43
+    },
+    {
+      "name": "Step SQ2 /Mod",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 44
+    },
+    {
+      "name": "Vox Step Lead",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 45
+    },
+    {
+      "name": "Step Growl 1",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 46
+    },
+    {
+      "name": "Step Growl 2",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 47
+    },
+    {
+      "name": "AX Jazz Scat",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 52
+    },
+    {
+      "name": "Jazz Doos",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 53
+    },
+    {
+      "name": "Bop Voice",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 54
+    },
+    {
+      "name": "Pop Voice",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 55
+    },
+    {
+      "name": "Scat Dow",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 2
+    }
+  ],
+  "drums": [
+    {
+      "name": "TR-808",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 48
+    },
+    {
+      "name": "TR-808 comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 49
+    },
+    {
+      "name": "TR-808 w comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 50
+    },
+    {
+      "name": "LD Std Kit 1",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 1
+    },
+    {
+      "name": "TR-707&727",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 51
+    },
+    {
+      "name": "LD Std Kit 2",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 2
+    },
+    {
+      "name": "TR-707&727 comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 52
+    },
+    {
+      "name": "Me Shell Kit 1",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 3
+    },
+    {
+      "name": "TR-707&727 w cmp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 53
+    },
+    {
+      "name": "Me Shell Kit 2",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 4
+    },
+    {
+      "name": "CR-78",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 54
+    },
+    {
+      "name": "WD Std Kit 1",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 5
+    },
+    {
+      "name": "CR-78 comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 55
+    },
+    {
+      "name": "WD Std Kit 2",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 6
+    },
+    {
+      "name": "CR-78 w comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 56
+    },
+    {
+      "name": "SF Std Kit 1",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 7
+    },
+    {
+      "name": "TR-606",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 57
+    },
+    {
+      "name": "SF Std Kit 2",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 8
+    },
+    {
+      "name": "TR-606 comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 58
+    },
+    {
+      "name": "Rock Kit 1",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 9
+    },
+    {
+      "name": "TR-606 w comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 59
+    },
+    {
+      "name": "Rock Kit 2",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 10
+    },
+    {
+      "name": "TR-626",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 60
+    },
+    {
+      "name": "Brush Jz Kit 1",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 11
+    },
+    {
+      "name": "TR-626 comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 61
+    },
+    {
+      "name": "Brush Jz Kit 2",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 12
+    },
+    {
+      "name": "TR-626 w comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 62
+    },
+    {
+      "name": "Standard Kit 1",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 13
+    },
+    {
+      "name": "Kick",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 63
+    },
+    {
+      "name": "Standard Kit 2",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 14
+    },
+    {
+      "name": "Kick w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 64
+    },
+    {
+      "name": "Standard Kit 3",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 15
+    },
+    {
+      "name": "Snare",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 65
+    },
+    {
+      "name": "Standard Kit 4",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 16
+    },
+    {
+      "name": "Snare w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 66
+    },
+    {
+      "name": "Standard Kit 5",
+      "msb": 86,
+      "lsb": 64,
+      "pc": 17
+    },
+    {
+      "name": "RimStickClapTom",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 67
+    },
+    {
+      "name": "Standard Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 1
+    },
+    {
+      "name": "RimStickClapTm w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 68
+    },
+    {
+      "name": "Room Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 2
+    },
+    {
+      "name": "HiHat Cymbal",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 69
+    },
+    {
+      "name": "Power Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 3
+    },
+    {
+      "name": "HiHat Cymbal w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 70
+    },
+    {
+      "name": "Electric Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 4
+    },
+    {
+      "name": "Other Perc 1",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 71
+    },
+    {
+      "name": "Analog Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 5
+    },
+    {
+      "name": "Other Perc 1 w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 72
+    },
+    {
+      "name": "Jazz Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 6
+    },
+    {
+      "name": "Other Perc 2",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 73
+    },
+    {
+      "name": "Brush Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 7
+    },
+    {
+      "name": "Other Perc 2 w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 74
+    },
+    {
+      "name": "Orchestra Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 8
+    },
+    {
+      "name": "SFX Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 9
+    },
+    {
+      "name": "Standard Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 10
+    },
+    {
+      "name": "Room Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 11
+    },
+    {
+      "name": "Power Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 12
+    },
+    {
+      "name": "Electric Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 13
+    },
+    {
+      "name": "Analog Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 14
+    },
+    {
+      "name": "Jazz Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 15
+    },
+    {
+      "name": "Brush Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 16
+    },
+    {
+      "name": "Orchestra Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 17
+    },
+    {
+      "name": "SFX Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 18
+    },
+    {
+      "name": "Studio Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 19
+    },
+    {
+      "name": "Studio Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 20
+    },
+    {
+      "name": "Pop Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 21
+    },
+    {
+      "name": "Pop Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 22
+    },
+    {
+      "name": "Pop Kit Lim",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 23
+    },
+    {
+      "name": "90’s Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 24
+    },
+    {
+      "name": "90’s Kit comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 25
+    },
+    {
+      "name": "90’s Kit w comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 26
+    },
+    {
+      "name": "80’s Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 27
+    },
+    {
+      "name": "80’s Kit comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 28
+    },
+    {
+      "name": "80’s Kit w comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 29
+    },
+    {
+      "name": "EDM Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 30
+    },
+    {
+      "name": "EDM Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 31
+    },
+    {
+      "name": "EDM Kit Lim",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 32
+    },
+    {
+      "name": "Drum&Bass Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 33
+    },
+    {
+      "name": "Drum&Bass Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 34
+    },
+    {
+      "name": "Drum&Bass KitLim",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 35
+    },
+    {
+      "name": "Techno Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 36
+    },
+    {
+      "name": "Techno Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 37
+    },
+    {
+      "name": "House Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 38
+    },
+    {
+      "name": "House Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 39
+    },
+    {
+      "name": "HipHop Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 40
+    },
+    {
+      "name": "HipHop Kit comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 41
+    },
+    {
+      "name": "HipHop Kit w cmp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 42
+    },
+    {
+      "name": "R&B Kit",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 43
+    },
+    {
+      "name": "R&B Kit w",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 44
+    },
+    {
+      "name": "TR-909",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 45
+    },
+    {
+      "name": "TR-909 comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 46
+    },
+    {
+      "name": "TR-909 w comp",
+      "msb": 86,
+      "lsb": 65,
+      "pc": 47
+    }
+  ],
+  "fx": [
+    {
+      "name": "Mysterions",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 126
+    },
+    {
+      "name": "Sorrow in Space",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 127
+    },
+    {
+      "name": "Jewellery Box",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 128
+    },
+    {
+      "name": "XMod Pizz",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 1
+    },
+    {
+      "name": "Cosine Porta",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 2
+    },
+    {
+      "name": "Drifter",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 3
+    },
+    {
+      "name": "8th Peak",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 4
+    },
+    {
+      "name": "Step LFO Dream",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 5
+    },
+    {
+      "name": "S.C Lofi Vox",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 6
+    },
+    {
+      "name": "Dancing P5",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 7
+    },
+    {
+      "name": "Layer Cake",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 8
+    },
+    {
+      "name": "Side Chain Syn",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 9
+    },
+    {
+      "name": "LFO Pluck / Mod",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 10
+    },
+    {
+      "name": "Vectorism",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 11
+    },
+    {
+      "name": "Pad-o-wan Step",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 12
+    },
+    {
+      "name": "Ripple Shimmer",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 13
+    },
+    {
+      "name": "Frost Bite",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 14
+    },
+    {
+      "name": "Alpha Centauri",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 15
+    },
+    {
+      "name": "Passage",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 16
+    },
+    {
+      "name": "Dirty Phaser",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 17
+    },
+    {
+      "name": "Decompose",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 18
+    },
+    {
+      "name": "LFO POLY MOD.F",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 19
+    },
+    {
+      "name": "P5 Modulation",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 20
+    },
+    {
+      "name": "Hyperion 4632",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 21
+    },
+    {
+      "name": "Swing",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 22
+    },
+    {
+      "name": "Angels Wings",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 23
+    },
+    {
+      "name": "Dust Spark",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 24
+    },
+    {
+      "name": "Bamboo",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 25
+    },
+    {
+      "name": "Sickly Star",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 26
+    },
+    {
+      "name": "Strange P5",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 27
+    },
+    {
+      "name": "Noise Pound",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 28
+    },
+    {
+      "name": "Faulty Neurons",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 29
+    },
+    {
+      "name": "Not Quite Tine",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 30
+    },
+    {
+      "name": "Hairy Triangles",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 31
+    },
+    {
+      "name": "Low Fidelity",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 32
+    },
+    {
+      "name": "Space Hiccup",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 33
+    },
+    {
+      "name": "Faint Light",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 34
+    },
+    {
+      "name": "Step Per Organ",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 35
+    },
+    {
+      "name": "Donkey Cart",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 36
+    },
+    {
+      "name": "XMod2 Seq 1",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 37
+    },
+    {
+      "name": "XMod2 Seq 2",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 38
+    },
+    {
+      "name": "XMod2 Seq 3",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 39
+    },
+    {
+      "name": "Bugendai",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 110
+    },
+    {
+      "name": "Flutter Pulse",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 50
+    },
+    {
+      "name": "Morse Groove",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 51
+    },
+    {
+      "name": "Chiptuner",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 31
+    },
+    {
+      "name": "Bit Walker",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 32
+    },
+    {
+      "name": "Ring Mod 1",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 33
+    },
+    {
+      "name": "Ring Mod 2",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 34
+    },
+    {
+      "name": "Ring /Mod",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 35
+    },
+    {
+      "name": "X-Mod Driver",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 36
+    },
+    {
+      "name": "Kick/Snare",
+      "msb": 87,
+      "lsb": 67,
+      "pc": 37
+    },
+    {
+      "name": "JayMeJay",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 98
+    },
+    {
+      "name": "Karmalog",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 99
+    },
+    {
+      "name": "MINIM-L",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 100
+    },
+    {
+      "name": "Trance Staff",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 101
+    },
+    {
+      "name": "Radanceky",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 102
+    },
+    {
+      "name": "12303",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 103
+    },
+    {
+      "name": "Experiment",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 104
+    },
+    {
+      "name": "Pulserelay",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 105
+    },
+    {
+      "name": "Jazz Bubbles",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 106
+    },
+    {
+      "name": "Psychoscilo",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 107
+    },
+    {
+      "name": "PXZoon",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 108
+    },
+    {
+      "name": "Welding Bell",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 109
+    },
+    {
+      "name": "Glassphemia",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 110
+    },
+    {
+      "name": "Strobe Bell",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 111
+    },
+    {
+      "name": "Sawflutter",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 112
+    },
+    {
+      "name": "Dronified",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 113
+    },
+    {
+      "name": "Tri-Vector",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 114
+    },
+    {
+      "name": "X-Mod Man",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 68
+    },
+    {
+      "name": "Paz <==> Zap",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 69
+    },
+    {
+      "name": "Strobe Mode",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 93
+    },
+    {
+      "name": "Albion",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 94
+    },
+    {
+      "name": "Running Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 95
+    },
+    {
+      "name": "Stepped Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 96
+    },
+    {
+      "name": "Random Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 97
+    },
+    {
+      "name": "SoundtrkDANC",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 98
+    },
+    {
+      "name": "Flying Waltz",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 99
+    },
+    {
+      "name": "Vanishing",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 100
+    },
+    {
+      "name": "Phazweep",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 102
+    },
+    {
+      "name": "Sands ofTime",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 107
+    },
+    {
+      "name": "Inertia",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 108
+    },
+    {
+      "name": "Vektogram",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 109
+    },
+    {
+      "name": "Cascade",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 112
+    },
+    {
+      "name": "Shattered",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 113
+    },
+    {
+      "name": "NextFrontier",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 114
+    },
+    {
+      "name": "Pure Tibet",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 115
+    },
+    {
+      "name": "Chime Wash",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 116
+    },
+    {
+      "name": "Night Shade",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 117
+    },
+    {
+      "name": "Tortured",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 118
+    },
+    {
+      "name": "Dissimilate",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 119
+    },
+    {
+      "name": "Dunes",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 120
+    },
+    {
+      "name": "Ocean Floor",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 121
+    },
+    {
+      "name": "Temple of JV",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 78
+    },
+    {
+      "name": "Planet Asia",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 79
+    },
+    {
+      "name": "Afterlife",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 80
+    },
+    {
+      "name": "Trancing Pad",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 81
+    },
+    {
+      "name": "Pulsatronic",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 82
+    },
+    {
+      "name": "Cyber Dreams",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 83
+    },
+    {
+      "name": "RiversOfTime",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 117
+    },
+    {
+      "name": "Phobos",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 118
+    },
+    {
+      "name": "2 0 8 0",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 119
+    },
+    {
+      "name": "Unearthly",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 120
+    },
+    {
+      "name": "Glistening",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 121
+    },
+    {
+      "name": "Sci-Fi Str",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 122
+    },
+    {
+      "name": "Shadows",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 123
+    },
+    {
+      "name": "Helium Queen",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 124
+    },
+    {
+      "name": "Sci-Fi FX x4",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 125
+    },
+    {
+      "name": "Rippling",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 106
+    },
+    {
+      "name": "SteppingPhsr",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 107
+    },
+    {
+      "name": "Trance Fair",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 108
+    },
+    {
+      "name": "GermanBounce",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 109
+    },
+    {
+      "name": "Acid JaZZ",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 110
+    },
+    {
+      "name": "Cutter>ModWh",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 111
+    },
+    {
+      "name": "Blades",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 112
+    },
+    {
+      "name": "Mad Bender",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 113
+    },
+    {
+      "name": "Shapeshifter",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 114
+    },
+    {
+      "name": "ForestMoon",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 115
+    },
+    {
+      "name": "Predator 2",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 116
+    },
+    {
+      "name": "Dark Side",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 117
+    },
+    {
+      "name": "The Beast",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 118
+    },
+    {
+      "name": "X-mod Reso",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 119
+    },
+    {
+      "name": "Planet Meta",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 120
+    },
+    {
+      "name": "Nexus",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 121
+    },
+    {
+      "name": "Halographix",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 122
+    },
+    {
+      "name": "Moon Rise",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 123
+    },
+    {
+      "name": "Gruvacious",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 124
+    },
+    {
+      "name": "Windy Dunes",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 125
+    },
+    {
+      "name": "Ice Blasts",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 126
+    },
+    {
+      "name": "Ringy Thingy",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 127
+    },
+    {
+      "name": "Atmospherics",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 128
+    },
+    {
+      "name": "Xcuse me",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 100
+    },
+    {
+      "name": "5ths in 4ths",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 101
+    },
+    {
+      "name": "Runaway Rez",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 115
+    },
+    {
+      "name": "Dropplets",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 116
+    },
+    {
+      "name": "Indian Guru",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 117
+    },
+    {
+      "name": "Cosmic Rain",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 118
+    },
+    {
+      "name": "Trying Winds",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 119
+    },
+    {
+      "name": "Space Whiz",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 120
+    },
+    {
+      "name": "DigitalDrone",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 121
+    },
+    {
+      "name": "Space Race",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 122
+    },
+    {
+      "name": "Bowed Bell",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 123
+    },
+    {
+      "name": "X-Tension",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 124
+    },
+    {
+      "name": "DUB!!!",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 125
+    },
+    {
+      "name": "Dream Diver",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 126
+    },
+    {
+      "name": "Flashback",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 127
+    }
+  ],
+  "lead": [
+    {
+      "name": "Wizard Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 67
+    },
+    {
+      "name": "Skunk Trunk Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 68
+    },
+    {
+      "name": "Future Sync Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 69
+    },
+    {
+      "name": "Future Vox Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 70
+    },
+    {
+      "name": "JP Ring Baby",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 71
+    },
+    {
+      "name": "Fat Mask Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 72
+    },
+    {
+      "name": "Metal Crush",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 73
+    },
+    {
+      "name": "Harsh Hog Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 74
+    },
+    {
+      "name": "XMod Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 75
+    },
+    {
+      "name": "Top Hat Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 76
+    },
+    {
+      "name": "Digi-8 Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 77
+    },
+    {
+      "name": "Cauldron Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 78
+    },
+    {
+      "name": "Cone Buzz Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 79
+    },
+    {
+      "name": "Mod Swallow",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 80
+    },
+    {
+      "name": "Buzzing Fly",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 81
+    },
+    {
+      "name": "Brassy VA Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 82
+    },
+    {
+      "name": "Saw Super Sync",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 83
+    },
+    {
+      "name": "JP-6 Rings",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 84
+    },
+    {
+      "name": "Gabba Stabber",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 85
+    },
+    {
+      "name": "Sync Metals",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 86
+    },
+    {
+      "name": "Power Sync",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 87
+    },
+    {
+      "name": "Sync XFM",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 88
+    },
+    {
+      "name": "XMod Square",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 89
+    },
+    {
+      "name": "XMod JP",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 90
+    },
+    {
+      "name": "Cage’s Ring Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 91
+    },
+    {
+      "name": "Sync Nativity",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 92
+    },
+    {
+      "name": "Ode to...",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 93
+    },
+    {
+      "name": "Bellbottom",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 94
+    },
+    {
+      "name": "Square Easy",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 95
+    },
+    {
+      "name": "Arasquare",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 96
+    },
+    {
+      "name": "XMod2 Soft Ld 1",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 97
+    },
+    {
+      "name": "XMod2 Soft Ld 2",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 98
+    },
+    {
+      "name": "Ambisynthereed",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 99
+    },
+    {
+      "name": "AX Saw Lead 4",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 20
+    },
+    {
+      "name": "Bright Pulse",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 21
+    },
+    {
+      "name": "AX Waspy Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 22
+    },
+    {
+      "name": "Bright Square",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 23
+    },
+    {
+      "name": "Simple Square",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 24
+    },
+    {
+      "name": "Square Edge",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 25
+    },
+    {
+      "name": "X-Mod Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 26
+    },
+    {
+      "name": "AX 5th Saw Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 27
+    },
+    {
+      "name": "Oct Solid Saw",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 28
+    },
+    {
+      "name": "Oct Saw Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 29
+    },
+    {
+      "name": "AX Fat GR Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 30
+    },
+    {
+      "name": "Oct Juice",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 31
+    },
+    {
+      "name": "AX Juicy Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 32
+    },
+    {
+      "name": "Square Stack",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 33
+    },
+    {
+      "name": "7th Stack Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 34
+    },
+    {
+      "name": "Oct Square",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 35
+    },
+    {
+      "name": "Tri Stack",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 36
+    },
+    {
+      "name": "Digi Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 37
+    },
+    {
+      "name": "Fireball Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 38
+    },
+    {
+      "name": "AX Jupiter Ld 2",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 39
+    },
+    {
+      "name": "AX Saw Lead 5",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 40
+    },
+    {
+      "name": "Pro Fat Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 41
+    },
+    {
+      "name": "Mid Saw Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 42
+    },
+    {
+      "name": "Reso Saw Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 43
+    },
+    {
+      "name": "AX Square Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 44
+    },
+    {
+      "name": "Simple Tri Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 45
+    },
+    {
+      "name": "2 krazy Soft",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 46
+    },
+    {
+      "name": "AX Ramp Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 47
+    },
+    {
+      "name": "Pulse Lead 1",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 48
+    },
+    {
+      "name": "Pulse Lead 2",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 49
+    },
+    {
+      "name": "Digi-Rip Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 50
+    },
+    {
+      "name": "Theramax",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 51
+    },
+    {
+      "name": "On Air Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 52
+    },
+    {
+      "name": "Air Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 53
+    },
+    {
+      "name": "AX Soft Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 54
+    },
+    {
+      "name": "Soft Sqr Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 55
+    },
+    {
+      "name": "Tri Lead 1",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 56
+    },
+    {
+      "name": "Tri Lead 2",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 57
+    },
+    {
+      "name": "Solo Nz Peaker",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 58
+    },
+    {
+      "name": "Whistle Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 59
+    },
+    {
+      "name": "AX Spooky Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 60
+    },
+    {
+      "name": "Sine Lead 1",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 61
+    },
+    {
+      "name": "Sine Lead 2",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 62
+    },
+    {
+      "name": "Simple Sine",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 63
+    },
+    {
+      "name": "Sine Atk Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 64
+    },
+    {
+      "name": "Dist Stack",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 65
+    },
+    {
+      "name": "Buzz Saw",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 66
+    },
+    {
+      "name": "Buzz Nation",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 67
+    },
+    {
+      "name": "OSC Sync 1",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 68
+    },
+    {
+      "name": "OSC Sync 2",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 69
+    },
+    {
+      "name": "OSC Sync 3",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 70
+    },
+    {
+      "name": "OSC Sync 4",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 71
+    },
+    {
+      "name": "AX Sync Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 72
+    },
+    {
+      "name": "Sync Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 73
+    },
+    {
+      "name": "Sync Tank",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 74
+    },
+    {
+      "name": "2 krazy Bright",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 75
+    },
+    {
+      "name": "Dist Sync Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 76
+    },
+    {
+      "name": "Oct Sync",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 77
+    },
+    {
+      "name": "Sync Mod",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 78
+    },
+    {
+      "name": "Metal Sync Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 79
+    },
+    {
+      "name": "Saw Cross",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 80
+    },
+    {
+      "name": "Unison Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 81
+    },
+    {
+      "name": "Unison Fat Mod",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 82
+    },
+    {
+      "name": "Oct Stack",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 83
+    },
+    {
+      "name": "Unison Soft",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 84
+    },
+    {
+      "name": "Growl Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 85
+    },
+    {
+      "name": "Super Saw Lead",
+      "msb": 87,
+      "lsb": 64,
+      "pc": 86
+    },
+    {
+      "name": "SL-JP8 3",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 3
+    },
+    {
+      "name": "SL-JP8 4",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 4
+    },
+    {
+      "name": "SL-SH101 1",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 107
+    },
+    {
+      "name": "SL-SH101 2",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 108
+    },
+    {
+      "name": "SL-SH101 3",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 109
+    },
+    {
+      "name": "SL-SH101 5",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 111
+    },
+    {
+      "name": "SL-SH101 8",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 114
+    },
+    {
+      "name": "SL-SH101 11",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 117
+    },
+    {
+      "name": "Saw Lead 1",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 44
+    },
+    {
+      "name": "Saw Lead 2",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 45
+    },
+    {
+      "name": "Saw Lead 3",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 46
+    },
+    {
+      "name": "Saw Lead 4",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 47
+    },
+    {
+      "name": "Saw Lead 5",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 48
+    },
+    {
+      "name": "Saw Lead 6",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 49
+    },
+    {
+      "name": "Saw Lead 7",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 50
+    },
+    {
+      "name": "Saw Lead 8",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 51
+    },
+    {
+      "name": "Saw Lead 9",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 52
+    },
+    {
+      "name": "Saw Lead 10",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 53
+    },
+    {
+      "name": "Saw Lead 11",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 54
+    },
+    {
+      "name": "Saw Lead 12",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 55
+    },
+    {
+      "name": "Saw Lead 13",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 56
+    },
+    {
+      "name": "Saw Lead 14",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 57
+    },
+    {
+      "name": "Saw Lead 15",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 58
+    },
+    {
+      "name": "Saw Lead 16",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 59
+    },
+    {
+      "name": "Saw Lead 17",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 60
+    },
+    {
+      "name": "Juno Soft Ld",
+      "msb": 87,
+      "lsb": 75,
+      "pc": 128
+    },
+    {
+      "name": "Oct Lead",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 1
+    },
+    {
+      "name": "Slow Lead 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 2
+    },
+    {
+      "name": "Slow Lead 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 3
+    },
+    {
+      "name": "Slow Lead 3",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 4
+    },
+    {
+      "name": "Slow Lead 4",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 5
+    },
+    {
+      "name": "Slow Lead 5",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 6
+    },
+    {
+      "name": "Slow Lead 6",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 7
+    },
+    {
+      "name": "Slow Lead 7",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 8
+    },
+    {
+      "name": "Slow Lead 8",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 9
+    },
+    {
+      "name": "Slow Lead 9",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 10
+    },
+    {
+      "name": "Slow Lead 10",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 11
+    },
+    {
+      "name": "Slow Lead 11",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 12
+    },
+    {
+      "name": "Slow Lead 12",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 13
+    },
+    {
+      "name": "AnaVox Ld 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 14
+    },
+    {
+      "name": "AnaVox Ld 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 15
+    },
+    {
+      "name": "AnaVox Ld 3",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 16
+    },
+    {
+      "name": "AnaVox Ld 4",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 17
+    },
+    {
+      "name": "Pulse Lead 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 18
+    },
+    {
+      "name": "Pulse Lead 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 19
+    },
+    {
+      "name": "Pulse Lead 3",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 20
+    },
+    {
+      "name": "BellSaw Ld 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 21
+    },
+    {
+      "name": "BellSaw Ld 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 22
+    },
+    {
+      "name": "Bell Lead 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 23
+    },
+    {
+      "name": "Bell Lead 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 24
+    },
+    {
+      "name": "Bell Lead 3",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 25
+    },
+    {
+      "name": "Dig n D",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 26
+    },
+    {
+      "name": "Juicy Lead 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 27
+    },
+    {
+      "name": "Juicy Lead 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 28
+    },
+    {
+      "name": "Portament Ld",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 29
+    },
+    {
+      "name": "Reso Juno",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 30
+    },
+    {
+      "name": "Air Lead 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 31
+    },
+    {
+      "name": "Air Lead 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 32
+    },
+    {
+      "name": "Reso Pulser",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 33
+    },
+    {
+      "name": "Growl Lead",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 34
+    },
+    {
+      "name": "Vintager 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 35
+    },
+    {
+      "name": "Vintager 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 36
+    },
+    {
+      "name": "Vintager 3",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 37
+    },
+    {
+      "name": "SuperSaw Ld",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 38
+    },
+    {
+      "name": "5th SawLead1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 39
+    },
+    {
+      "name": "5th SawLead2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 40
+    },
+    {
+      "name": "Simple Sqr",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 41
+    },
+    {
+      "name": "Round Sqr 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 42
+    },
+    {
+      "name": "Round Sqr 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 43
+    },
+    {
+      "name": "Square Ld 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 44
+    },
+    {
+      "name": "Square Ld 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 45
+    },
+    {
+      "name": "Square Ld 3",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 46
+    },
+    {
+      "name": "Square Ld 4",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 47
+    },
+    {
+      "name": "Square Ld 5",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 48
+    },
+    {
+      "name": "Square Ld 6",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 49
+    },
+    {
+      "name": "Square Ld 7",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 50
+    },
+    {
+      "name": "Square Ld 8",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 51
+    },
+    {
+      "name": "Square Ld 9",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 52
+    },
+    {
+      "name": "Square Ld 10",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 53
+    },
+    {
+      "name": "Square Ld 11",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 54
+    },
+    {
+      "name": "Square Ld 12",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 55
+    },
+    {
+      "name": "Square Ld 13",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 56
+    },
+    {
+      "name": "Square Ld 14",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 57
+    },
+    {
+      "name": "Square Ld 15",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 58
+    },
+    {
+      "name": "Squareoff",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 59
+    },
+    {
+      "name": "Brite Sqr 1",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 60
+    },
+    {
+      "name": "Brite Sqr 2",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 61
+    },
+    {
+      "name": "Brite Sqr 3",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 62
+    },
+    {
+      "name": "Cpt McSquare",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 63
+    },
+    {
+      "name": "Tekno Sqr",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 64
+    },
+    {
+      "name": "Octa Square",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 65
+    },
+    {
+      "name": "Pure Square",
+      "msb": 87,
+      "lsb": 76,
+      "pc": 66
+    },
+    {
+      "name": "Tekno Ld 24",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 6
+    },
+    {
+      "name": "Tekno Ld 25",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 7
+    },
+    {
+      "name": "Tekno Ld 26",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 8
+    },
+    {
+      "name": "Tekno Ld 27",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 9
+    },
+    {
+      "name": "Tekno Ld 28",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 10
+    },
+    {
+      "name": "Tekno Ld 29",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 11
+    },
+    {
+      "name": "Tekno Ld 30",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 12
+    },
+    {
+      "name": "Tekno Ld 31",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 13
+    },
+    {
+      "name": "Tekno Ld 32",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 14
+    },
+    {
+      "name": "Tekno Ld 33",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 15
+    },
+    {
+      "name": "Tekno Ld 34",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 16
+    },
+    {
+      "name": "Tekno Ld 35",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 17
+    },
+    {
+      "name": "Tekno Ld 36",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 18
+    },
+    {
+      "name": "JP80 Ring-80",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 19
+    },
+    {
+      "name": "Distroubled",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 20
+    },
+    {
+      "name": "Hover Dive 1",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 21
+    },
+    {
+      "name": "Hover Dive 2",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 22
+    },
+    {
+      "name": "OhWowWow",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 23
+    },
+    {
+      "name": "Broken Lead",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 24
+    },
+    {
+      "name": "Raverborg",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 59
+    },
+    {
+      "name": "SquareLead 1",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 77
+    },
+    {
+      "name": "SquareLead 2",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 78
+    },
+    {
+      "name": "You and Luck",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 79
+    },
+    {
+      "name": "Belly Lead",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 80
+    },
+    {
+      "name": "WhistlinAtom",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 81
+    },
+    {
+      "name": "Edye Boost",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 82
+    },
+    {
+      "name": "MG Solo",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 83
+    },
+    {
+      "name": "FXM Saw Lead",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 84
+    },
+    {
+      "name": "Sawteeth",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 85
+    },
+    {
+      "name": "Smoothe",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 86
+    },
+    {
+      "name": "MG Lead",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 87
+    },
+    {
+      "name": "MG Interval",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 88
+    },
+    {
+      "name": "Pulse Lead 1",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 89
+    },
+    {
+      "name": "Pulse Lead 2",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 90
+    },
+    {
+      "name": "Little Devil",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 91
+    },
+    {
+      "name": "Loud SynLead",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 92
+    },
+    {
+      "name": "Analog Lead",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 93
+    },
+    {
+      "name": "5th Lead",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 94
+    },
+    {
+      "name": "Mental Chord",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 66
+    },
+    {
+      "name": "House Chord",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 67
+    },
+    {
+      "name": "Booster Bips",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 69
+    },
+    {
+      "name": "VintagePlunk",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 70
+    },
+    {
+      "name": "Resojuice",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 75
+    },
+    {
+      "name": "Dist TB-303",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 77
+    },
+    {
+      "name": "Warm Pipe",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 84
+    },
+    {
+      "name": "Pure Pipe",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 85
+    },
+    {
+      "name": "SH-2000",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 86
+    },
+    {
+      "name": "X..? Whistle",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 87
+    },
+    {
+      "name": "Jay Vee Solo",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 88
+    },
+    {
+      "name": "Progresso Ld",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 89
+    },
+    {
+      "name": "Adrenaline",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 90
+    },
+    {
+      "name": "Marcato Str 87 82 75 PR-E 0650 Soaring Saws",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 10
+    },
+    {
+      "name": "Square Roots",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 11
+    },
+    {
+      "name": "BOG",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 12
+    },
+    {
+      "name": "Talking Box",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 13
+    },
+    {
+      "name": "Retro Lead",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 14
+    },
+    {
+      "name": "Leads United",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 16
+    },
+    {
+      "name": "FullChmbrStr 87 82 79 PR-E 0657 Dirty Sync",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 17
+    },
+    {
+      "name": "DistortaSync",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 18
+    },
+    {
+      "name": "Blistering",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 19
+    },
+    {
+      "name": "2ndRateChord",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 94
+    },
+    {
+      "name": "RageInYouth",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 95
+    },
+    {
+      "name": "MinorIncidnt",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 96
+    },
+    {
+      "name": "Phunky DC",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 97
+    },
+    {
+      "name": "Agent X",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 98
+    },
+    {
+      "name": "Looney 2nz",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 100
+    },
+    {
+      "name": "DeeperBeeper",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 102
+    },
+    {
+      "name": "Powersoaker",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 68
+    },
+    {
+      "name": "Mean Thing",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 69
+    },
+    {
+      "name": "Jet Sync",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 70
+    },
+    {
+      "name": "Boss’d Synth",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 107
+    },
+    {
+      "name": "Cross Fire",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 108
+    },
+    {
+      "name": "Techno Cave",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 109
+    },
+    {
+      "name": "Generator",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 110
+    },
+    {
+      "name": "GenderBender",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 111
+    },
+    {
+      "name": "Xtremities",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 112
+    },
+    {
+      "name": "AM 05:59",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 113
+    }
+  ],
+  "organ": [
+    {
+      "name": "PositiveOrg /Mod",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 72
+    },
+    {
+      "name": "Grand Pipes",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 73
+    },
+    {
+      "name": "Cathedral",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 60
+    },
+    {
+      "name": "Church Pipes",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 61
+    }
+  ],
+  "pad": [
+    {
+      "name": "Shine Pad",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 25
+    },
+    {
+      "name": "Ambien",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 26
+    },
+    {
+      "name": "Formant Pad",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 27
+    },
+    {
+      "name": "XMod N Pole",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 28
+    },
+    {
+      "name": "Sawchestra",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 29
+    },
+    {
+      "name": "Release 2 Mod",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 30
+    },
+    {
+      "name": "Pad-o-wan",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 31
+    },
+    {
+      "name": "Waterfront",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 32
+    },
+    {
+      "name": "Resonant Gravity",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 33
+    },
+    {
+      "name": "XMod Pad",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 34
+    },
+    {
+      "name": "Droner Pad",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 35
+    },
+    {
+      "name": "Chasing Amy",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 36
+    },
+    {
+      "name": "Materials Pad",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 37
+    },
+    {
+      "name": "Jarresque Pad",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 38
+    },
+    {
+      "name": "Delayed Cascade",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 39
+    },
+    {
+      "name": "Diorama",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 40
+    },
+    {
+      "name": "Enochian",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 41
+    },
+    {
+      "name": "Firefly Chaser",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 42
+    },
+    {
+      "name": "Echoes of JD-XA",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 43
+    },
+    {
+      "name": "In the sky",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 44
+    },
+    {
+      "name": "Delicate",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 45
+    },
+    {
+      "name": "Hot Ring Pad",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 46
+    },
+    {
+      "name": "Blackhole for Me",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 47
+    },
+    {
+      "name": "No Juno",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 48
+    },
+    {
+      "name": "Teary Strings",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 49
+    },
+    {
+      "name": "Polymod",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 50
+    },
+    {
+      "name": "Chemtrails",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 51
+    },
+    {
+      "name": "Unreal Pad",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 52
+    },
+    {
+      "name": "Tricycle",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 53
+    },
+    {
+      "name": "Digitalis",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 54
+    },
+    {
+      "name": "XMod2 String",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 55
+    },
+    {
+      "name": "XMod2 Sweep",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 56
+    },
+    {
+      "name": "Linear Synth Pad",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 57
+    },
+    {
+      "name": "Fantasia 2019",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 58
+    },
+    {
+      "name": "Fantom Overture",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 101
+    },
+    {
+      "name": "Fade Pad",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 102
+    },
+    {
+      "name": "Soft Saw Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 26
+    },
+    {
+      "name": "Juno P13 Str",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 27
+    },
+    {
+      "name": "5th DLA Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 28
+    },
+    {
+      "name": "Nu Epic Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 29
+    },
+    {
+      "name": "PWM Basic Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 30
+    },
+    {
+      "name": "PWM Hard Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 31
+    },
+    {
+      "name": "Sawtooth Str",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 32
+    },
+    {
+      "name": "PWM Soft Pad 1",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 33
+    },
+    {
+      "name": "Soft Pad 1",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 34
+    },
+    {
+      "name": "PWM Soft Pad 2",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 35
+    },
+    {
+      "name": "PWM Soft Pad 3",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 36
+    },
+    {
+      "name": "Soft Pad 2",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 37
+    },
+    {
+      "name": "Chorus Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 38
+    },
+    {
+      "name": "AX Hollow Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 39
+    },
+    {
+      "name": "AX Heaven Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 40
+    },
+    {
+      "name": "Shimmer Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 41
+    },
+    {
+      "name": "Scape Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 42
+    },
+    {
+      "name": "Str of Breath",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 43
+    },
+    {
+      "name": "Angels Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 44
+    },
+    {
+      "name": "JX Strings",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 45
+    },
+    {
+      "name": "PWM Sweep Pad 1",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 46
+    },
+    {
+      "name": "PWM Sweep Pad 2",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 47
+    },
+    {
+      "name": "Trance Sweep Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 48
+    },
+    {
+      "name": "Phase Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 49
+    },
+    {
+      "name": "Cosmic Rays",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 50
+    },
+    {
+      "name": "Phase Super Saw",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 51
+    },
+    {
+      "name": "Phase PWM Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 52
+    },
+    {
+      "name": "AX Voyager",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 53
+    },
+    {
+      "name": "Bend Pad",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 54
+    },
+    {
+      "name": "Tuned Nz 1",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 55
+    },
+    {
+      "name": "Tuned Nz 2",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 56
+    },
+    {
+      "name": "Tuned Nz 3",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 57
+    },
+    {
+      "name": "SL-JP8 5",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 5
+    },
+    {
+      "name": "SL-JP8 8",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 8
+    },
+    {
+      "name": "SL-JP8 12",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 12
+    },
+    {
+      "name": "SL-JP8 16",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 16
+    },
+    {
+      "name": "SL-D50 1",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 119
+    },
+    {
+      "name": "SL-D50 2",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 120
+    },
+    {
+      "name": "SL-D50 3",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 121
+    },
+    {
+      "name": "SL-D50 4",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 122
+    },
+    {
+      "name": "SL-D50 5",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 123
+    },
+    {
+      "name": "SL-D50 8",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 126
+    },
+    {
+      "name": "SL-D50 10",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 128
+    },
+    {
+      "name": "Cloud Pad",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 66
+    },
+    {
+      "name": "Slow Pad 1",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 67
+    },
+    {
+      "name": "JP8 Strings1",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 1
+    },
+    {
+      "name": "JP8 Strings2",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 2
+    },
+    {
+      "name": "JP8 Strings3",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 3
+    },
+    {
+      "name": "JP8 Strings4",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 4
+    },
+    {
+      "name": "JP8 Strings5",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 5
+    },
+    {
+      "name": "JP8 Strings6",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 6
+    },
+    {
+      "name": "JP8 Strings7",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 7
+    },
+    {
+      "name": "JP8 Strings8",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 8
+    },
+    {
+      "name": "JP8 Strings9",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 9
+    },
+    {
+      "name": "JP8Strings10",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 10
+    },
+    {
+      "name": "JP8Strings11",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 11
+    },
+    {
+      "name": "JP8Strings12",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 12
+    },
+    {
+      "name": "JP8Strings13",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 13
+    },
+    {
+      "name": "JP8Strings14",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 14
+    },
+    {
+      "name": "JP8Strings15",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 15
+    },
+    {
+      "name": "JP8Strings16",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 16
+    },
+    {
+      "name": "JP-8 Pad 1",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 17
+    },
+    {
+      "name": "JP-8 Pad 2",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 18
+    },
+    {
+      "name": "JP-8 Pad 3",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 19
+    },
+    {
+      "name": "JP-8 Pad 4",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 20
+    },
+    {
+      "name": "JUNO Str 1",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 21
+    },
+    {
+      "name": "JUNO Str 2",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 22
+    },
+    {
+      "name": "JUNO Str 3",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 23
+    },
+    {
+      "name": "JX Strings",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 24
+    },
+    {
+      "name": "JP8 Hollow 1",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 92
+    },
+    {
+      "name": "JP8 Hollow 2",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 93
+    },
+    {
+      "name": "JP8 Hollow 3",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 94
+    },
+    {
+      "name": "Hollow Pad 1",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 95
+    },
+    {
+      "name": "Hollow Pad 2",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 96
+    },
+    {
+      "name": "Simple Air",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 97
+    },
+    {
+      "name": "Air Pad",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 98
+    },
+    {
+      "name": "Glass Pad",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 99
+    },
+    {
+      "name": "Flute Pad",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 100
+    },
+    {
+      "name": "Seek Flute",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 101
+    },
+    {
+      "name": "Syn Pad 1",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 102
+    },
+    {
+      "name": "Syn Pad 2",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 103
+    },
+    {
+      "name": "Syn Pad 3",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 104
+    },
+    {
+      "name": "Syn Pad 4",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 105
+    },
+    {
+      "name": "Syn Pad 5",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 106
+    },
+    {
+      "name": "Syn Pad 6",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 107
+    },
+    {
+      "name": "Syn Pad 7",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 108
+    },
+    {
+      "name": "Syn Pad 8",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 109
+    },
+    {
+      "name": "Syn Pad 9",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 110
+    },
+    {
+      "name": "Syn Pad 10",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 111
+    },
+    {
+      "name": "Syn Pad 11",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 112
+    },
+    {
+      "name": "Syn Pad 12",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 113
+    },
+    {
+      "name": "Syn Pad 13",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 114
+    },
+    {
+      "name": "Syn Pad 14",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 115
+    },
+    {
+      "name": "Syn Pad 15",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 116
+    },
+    {
+      "name": "Syn Pad 16",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 117
+    },
+    {
+      "name": "Syn Pad 17",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 118
+    },
+    {
+      "name": "Syn Pad 18",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 119
+    },
+    {
+      "name": "Syn Pad 19",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 120
+    },
+    {
+      "name": "Syn Pad 20",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 121
+    },
+    {
+      "name": "Syn Pad 21",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 122
+    },
+    {
+      "name": "Syn Pad 22",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 123
+    },
+    {
+      "name": "Syn Pad 23",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 124
+    },
+    {
+      "name": "Hybrid Str 1",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 125
+    },
+    {
+      "name": "Hybrid Str 2",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 126
+    },
+    {
+      "name": "Hybrid Str 3",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 127
+    },
+    {
+      "name": "LFO Pad 1",
+      "msb": 87,
+      "lsb": 69,
+      "pc": 128
+    },
+    {
+      "name": "LFO Pad 2",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 1
+    },
+    {
+      "name": "RETROX 139",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 2
+    },
+    {
+      "name": "I Sync So",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 3
+    },
+    {
+      "name": "Sea Waves",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 4
+    },
+    {
+      "name": "FireFlies",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 5
+    },
+    {
+      "name": "Particles",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 6
+    },
+    {
+      "name": "Phr Str 1",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 7
+    },
+    {
+      "name": "Phr Str 2",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 8
+    },
+    {
+      "name": "Phr Str 3",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 9
+    },
+    {
+      "name": "Phr Str 4",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 10
+    },
+    {
+      "name": "Phr Str 5",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 11
+    },
+    {
+      "name": "Phr Str 6",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 12
+    },
+    {
+      "name": "Phr Str 7",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 13
+    },
+    {
+      "name": "Phr Str 8",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 14
+    },
+    {
+      "name": "Phr Str 9",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 15
+    },
+    {
+      "name": "Phr Str 10",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 16
+    },
+    {
+      "name": "Phr Str 11",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 17
+    },
+    {
+      "name": "Stone Pad",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 18
+    },
+    {
+      "name": "JP8 Stone 1",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 19
+    },
+    {
+      "name": "JP8 Stone 2",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 20
+    },
+    {
+      "name": "Sweep Pad 1",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 21
+    },
+    {
+      "name": "Sweep Pad 2",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 22
+    },
+    {
+      "name": "Sweep Pad 3",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 23
+    },
+    {
+      "name": "Sweep Pad 4",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 24
+    },
+    {
+      "name": "Sweep Pad 5",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 25
+    },
+    {
+      "name": "Sweep Pad 6",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 26
+    },
+    {
+      "name": "Sweep Pad 7",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 27
+    },
+    {
+      "name": "Sweep Pad 8",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 28
+    },
+    {
+      "name": "Sweep Pad 9",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 29
+    },
+    {
+      "name": "Sweep Pad 10",
+      "msb": 87,
+      "lsb": 70,
+      "pc": 30
+    },
+    {
+      "name": "DreamingBox",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 110
+    },
+    {
+      "name": "New Jupiter",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 111
+    },
+    {
+      "name": "Analog Dream",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 112
+    },
+    {
+      "name": "Huge MIDI 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 113
+    },
+    {
+      "name": "Huge MIDI 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 114
+    },
+    {
+      "name": "Huge MIDI 3",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 115
+    },
+    {
+      "name": "MIDI Key",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 116
+    },
+    {
+      "name": "Pipe Key",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 117
+    },
+    {
+      "name": "Vox Key",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 118
+    },
+    {
+      "name": "Magichand",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 119
+    },
+    {
+      "name": "AnalogBell 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 120
+    },
+    {
+      "name": "AnalogBell 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 121
+    },
+    {
+      "name": "AnalogBell 3",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 122
+    },
+    {
+      "name": "AnalogBell 4",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 123
+    },
+    {
+      "name": "Synth Sniper",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 124
+    },
+    {
+      "name": "Temper Bell",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 125
+    },
+    {
+      "name": "Icycle",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 126
+    },
+    {
+      "name": "Pipe Chatter",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 127
+    },
+    {
+      "name": "Spring Wind",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 128
+    },
+    {
+      "name": "JP80 SynHarp",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 1
+    },
+    {
+      "name": "D-50 Stack",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 71
+    },
+    {
+      "name": "Fantasia JV",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 72
+    },
+    {
+      "name": "Jimmee Dee",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 73
+    },
+    {
+      "name": "Heavenals",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 74
+    },
+    {
+      "name": "Mallet Pad",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 75
+    },
+    {
+      "name": "Huff N Stuff",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 76
+    },
+    {
+      "name": "BellVox 1080",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 78
+    },
+    {
+      "name": "Fantasy Vox",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 79
+    },
+    {
+      "name": "JP-8 Str 1",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 51
+    },
+    {
+      "name": "JP-8 Str 2",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 52
+    },
+    {
+      "name": "E-Motion Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 53
+    },
+    {
+      "name": "JP-8 Str 3",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 54
+    },
+    {
+      "name": "Vintage Orch",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 55
+    },
+    {
+      "name": "JUNO Strings",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 56
+    },
+    {
+      "name": "Gigantalog",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 57
+    },
+    {
+      "name": "PWM Strings",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 58
+    },
+    {
+      "name": "Warmth",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 59
+    },
+    {
+      "name": "ORBit Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 60
+    },
+    {
+      "name": "Deep Strings",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 61
+    },
+    {
+      "name": "Pulsify",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 62
+    },
+    {
+      "name": "Pulse Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 63
+    },
+    {
+      "name": "Greek Power",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 64
+    },
+    {
+      "name": "Harmonicum",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 65
+    },
+    {
+      "name": "D-50 Heaven",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 66
+    },
+    {
+      "name": "Pop Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 68
+    },
+    {
+      "name": "Dreamesque",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 69
+    },
+    {
+      "name": "Square Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 70
+    },
+    {
+      "name": "JP-8 Hollow",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 71
+    },
+    {
+      "name": "JP-8Haunting",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 72
+    },
+    {
+      "name": "Heirborne",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 73
+    },
+    {
+      "name": "Hush Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 74
+    },
+    {
+      "name": "Jet Pad 1",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 75
+    },
+    {
+      "name": "Jet Pad 2",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 76
+    },
+    {
+      "name": "Phaze Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 77
+    },
+    {
+      "name": "Phaze Str",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 78
+    },
+    {
+      "name": "Jet Str Ens",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 79
+    },
+    {
+      "name": "Pivotal Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 80
+    },
+    {
+      "name": "3D Flanged",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 81
+    },
+    {
+      "name": "Fantawine",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 82
+    },
+    {
+      "name": "Glassy Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 83
+    },
+    {
+      "name": "Moving Glass",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 84
+    },
+    {
+      "name": "Glasswaves",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 85
+    },
+    {
+      "name": "Shiny Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 86
+    },
+    {
+      "name": "ShiftedGlass",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 87
+    },
+    {
+      "name": "Chime Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 88
+    },
+    {
+      "name": "Spin Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 89
+    },
+    {
+      "name": "Rotary Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 90
+    },
+    {
+      "name": "Dawn 2 Dusk",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 91
+    },
+    {
+      "name": "Aurora",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 92
+    },
+    {
+      "name": "5th Sweep",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 101
+    },
+    {
+      "name": "Crash Pad",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 110
+    },
+    {
+      "name": "Feedback VOX",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 111
+    },
+    {
+      "name": "Glass Blower",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 92
+    },
+    {
+      "name": "Earth Blow",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 93
+    },
+    {
+      "name": "JX SqrCarpet",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 94
+    },
+    {
+      "name": "Dimensional",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 95
+    },
+    {
+      "name": "Jupiterings",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 96
+    },
+    {
+      "name": "Analog Drama",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 97
+    },
+    {
+      "name": "Rich Dynapad",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 98
+    },
+    {
+      "name": "Silky Way",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 99
+    },
+    {
+      "name": "Gluey Pad",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 100
+    },
+    {
+      "name": "BandPass Mod",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 101
+    },
+    {
+      "name": "Soundtraque",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 102
+    },
+    {
+      "name": "Translucence",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 103
+    },
+    {
+      "name": "Darkshine",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 104
+    },
+    {
+      "name": "D’light",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 105
+    },
+    {
+      "name": "December Sky",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 106
+    },
+    {
+      "name": "Octapad",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 107
+    },
+    {
+      "name": "JUNO Power!",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 108
+    },
+    {
+      "name": "Spectrum Mod",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 109
+    },
+    {
+      "name": "Stringsheen",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 110
+    },
+    {
+      "name": "GR500 TmpDly",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 111
+    },
+    {
+      "name": "Mod DirtyWav",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 112
+    },
+    {
+      "name": "Silicon Str",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 113
+    },
+    {
+      "name": "D50FantaPerc",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 114
+    },
+    {
+      "name": "Rotodreams",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 115
+    },
+    {
+      "name": "Glass Orbit",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 114
+    },
+    {
+      "name": "5th Atm /Aft",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 115
+    },
+    {
+      "name": "Lo-fi Sweep",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 116
+    },
+    {
+      "name": "Modular Life",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 117
+    },
+    {
+      "name": "Combing",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 119
+    },
+    {
+      "name": "Rolling 5ths",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 120
+    },
+    {
+      "name": "Analogue Str",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 121
+    },
+    {
+      "name": "Lunar Strngs",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 122
+    }
+  ],
+  "piano": [
+    {
+      "name": "Ac Pop Piano 1",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 61
+    },
+    {
+      "name": "Rocker Piano",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 62
+    },
+    {
+      "name": "Ragtime Piano",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 63
+    },
+    {
+      "name": "Ac Pop Piano 2",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 64
+    },
+    {
+      "name": "Piano + Str 1",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 65
+    },
+    {
+      "name": "Piano + Str 2",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 66
+    },
+    {
+      "name": "E.Piano",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 67
+    },
+    {
+      "name": "Mono Piano",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 25
+    },
+    {
+      "name": "JD-800 Piano",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 26
+    },
+    {
+      "name": "AX Honky-tonk",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 27
+    },
+    {
+      "name": "DNC Piano",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 28
+    },
+    {
+      "name": "Blend Piano",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 29
+    },
+    {
+      "name": "E-Grand",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 30
+    },
+    {
+      "name": "Metal Key",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 31
+    },
+    {
+      "name": "Dyno EP",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 32
+    },
+    {
+      "name": "Stage EP",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 33
+    },
+    {
+      "name": "AX Vintage EP",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 34
+    },
+    {
+      "name": "Phase EP 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 35
+    },
+    {
+      "name": "Phase EP 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 36
+    },
+    {
+      "name": "Phase Stage",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 37
+    },
+    {
+      "name": "AX Tremolo EP",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 38
+    },
+    {
+      "name": "Psycho EP",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 39
+    },
+    {
+      "name": "SA EP",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 40
+    },
+    {
+      "name": "Wurly EP",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 41
+    },
+    {
+      "name": "Dist Wurly",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 42
+    },
+    {
+      "name": "FM EP 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 43
+    },
+    {
+      "name": "FM EP 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 44
+    },
+    {
+      "name": "AX Harpsichord",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 45
+    },
+    {
+      "name": "AX Clav 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 46
+    },
+    {
+      "name": "AX Clav 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 47
+    },
+    {
+      "name": "Twah Clav",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 48
+    },
+    {
+      "name": "Phase Clav",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 49
+    },
+    {
+      "name": "AX Pulse Clav 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 50
+    },
+    {
+      "name": "AX Pulse Clav 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 51
+    },
+    {
+      "name": "Sweepin Clav",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 52
+    },
+    {
+      "name": "Lord Organ 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 53
+    },
+    {
+      "name": "Lord Organ 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 54
+    },
+    {
+      "name": "Perc Rotary Org",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 55
+    },
+    {
+      "name": "Rotary Org 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 56
+    },
+    {
+      "name": "Rotary Org 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 57
+    },
+    {
+      "name": "Rotary Org 3",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 58
+    },
+    {
+      "name": "Old Fashion",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 59
+    },
+    {
+      "name": "Vintage Organ 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 60
+    },
+    {
+      "name": "Vintage Organ 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 61
+    },
+    {
+      "name": "VK Organ 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 62
+    },
+    {
+      "name": "VK Organ 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 63
+    },
+    {
+      "name": "D-Bars 1",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 64
+    },
+    {
+      "name": "D-Bars 2",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 65
+    },
+    {
+      "name": "D-Bars 3",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 66
+    },
+    {
+      "name": "D-Bars 4",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 67
+    },
+    {
+      "name": "D-Bars 5",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 68
+    },
+    {
+      "name": "Dist Organ",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 69
+    },
+    {
+      "name": "Juno P14 Organ",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 70
+    },
+    {
+      "name": "D-50 Organ",
+      "msb": 87,
+      "lsb": 66,
+      "pc": 71
+    },
+    {
+      "name": "FM EP 1",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 58
+    },
+    {
+      "name": "FM EP 2",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 59
+    },
+    {
+      "name": "FM EP 3",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 60
+    },
+    {
+      "name": "FM EP 4",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 61
+    },
+    {
+      "name": "FM EP 5",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 62
+    },
+    {
+      "name": "FM EP 6",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 63
+    },
+    {
+      "name": "FM EPhaser",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 64
+    },
+    {
+      "name": "EP Belle",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 65
+    },
+    {
+      "name": "80’s EP",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 66
+    },
+    {
+      "name": "Spirit Tine",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 67
+    },
+    {
+      "name": "70’s E.Org 1",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 68
+    },
+    {
+      "name": "70’s E.Org 2",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 69
+    },
+    {
+      "name": "Theater 1",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 70
+    },
+    {
+      "name": "Theater 2",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 71
+    },
+    {
+      "name": "Theater 3",
+      "msb": 87,
+      "lsb": 77,
+      "pc": 72
+    },
+    {
+      "name": "Gospel Spin",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 52
+    },
+    {
+      "name": "Roller Spin",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 53
+    },
+    {
+      "name": "Rocker Spin",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 54
+    },
+    {
+      "name": "Tone Wh.Solo",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 55
+    },
+    {
+      "name": "Purple Spin",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 56
+    },
+    {
+      "name": "60’s LeadORG",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 57
+    },
+    {
+      "name": "Assalt Organ",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 58
+    },
+    {
+      "name": "D-50 Organ",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 59
+    },
+    {
+      "name": "Power Octs",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 1
+    },
+    {
+      "name": "WaterPiano2",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 2
+    },
+    {
+      "name": "St.LoFiNoise",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 128
+    }
+  ],
+  "pluck": [
+    {
+      "name": "Sitar",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 101
+    },
+    {
+      "name": "Drone Split",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 102
+    },
+    {
+      "name": "Ethnopluck",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 103
+    },
+    {
+      "name": "Jamisen",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 104
+    },
+    {
+      "name": "Dulcimer",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 105
+    },
+    {
+      "name": "East Melody",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 106
+    },
+    {
+      "name": "MandolinTrem",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 107
+    },
+    {
+      "name": "Harp On It",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 49
+    },
+    {
+      "name": "Harp",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 50
+    },
+    {
+      "name": "Andreas Cave",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 75
+    },
+    {
+      "name": "AmbiPizza",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 76
+    },
+    {
+      "name": "Voxy Nylon",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 77
+    },
+    {
+      "name": "EastrnEurope",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 78
+    },
+    {
+      "name": "Celtic Harp",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 79
+    },
+    {
+      "name": "Reso Sitar",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 80
+    },
+    {
+      "name": "The Ganges",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 81
+    },
+    {
+      "name": "MountainFolk",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 82
+    },
+    {
+      "name": "Byzantine",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 83
+    },
+    {
+      "name": "AsiaPlectrum",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 84
+    },
+    {
+      "name": "VelHarp)Harm",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 85
+    },
+    {
+      "name": "Pluckaphone",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 86
+    }
+  ],
+  "poly": [
+    {
+      "name": "AnalogAtmosphere",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 1
+    },
+    {
+      "name": "Progre.Pluck Mod",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 2
+    },
+    {
+      "name": "Stringbell Synth",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 3
+    },
+    {
+      "name": "P5 Soundtrack",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 4
+    },
+    {
+      "name": "5th Ambi Pluck",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 5
+    },
+    {
+      "name": "Juno Poly Stack",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 6
+    },
+    {
+      "name": "M/S Pulse/Mod",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 7
+    },
+    {
+      "name": "JUNO On Fire",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 8
+    },
+    {
+      "name": "Future Poly/Mod",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 9
+    },
+    {
+      "name": "Synth Edge 1",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 10
+    },
+    {
+      "name": "Future Poly",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 11
+    },
+    {
+      "name": "Future Sine Poly",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 12
+    },
+    {
+      "name": "Close to Lead",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 13
+    },
+    {
+      "name": "Laser Sync Harp",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 14
+    },
+    {
+      "name": "Broken Toys",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 15
+    },
+    {
+      "name": "Arise",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 16
+    },
+    {
+      "name": "Ring Padding",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 17
+    },
+    {
+      "name": "JP8 X-MOD Magic",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 18
+    },
+    {
+      "name": "Heliosphere",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 19
+    },
+    {
+      "name": "Sweet Sustain",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 20
+    },
+    {
+      "name": "New Pizzagogo",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 21
+    },
+    {
+      "name": "S.SAW Orch+Pizz",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 22
+    },
+    {
+      "name": "Slow Sleeper",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 23
+    },
+    {
+      "name": "XMod2 JazzGt",
+      "msb": 87,
+      "lsb": 92,
+      "pc": 24
+    },
+    {
+      "name": "Synth Edge 2",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 103
+    },
+    {
+      "name": "Randen 1986",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 104
+    },
+    {
+      "name": "Clean Me",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 105
+    },
+    {
+      "name": "Cyber Slime",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 106
+    },
+    {
+      "name": "Sunrise",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 107
+    },
+    {
+      "name": "Kaihou Keys",
+      "msb": 87,
+      "lsb": 93,
+      "pc": 108
+    },
+    {
+      "name": "Square Saw",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 71
+    },
+    {
+      "name": "Juno SAW",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 72
+    },
+    {
+      "name": "Filter Env Key",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 73
+    },
+    {
+      "name": "Mini Growl",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 74
+    },
+    {
+      "name": "Round SQR",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 75
+    },
+    {
+      "name": "SQR Atk Pop",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 76
+    },
+    {
+      "name": "Touchy Key",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 77
+    },
+    {
+      "name": "Poly Synth 1",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 78
+    },
+    {
+      "name": "Poly Synth 2",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 79
+    },
+    {
+      "name": "Poly Synth 3",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 80
+    },
+    {
+      "name": "Ox Synth",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 81
+    },
+    {
+      "name": "Trance Synth",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 82
+    },
+    {
+      "name": "Super Saw Key 1",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 83
+    },
+    {
+      "name": "Super Saw Key 2",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 84
+    },
+    {
+      "name": "AX Digitaless",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 85
+    },
+    {
+      "name": "SL-JP8 1",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 1
+    },
+    {
+      "name": "SL-JP8 2",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 2
+    },
+    {
+      "name": "Sl-JP8 10",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 10
+    },
+    {
+      "name": "SL-JP8 11",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 11
+    },
+    {
+      "name": "SL-JP8 17",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 17
+    },
+    {
+      "name": "SL-D50 6",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 124
+    },
+    {
+      "name": "SL-D50 7",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 125
+    },
+    {
+      "name": "SL-D50 9",
+      "msb": 87,
+      "lsb": 68,
+      "pc": 127
+    },
+    {
+      "name": "Poly Syn 6",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 104
+    },
+    {
+      "name": "Poly Syn 7",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 105
+    },
+    {
+      "name": "Poly Syn 8",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 106
+    },
+    {
+      "name": "Poly Syn 9",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 107
+    },
+    {
+      "name": "Poly Syn 10",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 108
+    },
+    {
+      "name": "Poly Syn 11",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 109
+    },
+    {
+      "name": "Poly Syn 12",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 110
+    },
+    {
+      "name": "Poly Syn 13",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 111
+    },
+    {
+      "name": "Poly Syn 14",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 112
+    },
+    {
+      "name": "Poly Syn 15",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 113
+    },
+    {
+      "name": "Poly Syn 16",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 114
+    },
+    {
+      "name": "Poly Syn 17",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 115
+    },
+    {
+      "name": "Poly Syn 18",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 116
+    },
+    {
+      "name": "Poly Syn 19",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 117
+    },
+    {
+      "name": "Poly Syn 20",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 118
+    },
+    {
+      "name": "Poly Syn 21",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 119
+    },
+    {
+      "name": "Poly Syn 22",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 120
+    },
+    {
+      "name": "Poly Syn 23",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 121
+    },
+    {
+      "name": "Poly Syn 24",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 122
+    },
+    {
+      "name": "Poly Syn 25",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 123
+    },
+    {
+      "name": "Poly Syn 26",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 124
+    },
+    {
+      "name": "Saw Dtune",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 125
+    },
+    {
+      "name": "Jester",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 126
+    },
+    {
+      "name": "Fusion Decay",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 127
+    },
+    {
+      "name": "Polysubito",
+      "msb": 87,
+      "lsb": 71,
+      "pc": 128
+    },
+    {
+      "name": "Wave Scan",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 1
+    },
+    {
+      "name": "Wire String",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 2
+    },
+    {
+      "name": "Brusky Key",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 3
+    },
+    {
+      "name": "Cutter Key",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 4
+    },
+    {
+      "name": "PolySyn Atk",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 5
+    },
+    {
+      "name": "Harpsitone",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 6
+    },
+    {
+      "name": "Digi Key 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 7
+    },
+    {
+      "name": "Digi Key 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 8
+    },
+    {
+      "name": "Digi Key 3",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 9
+    },
+    {
+      "name": "Digi Key 4",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 10
+    },
+    {
+      "name": "Digi Key 5",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 11
+    },
+    {
+      "name": "Digi Key 6",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 12
+    },
+    {
+      "name": "Digi Poly 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 13
+    },
+    {
+      "name": "Digi Poly 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 14
+    },
+    {
+      "name": "Bit Poly 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 15
+    },
+    {
+      "name": "Bit Poly 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 16
+    },
+    {
+      "name": "Bit Poly 3",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 17
+    },
+    {
+      "name": "Bit Poly 4",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 18
+    },
+    {
+      "name": "Bit Poly 5",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 19
+    },
+    {
+      "name": "Bit Poly 6",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 20
+    },
+    {
+      "name": "Bit Poly 7",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 21
+    },
+    {
+      "name": "Bit Poly 8",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 22
+    },
+    {
+      "name": "Bit Poly 9",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 23
+    },
+    {
+      "name": "Bit Poly 10",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 24
+    },
+    {
+      "name": "5th Poly 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 25
+    },
+    {
+      "name": "5th Poly 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 26
+    },
+    {
+      "name": "5th Poly 3",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 27
+    },
+    {
+      "name": "Poly Aug 5th",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 28
+    },
+    {
+      "name": "5th Key",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 29
+    },
+    {
+      "name": "HPF Poly 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 30
+    },
+    {
+      "name": "HPF Poly 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 31
+    },
+    {
+      "name": "BPF Poly 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 32
+    },
+    {
+      "name": "BPF Poly 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 33
+    },
+    {
+      "name": "Sweep Poly 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 34
+    },
+    {
+      "name": "Sweep Poly 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 35
+    },
+    {
+      "name": "Sweep Poly 3",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 36
+    },
+    {
+      "name": "Scoop Poly 1",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 37
+    },
+    {
+      "name": "Scoop Poly 2",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 38
+    },
+    {
+      "name": "Scoop Poly 3",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 39
+    },
+    {
+      "name": "Scoop Poly 4",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 40
+    },
+    {
+      "name": "Scoop Poly 5",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 41
+    },
+    {
+      "name": "Scoop Poly 6",
+      "msb": 87,
+      "lsb": 72,
+      "pc": 42
+    },
+    {
+      "name": "SEQ 1",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 35
+    },
+    {
+      "name": "SEQ 2",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 36
+    },
+    {
+      "name": "SEQ 3",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 37
+    },
+    {
+      "name": "SEQ 4",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 38
+    },
+    {
+      "name": "SEQ 5",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 39
+    },
+    {
+      "name": "SEQ 6",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 40
+    },
+    {
+      "name": "SEQ 7",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 41
+    },
+    {
+      "name": "SEQ 8",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 42
+    },
+    {
+      "name": "SEQ 9",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 43
+    },
+    {
+      "name": "SEQ 10",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 44
+    },
+    {
+      "name": "SEQ 11",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 45
+    },
+    {
+      "name": "SEQ 12",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 46
+    },
+    {
+      "name": "SEQ 13",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 47
+    },
+    {
+      "name": "SEQ 14",
+      "msb": 87,
+      "lsb": 73,
+      "pc": 48
+    },
+    {
+      "name": "Poly Key",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 62
+    },
+    {
+      "name": "Poly Saws",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 63
+    },
+    {
+      "name": "Poly Pulse",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 64
+    },
+    {
+      "name": "Dual Profs",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 65
+    },
+    {
+      "name": "Saw Mass",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 66
+    },
+    {
+      "name": "Poly Split",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 67
+    },
+    {
+      "name": "Stackoid",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 69
+    },
+    {
+      "name": "Poly Rock",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 70
+    },
+    {
+      "name": "Puff 1080",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 77
+    },
+    {
+      "name": "Square Keys",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 80
+    },
+    {
+      "name": "Pulse Key",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 89
+    },
+    {
+      "name": "Rezoid",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 58
+    },
+    {
+      "name": "Seq Mallet",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 62
+    },
+    {
+      "name": "Intentions",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 63
+    },
+    {
+      "name": "Pick It",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 64
+    },
+    {
+      "name": "Analog Seq",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 65
+    },
+    {
+      "name": "Impact Vox",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 66
+    },
+    {
+      "name": "TeknoSoloVox",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 67
+    },
+    {
+      "name": "Airplaaane",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 100
+    },
+    {
+      "name": "Big BPF",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 103
+    },
+    {
+      "name": "MG Sweep",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 104
+    },
+    {
+      "name": "Techno Dream",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 63
+    },
+    {
+      "name": "Organizer",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 64
+    },
+    {
+      "name": "Civilization",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 65
+    },
+    {
+      "name": "Sequalog",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 68
+    },
+    {
+      "name": "Plik-Plok",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 71
+    },
+    {
+      "name": "RingSequence",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 72
+    },
+    {
+      "name": "Cyber Swing",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 73
+    },
+    {
+      "name": "Keep :-)",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 74
+    },
+    {
+      "name": "B’on d’moov!",
+      "msb": 87,
+      "lsb": 81,
+      "pc": 76
+    },
+    {
+      "name": "Galactic",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 127
+    },
+    {
+      "name": "Powerwiggle",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 128
+    },
+    {
+      "name": "Power Stack",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 2
+    },
+    {
+      "name": "Dolce p/m/f 87 82 71 Strings PR-E 0643 Don’t Jump",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 3
+    },
+    {
+      "name": "Big Bubbles",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 4
+    },
+    {
+      "name": "X-mod Sweep",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 5
+    },
+    {
+      "name": "Bag O’ Bones",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 6
+    },
+    {
+      "name": "AirSoThin",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 7
+    },
+    {
+      "name": "Waspy Pulse",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 9
+    },
+    {
+      "name": "Oscillations",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 118
+    },
+    {
+      "name": "BPFsweep Mod",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 123
+    },
+    {
+      "name": "Queen V",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 124
+    },
+    {
+      "name": "Dreams East",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 73
+    },
+    {
+      "name": "Synergistic",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 74
+    },
+    {
+      "name": "Winky",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 99
+    },
+    {
+      "name": "Shortrave",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 101
+    },
+    {
+      "name": "Percolator",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 103
+    },
+    {
+      "name": "Filter Morph",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 104
+    },
+    {
+      "name": "Choir Bounce",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 105
+    },
+    {
+      "name": "Ambi Voices",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 98
+    },
+    {
+      "name": "Say Yeah !",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 99
+    },
+    {
+      "name": "Pretty Ugly",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 102
+    },
+    {
+      "name": "Con Sequence",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 103
+    },
+    {
+      "name": "BermudaShort",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 104
+    },
+    {
+      "name": "Saw n’ 202",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 105
+    },
+    {
+      "name": "Technoheadz",
+      "msb": 87,
+      "lsb": 84,
+      "pc": 106
+    }
+  ],
+  "strings": [
+    {
+      "name": "Strings 2",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 59
+    },
+    {
+      "name": "Tape Strings",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 63
+    },
+    {
+      "name": "AX Violin",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 67
+    },
+    {
+      "name": "AX Viola",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 68
+    },
+    {
+      "name": "AX Cello",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 69
+    },
+    {
+      "name": "AX Contrabass",
+      "msb": 87,
+      "lsb": 65,
+      "pc": 70
+    },
+    {
+      "name": "Voicey Pizz",
+      "msb": 87,
+      "lsb": 78,
+      "pc": 100
+    },
+    {
+      "name": "Film Orch",
+      "msb": 87,
+      "lsb": 79,
+      "pc": 110
+    },
+    {
+      "name": "ViolinCello",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 43
+    },
+    {
+      "name": "Symphonique",
+      "msb": 87,
+      "lsb": 80,
+      "pc": 44
+    },
+    {
+      "name": "Fat Strings",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 70
+    },
+    {
+      "name": "Strings4Film",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 74
+    },
+    {
+      "name": "ChamberSect.",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 78
+    },
+    {
+      "name": "Henry VIII",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 81
+    },
+    {
+      "name": "Prelude",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 82
+    },
+    {
+      "name": "Str&Brs Orch",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 83
+    },
+    {
+      "name": "Hornz",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 84
+    },
+    {
+      "name": "TudorFanfare",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 85
+    },
+    {
+      "name": "ChamberPlyrs",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 86
+    },
+    {
+      "name": "Trombone Atm",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 104
+    },
+    {
+      "name": "XV Trombone",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 105
+    },
+    {
+      "name": "XV Trumpet",
+      "msb": 87,
+      "lsb": 82,
+      "pc": 106
+    },
+    {
+      "name": "Brass Tubes",
+      "msb": 87,
+      "lsb": 83,
+      "pc": 72
+    }
+  ]
+}

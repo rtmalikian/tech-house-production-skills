@@ -1,0 +1,21 @@
+# Output files (large WAV/MP3)
+output/
+references/separated/
+references/separated_4stem/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# macOS
+.DS_Store
+
+# Audio cache
+*.wav
+*.mp3
+!skills/*.wav
+
+# Temporary
+/tmp/
+*.bak
