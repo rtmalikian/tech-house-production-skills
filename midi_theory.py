@@ -201,10 +201,25 @@ def get_microtonal_offset_for_root(note: int, root: int, scale_name: str,
     return 0
 
 def get_chord_notes(root: int, quality: str, inv: int = 0) -> List[int]:
-    intervals = {'major': [0,4,7], 'minor': [0,3,7], 'dom7': [0,4,7,10]}.get(quality, [0,4,7])
+    """Get chord notes. Tech house uses minor 7ths as default."""
+    intervals = {
+        'major': [0, 4, 7],
+        'minor': [0, 3, 7],
+        'dom7': [0, 4, 7, 10],
+        'min7': [0, 3, 7, 10],      # Minor 7th — THE tech house chord
+        'maj7': [0, 4, 7, 11],      # Major 7th — dreamy, lush
+        'min9': [0, 3, 7, 10, 14],  # Minor 9th — rich, sophisticated
+        'add9': [0, 4, 7, 14],      # Add9 — brighter than plain triad
+        'sus2': [0, 2, 7],          # Suspended 2nd — ambiguous, floating
+        'sus4': [0, 5, 7],          # Suspended 4th — tension
+        'dim': [0, 3, 6],           # Diminished — dark
+        'aug': [0, 4, 8],           # Augmented — tense
+    }.get(quality, [0, 3, 7, 10])  # Default to minor 7th for tech house
     chord = [root + i for i in intervals]
     if inv == 1 and len(chord) >= 3:
         chord = chord[1:] + [chord[0] + 12]
+    elif inv == 2 and len(chord) >= 3:
+        chord = chord[2:] + [chord[0] + 12, chord[1] + 12]
     return sorted(chord)
 
 def get_chord_quality(root: int, scale: List[int]) -> str:

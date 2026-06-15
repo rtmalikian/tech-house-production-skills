@@ -6,51 +6,55 @@ ChordToken = Union[int, str]
 # ============================================================================
 # TECH HOUSE CHORD PROGRESSIONS
 # ============================================================================
-# Tech house uses minimal harmonic content — root notes, fifths, minor triads
-# Chord progressions are simple, repetitive, and hypnotic
+# Based on research: Fisher, Chris Lake, John Summit, Dennis Ferrer
+# Minor 7th chords as default. Simple, repetitive, hypnotic.
+# i-VII-VI-VII is THE classic tech house loop.
 
 # Main groove progressions (2-4 chords, very repetitive)
 VERSE_PROGRESSIONS = {
-    "i-iv-i-v": [0, 5, 0, 7],
-    "i-bVII-i-v": [0, 10, 0, 7],
-    "i-bVI-bVII-i": [0, 8, 10, 0],
-    "i-iv-bVII-i": [0, 5, 10, 0],
-    "i-v-bVI-bVII": [0, 7, 8, 10],
-    "i-bIII-bVII-iv": [0, 3, 10, 5],
-    "i-i-i-i": [0, 0, 0, 0],  # Static/drone — very common in tech house
-    "i-iv-i-iv": [0, 5, 0, 5],
-    "i-v-i-v": [0, 7, 0, 7],
-    "i-bVII-iv-i": [0, 10, 5, 0],
+    "i-VII-VI-VII": [0, 10, 8, 10],    # THE classic tech house loop (Am-G-F-G)
+    "i-VII-VI-V": [0, 10, 8, 7],        # Andalusian cadence — darker
+    "i-iv-VII-III": [0, 5, 10, 3],      # Circular with lift to relative major
+    "i-VI-III-VII": [0, 8, 3, 10],      # Versatile, blurs minor/major
+    "i-iv-i-v": [0, 5, 0, 7],           # Simple minor oscillation
+    "i-VII-i-v": [0, 10, 0, 7],         # Root-centered with movement
+    "i-VI-VII-i": [0, 8, 10, 0],        # Brooding minor
+    "i-iv-VII-i": [0, 5, 10, 0],        # Classic minor loop
+    "i-i-i-i": [0, 0, 0, 0],            # Static/drone — very common in tech house
+    "i-v-i-v": [0, 7, 0, 7],            # Root-5th oscillation
+    "i-VII-iv-i": [0, 10, 5, 0],        # Descending resolution
+    "i-iv-i-iv": [0, 5, 0, 5],          # Minor oscillation
 }
 
 # Drop/peak energy progressions — slightly more movement
 CHORUS_PROGRESSIONS = {
-    "i-iv-v-i": [0, 5, 7, 0],
-    "i-bVII-bVI-v": [0, 10, 8, 7],
-    "i-bIII-iv-v": [0, 3, 5, 7],
-    "i-iv-bVII-v": [0, 5, 10, 7],
-    "i-bVI-bVII-i": [0, 8, 10, 0],
-    "i-v-bVI-bVII": [0, 7, 8, 10],
-    "i-i-i-i": [0, 0, 0, 0],
-    "i-iv-i-v": [0, 5, 0, 7],
+    "i-VII-VI-VII": [0, 10, 8, 10],    # Classic tech house (same as verse — hypnotic)
+    "i-iv-v-i": [0, 5, 7, 0],           # Strong minor resolution
+    "i-VII-VI-V": [0, 10, 8, 7],        # Andalusian — dramatic
+    "i-III-VII-VI": [0, 3, 10, 8],      # Lift then descent
+    "i-iv-VII-v": [0, 5, 10, 7],        # Circular with tension
+    "i-VI-VII-i": [0, 8, 10, 0],        # Brooding
+    "i-i-i-i": [0, 0, 0, 0],            # Single chord vamp
+    "i-v-i-v": [0, 7, 0, 7],            # Root-5th drive
 }
 
 # Intro/Outro — minimal, DJ-friendly
 INTRO_OUTRO_PROGRESSIONS = {
-    "i": [0],
-    "i-i": [0, 0],
-    "i-v": [0, 7],
-    "i-iv": [0, 5],
-    "i-i-i-i": [0, 0, 0, 0],
+    "i": [0],                            # Single root — most common
+    "i-i": [0, 0],                       # Root only
+    "i-v": [0, 7],                       # Root + 5th
+    "i-iv": [0, 5],                      # Root + 4th
+    "i-VII": [0, 10],                    # Root + flat 7th
+    "i-i-i-i": [0, 0, 0, 0],            # Static
 }
 
 # Transition/fill progressions
 FILL_PROGRESSIONS = {
-    "v-i": [7, 0],
-    "iv-v": [5, 7],
-    "bVII-i": [10, 0],
-    "v-bVI": [7, 8],
-    "iv-i": [5, 0],
+    "v-i": [7, 0],                       # Classic resolution
+    "iv-v": [5, 7],                      # Rising tension
+    "VII-i": [10, 0],                    # Flat 7th resolution
+    "iv-i": [5, 0],                      # Plagal resolution
+    "VI-VII-i": [8, 10, 0],             # Triple approach
 }
 
 PASSING_CHORDS = {
