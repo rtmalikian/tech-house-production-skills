@@ -258,6 +258,10 @@ def main():
             # Bass preview: last 4 bars of breakdown only (reference pattern)
             bass_should_play = True
             bass_is_preview = True
+        elif bt == 'intro':
+            # Bass preview from bar 0 — full groove from the start
+            bass_should_play = True
+            bass_is_preview = True
         # Note: bass is SILENT during bars 48-75 of breakdown (reference pattern)
 
         if bass_should_play:
@@ -559,27 +563,90 @@ def main():
             dbar = bbD(480, random.randint(0, 3), variation_level=variation_level,
                         is_chorus=True, time_sig=time_sig)
         elif bt == 'breakdown':
-            # NO KICK in breakdown — only hats + percussion for tension
+            # === BREAKDOWN DRUM PATTERN ===
+            # First half (bars 48-63): sparse, atmospheric — NO kick
+            # Second half (bars 64-71): drum BUILD — kick enters, velocity increases
+            # Last 8 bars (bars 72-79): RAPID BUILD — kick intensifies to 16ths
+            
+            bar_in_breakdown = bar - 48  # 0-31 within breakdown
             dbar = []
-            # Closed hat on every other 16th (sparse)
-            for i in range(0, 16, 2):
-                dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': random.randint(40, 60),
-                             'time': i * 120})
-            # Occasional open hat
-            if random.random() < 0.3:
-                dbar.append({'note': GM_DRUM_MAP['OPEN_HAT'], 'velocity': random.randint(35, 50),
-                             'time': 7 * 120})
-        elif bt == 'intro':
-            # Intro: kick + hats only, no clap/snare for first 8 bars
-            if bar < 8:
-                # First 8 bars: kick + closed hat only
-                dbar = []
-                for beat in range(4):
-                    dbar.append({'note': GM_DRUM_MAP['KICK'], 'velocity': random.randint(122, 127),
-                                 'time': beat * 480})
-                for i in range(16):
-                    dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': random.randint(80, 100),
+            
+            if bar_in_breakdown < 16:
+                # First half: sparse hats only, NO kick
+                for i in range(0, 16, 2):
+                    dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': random.randint(40, 60),
                                  'time': i * 120})
+                # Occasional open hat
+                if random.random() < 0.3:
+                    dbar.append({'note': GM_DRUM_MAP['OPEN_HAT'], 'velocity': random.randint(35, 50),
+                                 'time': 7 * 120})
+            
+            elif bar_in_breakdown < 24:
+                # BUILD PHASE 1 (bars 64-71): Kick on quarter notes, velocity building
+                build_progress = (bar_in_breakdown - 16) / 8.0  # 0.0 to 1.0
+                kick_vel = int(60 + build_progress * 67)  # 60 → 127
+                
+                # Kick on every beat (quarter notes)
+                for beat in range(4):
+                    dbar.append({'note': GM_DRUM_MAP['KICK'], 'velocity': kick_vel,
+                                 'time': beat * 480})
+                
+                # Hats on 8th notes, velocity building
+                hat_vel = int(50 + build_progress * 50)  # 50 → 100
+                for i in range(8):
+                    dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': hat_vel,
+                                 'time': i * 240})
+                
+                # Clap on beats 2&4 starting at bar 68
+                if bar_in_breakdown >= 20:
+                    clap_vel = int(60 + build_progress * 60)
+                    dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': clap_vel,
+                                 'time': 1 * 480})
+                    dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': clap_vel,
+                                 'time': 3 * 480})
+            
+            else:
+                # BUILD PHASE 2 (bars 72-79): RAPID BUILD — kick on 16ths, velocity max
+                build_progress = (bar_in_breakdown - 24) / 8.0  # 0.0 to 1.0
+                
+                # Kick on 16th notes — classic build technique
+                kick_vel_start = int(80 + build_progress * 47)  # 80 → 127
+                for i in range(16):
+                    # Velocity increases within the bar too
+                    vel = int(kick_vel_start + (i / 16.0) * (127 - kick_vel_start))
+                    vel = min(127, vel)
+                    dbar.append({'note': GM_DRUM_MAP['KICK'], 'velocity': vel,
+                                 'time': i * 120})
+                
+                # Snare roll on 16ths (last 4 bars only)
+                if bar_in_breakdown >= 28:
+                    snare_vel = int(70 + build_progress * 57)
+                    for i in range(16):
+                        dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': snare_vel,
+                                     'time': i * 120})
+                
+                # Hats on 16ths
+                hat_vel = int(80 + build_progress * 47)
+                for i in range(16):
+                    dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': hat_vel,
+                                 'time': i * 120})
+        elif bt == 'intro':
+            # Intro: kick + hats + clap + bass preview from bar 0
+            # Reference tracks have full groove from the start
+            dbar = []
+            for beat in range(4):
+                dbar.append({'note': GM_DRUM_MAP['KICK'], 'velocity': random.randint(122, 127),
+                             'time': beat * 480})
+            # Clap on beats 2&4 from the start
+            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 110,
+                         'time': 1 * 480})
+            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 110,
+                         'time': 3 * 480})
+            # Hats on 16ths
+            for i in range(16):
+                vel = 120 if i % 4 == 0 else 110 if i % 4 == 2 else 100
+                dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': vel,
+                             'time': i * 120})
             else:
                 # Last 8 bars: add clap on 2&4
                 dbar = bbA(480, random.randint(0, 1), variation_level=0,
@@ -644,6 +711,41 @@ def main():
     lt_st = write_performance_to_track(stab_tr, stab_ev, drums_main_tr, drums_chorus_tr)
     lt_p = write_performance_to_track(pad_tr, pad_ev, drums_main_tr, drums_chorus_tr)
     lt_fx = write_performance_to_track(fx_tr, fx_ev, drums_main_tr, drums_chorus_tr)
+
+    # === MIDI CC AUTOMATION: Filter Cutoff + Resonance Builds ===
+    # During build phase (bars 64-79), send CC 74 (cutoff) and CC 71 (resonance)
+    # that gradually increase to create tension before the drop
+    def add_filter_build_automation(track, channel, bar_length, build_start_bar=64, build_end_bar=80):
+        """Add CC 74 (cutoff) and CC 71 (resonance) automation during build."""
+        cc_interval = bar_length // 4  # Send CC 4 times per bar (every beat)
+        
+        for bar in range(build_start_bar, build_end_bar):
+            build_progress = (bar - build_start_bar) / (build_end_bar - build_start_bar)  # 0.0 → 1.0
+            
+            for beat in range(4):
+                t = (bar * bar_length) + (beat * cc_interval)
+                beat_progress = (beat / 4.0)  # 0.0, 0.25, 0.5, 0.75
+                total_progress = min(1.0, build_progress + beat_progress * (1.0 / (build_end_bar - build_start_bar)))
+                
+                # CC 74: Filter Cutoff (0-127, ramp from 40 to 127)
+                cutoff_val = int(40 + total_progress * 87)
+                cutoff_val = min(127, cutoff_val)
+                track.append(mido.Message('control_change', channel=channel, control=74, value=cutoff_val, time=t))
+                
+                # CC 71: Resonance (0-127, ramp from 30 to 100)
+                resonance_val = int(30 + total_progress * 70)
+                resonance_val = min(127, resonance_val)
+                track.append(mido.Message('control_change', channel=channel, control=71, value=resonance_val, time=t))
+        
+        # Reset after build (at drop)
+        drop_t = build_end_bar * bar_length
+        track.append(mido.Message('control_change', channel=channel, control=74, value=64, time=drop_t))
+        track.append(mido.Message('control_change', channel=channel, control=71, value=40, time=drop_t))
+
+    # Add filter builds to bass, acid, and stab tracks
+    add_filter_build_automation(bass_tr, 0, bar_length)      # Channel 0 = bass
+    add_filter_build_automation(acid_tr, 2, bar_length)      # Channel 2 = acid
+    add_filter_build_automation(stab_tr, 3, bar_length)      # Channel 3 = stab
 
     # === EXPLODED DRUMS ===
     DRUM_NAME_MAP = {

@@ -253,6 +253,32 @@ JSON sidecar with full metadata:
 
 `tech-house` `music-production` `midi` `audio-engineering` `mixing` `mastering` `909` `roland-fantom` `sysex` `python` `automation` `dsp` `audio-analysis`
 
+## Reference Tracks
+
+The pipeline was optimized against these reference tracks (not included — copyright protected):
+
+| Track | Artist | BPM | Duration | Key Insight |
+|-------|--------|-----|----------|-------------|
+| Deep End | John Summit | 126 | 2:30 | 32-bar breakdown, bass drops out, "other" enters before drop |
+| Hey Hey (Original Mix) | Dennis Ferrer | 124 | 5:50 | Bass enters late (bar 42!), consistent energy, vocal-driven |
+| Panic Room (Jonas Rathsman Remix) | AuRa | 122 | 7:40 | 56-bar breakdown, pads increase during breakdown, sub 66%→26% |
+| 17 (Remixes) | MK | — | — | Spectral balance reference |
+
+**Spectral profile (average from stem separation analysis):**
+- LUFS: -9.2 (much louder than streaming standard)
+- Sub 20-60 Hz: 38%
+- Bass 60-250 Hz: 42%
+- Low-Mid 250-2k Hz: 13%
+- Presence 2k-6k Hz: 4%
+- Air 6k-20k Hz: 4%
+
+**Arrangement patterns discovered:**
+- Bass drops out during breakdown (creates tension)
+- Pads increase 50% during breakdown (fill the space)
+- Atmospheric elements enter just before drop (primes listener)
+- Breakdowns are 16-32 bars, not 8
+- Energy drops of 6-12 dB during breakdowns
+
 ## License
 
 MIT

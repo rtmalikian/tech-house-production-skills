@@ -76,21 +76,35 @@ def main():
         print(f"Error: Stems directory not found: {args.stems}")
         sys.exit(1)
 
-    # === STEM QC v2: Transient-aware balance correction before mastering ===
+    # === STEM EQ: Tech house specific curves before QC ===
     print(f"\n{'='*60}")
-    print(f"STEM QC v2 — Transient-Aware Balance")
+    print(f"STEM EQ — Tech House Curves")
     print(f"{'='*60}")
     try:
-        from stem_qc_v2 import run_full_qc
-        qc_output_dir = args.stems.rstrip('/') + '_qc'
-        qc_output_dir, qc_issues, qc_fixes = run_full_qc(args.stems, qc_output_dir, max_peak_db=-3.0)
+        from stem_eq import process_stems
+        eq_output_dir = args.stems.rstrip('/') + '_eq'
+        eq_output_dir, eq_count = process_stems(args.stems, eq_output_dir)
+        if eq_count > 0:
+            print(f"  Using EQ'd stems: {eq_output_dir}")
+            args.stems = eq_output_dir
+    except Exception as e:
+        print(f"  Stem EQ skipped: {e}")
+
+    # === STEM QC v4: Transient-aware drum balance + RMS for melodic ===
+    print(f"\n{'='*60}")
+    print(f"STEM QC v4 — Transient-Aware Drum Balance")
+    print(f"{'='*60}")
+    try:
+        from stem_qc_v4 import fix_stems
+        qc_output_dir = args.stems.rstrip('/') + '_balanced'
+        qc_output_dir, qc_fixes = fix_stems(args.stems, qc_output_dir)
         if qc_fixes:
-            print(f"  Using QC-fixed stems: {qc_output_dir}")
+            print(f"  Using balanced stems: {qc_output_dir}")
             args.stems = qc_output_dir
         else:
             print(f"  No fixes needed, using original stems")
     except Exception as e:
-        print(f"  QC v2 skipped: {e}")
+        print(f"  QC v4 skipped: {e}")
 
     # Find stems
     stems = find_stems(args.stems)
