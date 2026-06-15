@@ -231,20 +231,25 @@ def main():
         is_drums_only = bt in ['intro', 'outro']
         is_breakdown = bt == 'breakdown'
         is_drop = bt in ['drop1', 'drop2']
-
+        
         # Calculate position within drop for staggered entry
         if is_drop:
             drop_start = 16 if bt == 'drop1' else 80
             bar_in_drop = bar - drop_start  # 0-31 within drop
         else:
             bar_in_drop = -1
-
+        
         # Calculate position within breakdown for filter sweeps
         if is_breakdown:
             breakdown_start = 48
             bar_in_breakdown = bar - breakdown_start  # 0-31 within breakdown
         else:
             bar_in_breakdown = -1
+        
+        # === A-A-A-B PHRASE STRUCTURE ===
+        # Tech house melodies loop A for 3 bars, then B (variation) on bar 4
+        bar_in_phrase = bar % 4  # 0, 1, 2, 3
+        is_switch_up = (bar_in_phrase == 3)  # B bar — aggressive modulation
 
         # === BASS GENERATION ===
         # Reference tracks: bass DROPS OUT during breakdown, only preview in last 4 bars
@@ -314,18 +319,37 @@ def main():
                     {'time': sub_t + sub_dur, 'note': sub_note, 'vel': 0}
                 ])
 
-        # === ACID LINE (staggered: enters at bar 8+ of drop) ===
+        # === ACID LINE (A-A-A-B structure: bars 0-2 = A, bar 3 = B switch-up) ===
         if is_drop and bar_in_drop >= 8 and random.random() < 0.6:
             acid_root = clamp_to_register(root, 'acid_line')
-            # Simple acid pattern: root, fifth, octave, chromatic approach
-            acid_notes_pool = [acid_root, acid_root + 7, acid_root + 12,
-                               acid_root + 10, acid_root + 5, acid_root + 3]
+            
+            # A bars: standard acid notes pool
+            acid_notes_A = [acid_root, acid_root + 7, acid_root + 12,
+                           acid_root + 10, acid_root + 5, acid_root + 3]
+            
+            # B bar (switch-up): add chromatic tension, octave up, more notes
+            acid_notes_B = [acid_root + 12, acid_root + 11, acid_root + 13,  # Octave + chromatic
+                           acid_root + 10, acid_root + 5, acid_root + 3,
+                           acid_root + 14, acid_root + 15]  # 9th, b3 up
+            
             sixteenth = 120
+            
+            if is_switch_up:
+                # B BAR: Aggressive switch-up — more notes, higher, chromatic
+                acid_notes_pool = acid_notes_B
+                note_chance = 0.75  # More notes (75% vs 55%)
+                acid_vel = int(120 * energy)  # Louder on switch-up
+            else:
+                # A BARS: Standard acid pattern
+                acid_notes_pool = acid_notes_A
+                note_chance = 0.55
+                acid_vel = int(100 * energy)
+            
             # 16th note acid pattern
             for step in range(16):
-                if random.random() < 0.55:
+                if random.random() < note_chance:
                     an = random.choice(acid_notes_pool)
-                    av = int(100 * energy)  # Consistent acid velocity (tight, quantized)
+                    av = acid_vel
                     at = bs + step * sixteenth
                     ad = sixteenth // 2
                     acid_ev.extend([
@@ -333,75 +357,83 @@ def main():
                         {'time': at + ad, 'note': an, 'vel': 0}
                     ])
 
-        # === ARPEGGIO PATTERNS (moody, broody, sophisticated) ===
+        # === ARPEGGIO PATTERNS (A-A-A-B: bars 0-2 = A, bar 3 = B switch-up) ===
         # Not just 1-3-5 — use 7ths, 9ths, chromatic passing tones, varied rhythms
         if is_drop and bar_in_drop >= 4:
             chord = harmony.chord_tones
             root = chord[0] if chord else harmony.root
             
             # Build moody note pool — minor intervals, chromatic tension
-            arp_pool = []
-            # Chord tones (extended — 7ths, 9ths)
+            arp_pool_A = []
             for n in chord[:4]:  # Root, 3rd, 5th, 7th
-                arp_pool.append(clamp_to_register(n + 12, 'pad'))
-            # Add 9th (2nd octave up)
+                arp_pool_A.append(clamp_to_register(n + 12, 'pad'))
             if len(chord) >= 1:
-                arp_pool.append(clamp_to_register(root + 14, 'pad'))
-            # Chromatic passing tones (moody tension)
-            arp_pool.append(clamp_to_register(root + 11, 'pad'))  # maj7 below octave
-            arp_pool.append(clamp_to_register(root + 13, 'pad'))  # b9
+                arp_pool_A.append(clamp_to_register(root + 14, 'pad'))
+            arp_pool_A.append(clamp_to_register(root + 11, 'pad'))  # maj7
+            arp_pool_A.append(clamp_to_register(root + 13, 'pad'))  # b9
             
-            # Build varied rhythm patterns (not all equal notes)
-            arp_patterns = {
-                'dotted': [  # Dotted rhythms — moody, swaying
-                    (0, 360), (360, 120), (480, 240), (720, 120),
-                    (960, 360), (1320, 120), (1440, 240), (1680, 120),
-                ],
-                'long_short': [  # Long-short — brooding, hypnotic
-                    (0, 480), (480, 120), (600, 480), (1080, 120),
-                    (1200, 480), (1680, 120),
-                ],
-                'sparse': [  # Sparse — space and atmosphere
-                    (0, 240), (480, 240), (960, 240), (1440, 240),
-                ],
-                'triplet': [  # Triplet feel — rolling, hypnotic
-                    (0, 160), (160, 160), (320, 160), (480, 160),
-                    (640, 160), (800, 160), (960, 160), (1120, 160),
-                    (1280, 160), (1440, 160), (1600, 160), (1760, 160),
-                ],
-                'reverse': [  # Reverse feel — starts sparse, gets dense
-                    (0, 480), (480, 240), (720, 240), (960, 120),
-                    (1080, 120), (1200, 120), (1320, 120), (1440, 120),
-                    (1560, 120), (1680, 120), (1800, 120),
-                ],
-                'offbeat': [  # Offbeat emphasis — tension before resolution
-                    (120, 240), (360, 240), (600, 240), (840, 240),
-                    (1080, 240), (1320, 240), (1560, 240), (1800, 240),
-                ],
+            # B pool: higher octave, more chromatic, aggressive
+            arp_pool_B = []
+            for n in chord[:4]:
+                arp_pool_B.append(clamp_to_register(n + 24, 'pad'))  # 2 octaves up
+            arp_pool_B.append(clamp_to_register(root + 23, 'pad'))  # maj7 high
+            arp_pool_B.append(clamp_to_register(root + 25, 'pad'))  # b9 high
+            arp_pool_B.append(clamp_to_register(root + 26, 'pad'))  # 9th high
+            arp_pool_B.append(clamp_to_register(root + 22, 'pad'))  # b7 high
+            
+            # A pattern: standard rhythms
+            arp_patterns_A = {
+                'dotted': [(0, 360), (360, 120), (480, 240), (720, 120),
+                          (960, 360), (1320, 120), (1440, 240), (1680, 120)],
+                'long_short': [(0, 480), (480, 120), (600, 480), (1080, 120),
+                              (1200, 480), (1680, 120)],
+                'sparse': [(0, 240), (480, 240), (960, 240), (1440, 240)],
+                'triplet': [(0, 160), (160, 160), (320, 160), (480, 160),
+                           (640, 160), (800, 160), (960, 160), (1120, 160),
+                           (1280, 160), (1440, 160), (1600, 160), (1760, 160)],
+                'offbeat': [(120, 240), (360, 240), (600, 240), (840, 240),
+                           (1080, 240), (1320, 240), (1560, 240), (1800, 240)],
             }
             
-            pattern_name = random.choice(list(arp_patterns.keys()))
-            pattern = arp_patterns[pattern_name]
+            # B pattern: aggressive, dense, fast
+            arp_patterns_B = {
+                'rapid': [(0, 120), (120, 120), (240, 120), (360, 120),
+                         (480, 120), (600, 120), (720, 120), (840, 120),
+                         (960, 120), (1080, 120), (1200, 120), (1320, 120),
+                         (1440, 120), (1560, 120), (1680, 120), (1800, 120)],
+                'burst': [(0, 60), (60, 60), (120, 60), (180, 60),
+                         (480, 60), (540, 60), (600, 60), (660, 60),
+                         (960, 60), (1020, 60), (1080, 60), (1140, 60),
+                         (1440, 60), (1500, 60), (1560, 60), (1620, 60)],
+                'stutter': [(0, 120), (120, 120), (240, 120), (360, 120),
+                           (480, 240), (720, 240), (960, 120), (1080, 120),
+                           (1200, 120), (1320, 120), (1440, 240), (1680, 240)],
+            }
             
-            # Choose note sequence — not just cycling through chord tones
-            note_sequences = [
-                # Up-down through extended chord
-                arp_pool,
-                # Descending (dark, broody)
-                list(reversed(arp_pool)),
-                # Root-5th-7th-9th (open, spacey)
-                [arp_pool[0], arp_pool[2], arp_pool[3] if len(arp_pool) > 3 else arp_pool[0], arp_pool[4] if len(arp_pool) > 4 else arp_pool[1]],
-                # Chromatic descent (tension)
-                [arp_pool[i] for i in range(len(arp_pool)-1, -1, -1)],
-                # Random from pool (varied)
-                [random.choice(arp_pool) for _ in range(len(arp_pool))],
-            ]
-            note_seq = random.choice(note_sequences)
+            if is_switch_up:
+                # B BAR: Aggressive switch-up
+                arp_pool = arp_pool_B
+                pattern = random.choice(list(arp_patterns_B.values()))
+                note_seq = list(reversed(arp_pool))  # Descending for darkness
+                vel_base = 90  # Louder
+            else:
+                # A BARS: Standard moody pattern
+                arp_pool = arp_pool_A
+                pattern_name = random.choice(list(arp_patterns_A.keys()))
+                pattern = arp_patterns_A[pattern_name]
+                note_sequences = [
+                    arp_pool,
+                    list(reversed(arp_pool)),
+                    [arp_pool[0], arp_pool[2], arp_pool[3] if len(arp_pool) > 3 else arp_pool[0], arp_pool[4] if len(arp_pool) > 4 else arp_pool[1]],
+                    [arp_pool[i] for i in range(len(arp_pool)-1, -1, -1)],
+                    [random.choice(arp_pool) for _ in range(len(arp_pool))],
+                ]
+                note_seq = random.choice(note_sequences)
+                vel_base = 60
             
             for i, (pos, dur) in enumerate(pattern):
                 note = note_seq[i % len(note_seq)]
-                # Velocity varies by position — downbeats louder
-                vel = int((60 + (pos % 480 == 0) * 25 + (pos % 240 == 0) * 10) * energy)
+                vel = int((vel_base + (pos % 480 == 0) * 25 + (pos % 240 == 0) * 10) * energy)
                 t = bs + pos
                 if t + dur <= bs + bar_length:
                     pad_ev.extend([
