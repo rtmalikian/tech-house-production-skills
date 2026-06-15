@@ -69,45 +69,32 @@ def build_buildup_automation(part_idx, role, total_bars, bpm):
     if role in ('acid', 'bass', 'sub_bass', 'stab', 'pad'):
         # ============================================================
         # A-A-A-B SWITCH-UP AUTOMATION — Aggressive modulation on B bars
+        # ONLY during drops (not intro/outro/breakdown)
         # ============================================================
-        # Every 4th bar (bar_in_phrase == 3) gets aggressive filter/LFO spike
         
-        for bar in range(total_bars):
+        for bar in range(drop1_start, drop2_start + 32):  # Drop1 + Drop2 only
             bar_in_phrase = bar % 4
             if bar_in_phrase == 3:  # B bar — switch-up
-                # Filter cutoff spike (momentary high then back)
+                # Filter cutoff spike
                 cutoff_spike = random.randint(100, 120)
                 addr = _addr_add(base, ZONE_BASE['tvf_cutoff'])
-                events.append((bar, 'switchup_cutoff_spike',
+                events.append((bar, 'switchup_cutoff',
                               _sysex_dt1(addr, [cutoff_spike])))
                 
-                # LFO depth spike (more modulation on switch-up)
+                # LFO depth spike
                 depth_spike = random.randint(40, 60)
                 addr = _addr_add(base, ZONE_BASE['lfo1_depth'])
-                events.append((bar, 'switchup_lfo_depth',
+                events.append((bar, 'switchup_lfo',
                               _sysex_dt1(addr, [depth_spike])))
-                
-                # Resonance spike
-                reso_spike = random.randint(40, 65)
-                addr = _addr_add(base, ZONE_BASE['tvf_reso'])
-                events.append((bar, 'switchup_reso',
-                              _sysex_dt1(addr, [reso_spike])))
             
             elif bar_in_phrase == 0:  # Back to A — reset
-                # Reset filter to normal
                 addr = _addr_add(base, ZONE_BASE['tvf_cutoff'])
                 events.append((bar, 'reset_cutoff',
                               _sysex_dt1(addr, [random.randint(70, 90)])))
                 
-                # Reset LFO depth
                 addr = _addr_add(base, ZONE_BASE['lfo1_depth'])
-                events.append((bar, 'reset_lfo_depth',
+                events.append((bar, 'reset_lfo',
                               _sysex_dt1(addr, [random.randint(15, 25)])))
-                
-                # Reset resonance
-                addr = _addr_add(base, ZONE_BASE['tvf_reso'])
-                events.append((bar, 'reset_reso',
-                              _sysex_dt1(addr, [random.randint(15, 30)])))
         
         # ============================================================
         # FILTER CUTOFF SWEEP — Opening filter during builds

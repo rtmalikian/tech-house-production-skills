@@ -718,13 +718,12 @@ def _play_midi_and_record(midi_path: str, output_path: str,
     rec.start()
     time.sleep(0.3)  # Let recording stabilize
 
-    # Play MIDI with precise timing (replace mido.play() with manual timing)
+    # Play MIDI with sleep-based timing (not busy-wait — avoids CPU throttling)
     outport = mido.open_output(port_name)
     mid = mido.MidiFile(midi_path)
-    print(f"    Playing MIDI (precise timing)...")
-
+    print(f"    Playing MIDI (sleep-based timing)...")
+    
     # Extract all messages with absolute times
-    # First, get the tempo from the MIDI file
     tempo_us = mido.bpm2tempo(128)  # Default
     for track in mid.tracks:
         for msg in track:
@@ -740,16 +739,13 @@ def _play_midi_and_record(midi_path: str, output_path: str,
             if not msg.is_meta:
                 all_msgs.append((abs_time, msg))
     
-    # Sort by absolute time
     all_msgs.sort(key=lambda x: x[0])
     
-    # Play with busy-wait timing + SysEx automation
     start_perf = time.perf_counter()
     
     # Build automation events for this pass
     try:
         from sysex_automation import AutomationScheduler, build_buildup_automation
-        # Get track info for automation
         auto_events = []
         for track_info in tracks:
             part_idx = track_info.get('part_idx', 0)
@@ -766,15 +762,20 @@ def _play_midi_and_record(midi_path: str, output_path: str,
         print(f"    Automation skipped: {e}")
         scheduler = None
     
-    # Count-in duration (4 beats)
     count_in_sec = 4 * 60.0 / bpm
     
     for abs_time, msg in all_msgs:
         target = start_perf + abs_time
-        while time.perf_counter() < target:
-            pass  # Busy-wait for precise timing
+        now = time.perf_counter()
+        sleep_time = target - now - 0.001  # Wake 1ms early for precision
+        if sleep_time > 0:
+            time.sleep(sleep_time)
         
-        # Fire automation events at the right time
+        # Fine-tune with short busy-wait (max 2ms)
+        while time.perf_counter() < target:
+            pass
+        
+        # Fire automation events
         if scheduler:
             scheduler.check_and_fire(time.perf_counter(), count_in_sec)
         
