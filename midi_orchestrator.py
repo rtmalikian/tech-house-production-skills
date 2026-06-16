@@ -359,109 +359,23 @@ def main():
                         {'time': at + ad, 'note': an, 'vel': 0}
                     ])
 
-        # === ARPEGGIO PATTERNS (A-A-A-B: bars 0-2 = A, bar 3 = B switch-up) ===
-        # Not just 1-3-5 — use 7ths, 9ths, chromatic passing tones, varied rhythms
-        if is_drop and bar_in_drop >= 4:
-            chord = harmony.chord_tones
-            root = chord[0] if chord else harmony.root
-            
-            # Build moody note pool — minor intervals, chromatic tension
-            arp_pool_A = []
-            for n in chord[:4]:  # Root, 3rd, 5th, 7th
-                arp_pool_A.append(clamp_to_register(n + 12, 'pad'))
-            if len(chord) >= 1:
-                arp_pool_A.append(clamp_to_register(root + 14, 'pad'))
-            arp_pool_A.append(clamp_to_register(root + 11, 'pad'))  # maj7
-            arp_pool_A.append(clamp_to_register(root + 13, 'pad'))  # b9
-            
-            # B pool: higher octave, more chromatic, aggressive
-            arp_pool_B = []
-            for n in chord[:4]:
-                arp_pool_B.append(clamp_to_register(n + 24, 'pad'))  # 2 octaves up
-            arp_pool_B.append(clamp_to_register(root + 23, 'pad'))  # maj7 high
-            arp_pool_B.append(clamp_to_register(root + 25, 'pad'))  # b9 high
-            arp_pool_B.append(clamp_to_register(root + 26, 'pad'))  # 9th high
-            arp_pool_B.append(clamp_to_register(root + 22, 'pad'))  # b7 high
-            
-            # A pattern: standard rhythms
-            arp_patterns_A = {
-                'dotted': [(0, 360), (360, 120), (480, 240), (720, 120),
-                          (960, 360), (1320, 120), (1440, 240), (1680, 120)],
-                'long_short': [(0, 480), (480, 120), (600, 480), (1080, 120),
-                              (1200, 480), (1680, 120)],
-                'sparse': [(0, 240), (480, 240), (960, 240), (1440, 240)],
-                'triplet': [(0, 160), (160, 160), (320, 160), (480, 160),
-                           (640, 160), (800, 160), (960, 160), (1120, 160),
-                           (1280, 160), (1440, 160), (1600, 160), (1760, 160)],
-                'offbeat': [(120, 240), (360, 240), (600, 240), (840, 240),
-                           (1080, 240), (1320, 240), (1560, 240), (1800, 240)],
-            }
-            
-            # B pattern: aggressive, dense, fast
-            arp_patterns_B = {
-                'rapid': [(0, 120), (120, 120), (240, 120), (360, 120),
-                         (480, 120), (600, 120), (720, 120), (840, 120),
-                         (960, 120), (1080, 120), (1200, 120), (1320, 120),
-                         (1440, 120), (1560, 120), (1680, 120), (1800, 120)],
-                'burst': [(0, 60), (60, 60), (120, 60), (180, 60),
-                         (480, 60), (540, 60), (600, 60), (660, 60),
-                         (960, 60), (1020, 60), (1080, 60), (1140, 60),
-                         (1440, 60), (1500, 60), (1560, 60), (1620, 60)],
-                'stutter': [(0, 120), (120, 120), (240, 120), (360, 120),
-                           (480, 240), (720, 240), (960, 120), (1080, 120),
-                           (1200, 120), (1320, 120), (1440, 240), (1680, 240)],
-            }
-            
-            if is_switch_up:
-                # B BAR: Aggressive switch-up
-                arp_pool = arp_pool_B
-                pattern = random.choice(list(arp_patterns_B.values()))
-                note_seq = list(reversed(arp_pool))  # Descending for darkness
-                vel_base = 90  # Louder
-            else:
-                # A BARS: Standard moody pattern
-                arp_pool = arp_pool_A
-                pattern_name = random.choice(list(arp_patterns_A.keys()))
-                pattern = arp_patterns_A[pattern_name]
-                note_sequences = [
-                    arp_pool,
-                    list(reversed(arp_pool)),
-                    [arp_pool[0], arp_pool[2], arp_pool[3] if len(arp_pool) > 3 else arp_pool[0], arp_pool[4] if len(arp_pool) > 4 else arp_pool[1]],
-                    [arp_pool[i] for i in range(len(arp_pool)-1, -1, -1)],
-                    [random.choice(arp_pool) for _ in range(len(arp_pool))],
-                ]
-                note_seq = random.choice(note_sequences)
-                vel_base = 60
-            
-            for i, (pos, dur) in enumerate(pattern):
-                note = note_seq[i % len(note_seq)]
-                vel = int((vel_base + (pos % 480 == 0) * 25 + (pos % 240 == 0) * 10) * energy)
-                t = bs + pos
-                if t + dur <= bs + bar_length:
-                    pad_ev.extend([
-                        {'time': t, 'note': note, 'vel': vel},
-                        {'time': t + dur, 'note': note, 'vel': 0}
-                    ])
+        # === ARPEGGIOS REMOVED ===
+        # Minimal tech house: arpeggios add too much density.
+        # The groove comes from kick + bass + acid + stabs only.
+        # Arpeggios can be added back for breakdowns if needed.
 
-        # === CHORD STABS (staggered: enter at bar 4+ of drop) ===
-        if is_drop and bar_in_drop >= 4:
+        # === CHORD STABS (minimal: every 2 bars, not every bar) ===
+        # Tech house: stabs are sparse, giving the groove room to breathe
+        if is_drop and bar_in_drop >= 4 and bar % 2 == 0:
             chord_notes = harmony.chord_tones[:3]  # Triads only
-            stab_vel = int(100 * energy)  # Consistent stab velocity (tight, quantized)
-            # Stab on beat 1, short duration
+            stab_vel = int(100 * energy)
+            # Stab on beat 1 only — short, punchy
             for ci, cn in enumerate(chord_notes):
                 sn = clamp_to_register(cn + 12, 'pad')
                 stab_ev.extend([
                     {'time': bs, 'note': sn, 'vel': stab_vel},
                     {'time': bs + 240, 'note': sn, 'vel': 0}  # 8th note duration
                 ])
-            # Stab on beat 3 (60% chance — more frequent)
-            if random.random() < 0.6:
-                for ci, cn in enumerate(chord_notes):
-                    sn = clamp_to_register(cn + 12, 'pad')
-                    stab_ev.extend([
-                        {'time': bs + 2 * 480, 'note': sn, 'vel': int(stab_vel * 0.8)},
-                        {'time': bs + 2 * 480 + 240, 'note': sn, 'vel': 0}
-                    ])
 
         # === PAD (breakdown — atmospheric, LOUDER to fill space) ===
         # Reference tracks: pads/synths INCREASE during breakdown
