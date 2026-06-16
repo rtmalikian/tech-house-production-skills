@@ -699,52 +699,32 @@ def main():
     # Filter build automation is handled by SysEx automation during playback
     # (not embedded in MIDI to avoid huge delta times)
 
-    # === EXPLODED DRUMS ===
-    DRUM_NAME_MAP = {
-        35: "KickLow", 36: "Kick", 41: "KickAlt",
-        37: "SideStick", 38: "Snare", 39: "Clap", 40: "SnareAlt", 43: "FloorTom",
-        42: "ClosedHat", 44: "PedalHat", 45: "LowTom", 46: "OpenHat", 47: "MidTom",
-        49: "Crash", 51: "Ride", 54: "Tambourine", 56: "Cowbell", 70: "Shaker/Maracas",
-    }
-
-    drum_tracks_data = {}
-    main_ev.sort(key=lambda x: x['time'])
-    chorus_ev.sort(key=lambda x: x['time'])
-    aux_perc_ev.sort(key=lambda x: x['time'])
-
-    def add_to_exploded(ev_list, prefix):
-        for ev in ev_list:
-            note = ev['note']
-            key = (prefix, note)
-            if key not in drum_tracks_data:
-                drum_tracks_data[key] = []
-            drum_tracks_data[key].append(ev)
-
-    add_to_exploded(main_ev, "drum1")
-    add_to_exploded(chorus_ev, "drum2")
-    add_to_exploded(aux_perc_ev, "drum_aux")
-
-    print(f"Exploding drums into individual instrument tracks...")
-
+    # === CONSOLIDATED DRUMS (single track — Fantom drum kit is one patch) ===
+    # All drum sounds go into ONE track on channel 9 (GM drum channel)
+    # The Fantom drum kit responds to all notes on a single channel
+    
+    all_drum_events = []
+    all_drum_events.extend(main_ev)
+    all_drum_events.extend(chorus_ev)
+    all_drum_events.extend(aux_perc_ev)
+    all_drum_events.sort(key=lambda x: x['time'])
+    
+    print(f"Consolidating {len(all_drum_events)} drum events into single track...")
+    
     tracks_to_keep = [tempo_tr, bass_tr, sub_bass_tr, acid_tr, stab_tr,
                        pad_tr, fx_tr]
     mid.tracks = tracks_to_keep
-
-    for (prefix, note) in sorted(drum_tracks_data.keys()):
-        events = sorted(drum_tracks_data[(prefix, note)], key=lambda x: x['time'])
-        instr_name = DRUM_NAME_MAP.get(note, "Instr")
-        track_name = f"{prefix}_{instr_name}_n{note}"
-
-        dtr = mido.MidiTrack()
-        dtr.name = track_name
-        dtr.append(mido.MetaMessage('track_name', name=track_name, time=0))
-        mid.tracks.append(dtr)
-
-        pan_val = random.randint(44, 84)
-        init_spatial(dtr, pan=pan_val)
-
-        lt = write_performance_to_track(dtr, events, None, None, force_drum=True)
-        dtr.append(mido.MetaMessage('end_of_track', time=max(0, song_length - lt)))
+    
+    # Single drum track
+    drum_tr = mido.MidiTrack()
+    drum_tr.name = "Drums"
+    drum_tr.append(mido.MetaMessage('track_name', name="Drums", time=0))
+    mid.tracks.append(drum_tr)
+    
+    init_spatial(drum_tr, pan=64)  # Center
+    
+    lt_drums = write_performance_to_track(drum_tr, all_drum_events, None, None, force_drum=True)
+    drum_tr.append(mido.MetaMessage('end_of_track', time=max(0, song_length - lt_drums)))
 
     # === END OF TRACK MARKERS ===
     bass_tr.append(mido.MetaMessage('end_of_track', time=max(0, song_length - lt_b)))
