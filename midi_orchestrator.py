@@ -551,53 +551,84 @@ def main():
                                  'time': 7 * 120})
             
             elif bar_in_breakdown < 24:
-                # BUILD PHASE 1 (bars 64-71): Kick on quarter notes, velocity building
+                # BUILD PHASE 1 (bars 64-71): Gradual kick + snare fade-in
                 build_progress = (bar_in_breakdown - 16) / 8.0  # 0.0 to 1.0
-                kick_vel = int(60 + build_progress * 67)  # 60 → 127
                 
-                # Kick on every beat (quarter notes)
+                # Exponential curve for more gradual feel (not linear)
+                kick_vel = int(30 + (build_progress ** 0.6) * 97)  # 30 → 127, slow start
+                
+                # Kick on quarter notes — starts quiet, gets louder
                 for beat in range(4):
-                    dbar.append({'note': GM_DRUM_MAP['KICK'], 'velocity': kick_vel,
+                    # Per-beat velocity increase within the bar
+                    beat_progress = beat / 4.0
+                    vel = int(kick_vel + beat_progress * 10)
+                    vel = min(127, vel)
+                    dbar.append({'note': GM_DRUM_MAP['KICK'], 'velocity': vel,
                                  'time': beat * 480})
                 
-                # Hats on 8th notes, velocity building
-                hat_vel = int(50 + build_progress * 50)  # 50 → 100
+                # Hats on 8th notes — starts quiet, builds with kick
+                hat_vel = int(25 + (build_progress ** 0.7) * 75)  # 25 → 100
                 for i in range(8):
-                    dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': hat_vel,
+                    beat_pos = i / 8.0
+                    vel = int(hat_vel + beat_pos * 8)
+                    vel = min(127, vel)
+                    dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': vel,
                                  'time': i * 240})
                 
-                # Clap on beats 2&4 starting at bar 68
+                # Clap enters bar 68 (bar_in_breakdown=20) — starts quiet
                 if bar_in_breakdown >= 20:
-                    clap_vel = int(60 + build_progress * 60)
+                    clap_build = (bar_in_breakdown - 20) / 4.0  # 0.0 to 1.0
+                    clap_vel = int(40 + (clap_build ** 0.5) * 87)  # 40 → 127
                     dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': clap_vel,
                                  'time': 1 * 480})
                     dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': clap_vel,
                                  'time': 3 * 480})
+                
+                # Snare roll enters bar 70 (bar_in_breakdown=22) — starts very quiet
+                if bar_in_breakdown >= 22:
+                    snare_build = (bar_in_breakdown - 22) / 2.0  # 0.0 to 1.0
+                    snare_vel = int(30 + (snare_build ** 0.5) * 97)  # 30 → 127
+                    # Half-note snare roll, getting denser
+                    if bar_in_breakdown >= 23:
+                        # 8th note snare roll
+                        for i in range(8):
+                            dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': snare_vel,
+                                         'time': i * 240})
+                    else:
+                        # Quarter note snare
+                        for beat in range(4):
+                            dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': snare_vel,
+                                         'time': beat * 480})
             
             else:
-                # BUILD PHASE 2 (bars 72-79): RAPID BUILD — kick on 16ths, velocity max
+                # BUILD PHASE 2 (bars 72-79): RAPID BUILD — all elements intensifying
                 build_progress = (bar_in_breakdown - 24) / 8.0  # 0.0 to 1.0
                 
-                # Kick on 16th notes — classic build technique
-                kick_vel_start = int(80 + build_progress * 47)  # 80 → 127
+                # Kick on 16ths — exponential velocity ramp WITHIN each bar
+                kick_vel_base = int(70 + (build_progress ** 0.5) * 57)  # 70 → 127
                 for i in range(16):
-                    # Velocity increases within the bar too
-                    vel = int(kick_vel_start + (i / 16.0) * (127 - kick_vel_start))
+                    within_bar = i / 16.0
+                    vel = int(kick_vel_base + (within_bar ** 0.7) * (127 - kick_vel_base))
                     vel = min(127, vel)
                     dbar.append({'note': GM_DRUM_MAP['KICK'], 'velocity': vel,
                                  'time': i * 120})
                 
-                # Snare roll on 16ths (last 4 bars only)
-                if bar_in_breakdown >= 28:
-                    snare_vel = int(70 + build_progress * 57)
-                    for i in range(16):
-                        dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': snare_vel,
-                                     'time': i * 120})
-                
-                # Hats on 16ths
-                hat_vel = int(80 + build_progress * 47)
+                # Snare roll on 16ths — builds from quiet to full
+                snare_vel_base = int(50 + (build_progress ** 0.6) * 77)  # 50 → 127
                 for i in range(16):
-                    dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': hat_vel,
+                    within_bar = i / 16.0
+                    vel = int(snare_vel_base + (within_bar ** 0.5) * (127 - snare_vel_base))
+                    vel = min(127, vel)
+                    dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': vel,
+                                 'time': i * 120})
+                
+                # Hats on 16ths — crescendo
+                hat_vel_base = int(60 + (build_progress ** 0.7) * 67)  # 60 → 127
+                for i in range(16):
+                    within_bar = i / 16.0
+                    vel = int(hat_vel_base + (within_bar ** 0.5) * (127 - hat_vel_base))
+                    vel = min(127, vel)
+                    dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': vel,
                                  'time': i * 120})
         elif bt == 'intro':
             # Intro: kick + hats + clap + bass preview from bar 0

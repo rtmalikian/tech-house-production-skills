@@ -100,47 +100,73 @@ def build_buildup_automation(part_idx, role, total_bars, bpm):
         # FILTER CUTOFF SWEEP — Opening filter during builds
         # ============================================================
         
-        # Breakdown: start with closed filter, gradually open
-        # Bars 48-63: filter slowly opening (60 → 100)
+        # Breakdown first half (bars 48-63): filter slowly opening
         for bar in range(breakdown_start, breakdown_start + 16):
             progress = (bar - breakdown_start) / 15.0
-            cutoff = int(60 + progress * 40)  # 60 → 100
+            cutoff = int(50 + (progress ** 0.7) * 50)  # 50 → 100, exponential
             addr = _addr_add(base, ZONE_BASE['tvf_cutoff'])
             events.append((bar, 'filter_open', 
                           _sysex_dt1(addr, [cutoff])))
         
-        # Bars 64-75: filter fully open, resonance increasing
-        for bar in range(breakdown_start + 16, breakdown_start + 28):
-            progress = (bar - breakdown_start - 16) / 11.0
-            reso = int(20 + progress * 40)  # 20 → 60
+        # Build phase 1 (bars 64-71): filter opens further + resonance builds
+        for bar in range(breakdown_start + 16, breakdown_start + 24):
+            progress = (bar - breakdown_start - 16) / 7.0
+            # Filter continues opening
+            cutoff = int(80 + (progress ** 0.5) * 30)  # 80 → 110
+            addr = _addr_add(base, ZONE_BASE['tvf_cutoff'])
+            events.append((bar, 'filter_build_open',
+                          _sysex_dt1(addr, [cutoff])))
+            # Resonance increases — creates harmonic tension
+            reso = int(20 + (progress ** 0.6) * 45)  # 20 → 65
             addr = _addr_add(base, ZONE_BASE['tvf_reso'])
-            events.append((bar, 'reso_build', 
+            events.append((bar, 'reso_build',
                           _sysex_dt1(addr, [reso])))
+        
+        # Build phase 2 (bars 72-79): dramatic filter + resonance + MFX sweep
+        for bar in range(breakdown_start + 24, breakdown_start + 32):
+            progress = (bar - breakdown_start - 24) / 7.0
+            # Filter sweeps wide open
+            cutoff = int(90 + (progress ** 0.4) * 30)  # 90 → 120
+            addr = _addr_add(base, ZONE_BASE['tvf_cutoff'])
+            events.append((bar, 'filter_dramatic_open',
+                          _sysex_dt1(addr, [cutoff])))
+            # Resonance peaks — creates screaming tension
+            reso = int(40 + (progress ** 0.5) * 50)  # 40 → 90
+            addr = _addr_add(base, ZONE_BASE['tvf_reso'])
+            events.append((bar, 'reso_peak',
+                          _sysex_dt1(addr, [reso])))
+            # LFO depth increases — more modulation intensity
+            lfo_depth = int(20 + (progress ** 0.5) * 50)  # 20 → 70
+            addr = _addr_add(base, ZONE_BASE['lfo1_depth'])
+            events.append((bar, 'lfo_build_intensity',
+                          _sysex_dt1(addr, [lfo_depth])))
         
         # Bar 76: filter snap closed before drop (tension!)
         addr = _addr_add(base, ZONE_BASE['tvf_cutoff'])
         events.append((breakdown_start + 28, 'filter_snap_closed',
-                      _sysex_dt1(addr, [40])))
+                      _sysex_dt1(addr, [35])))
+        # Resonance stays high on snap — creates feedback
+        addr = _addr_add(base, ZONE_BASE['tvf_reso'])
+        events.append((breakdown_start + 28, 'reso_snap_feedback',
+                      _sysex_dt1(addr, [80])))
         
-        # Bar 80 (drop2): filter blasts open
+        # Bar 80 (drop2): filter blasts open, resonance resets
         addr = _addr_add(base, ZONE_BASE['tvf_cutoff'])
         events.append((drop2_start, 'filter_drop_open',
-                      _sysex_dt1(addr, [110])))
-        
-        # Reset resonance at drop
+                      _sysex_dt1(addr, [120])))
         addr = _addr_add(base, ZONE_BASE['tvf_reso'])
-        events.append((drop2_start, 'reso_reset',
-                      _sysex_dt1(addr, [20])))
+        events.append((drop2_start, 'reso_drop_reset',
+                      _sysex_dt1(addr, [25])))
         
         # ============================================================
         # LFO RATE MODULATION — Speed up during builds
         # ============================================================
         
         if role == 'acid':
-            # Acid: LFO rate speeds up dramatically during breakdown
-            for bar in range(breakdown_start + 8, breakdown_start + 28):
-                progress = (bar - breakdown_start - 8) / 19.0
-                lfo_rate = int(4 + progress * 8)  # 4 → 12 (slow → fast)
+            # Acid: LFO rate speeds up during entire breakdown
+            for bar in range(breakdown_start + 4, breakdown_start + 32):
+                progress = (bar - breakdown_start - 4) / 27.0
+                lfo_rate = int(2 + (progress ** 0.6) * 14)  # 2 → 16 (very slow → very fast)
                 addr = _addr_add(base, ZONE_BASE['lfo1_rate'])
                 events.append((bar, 'acid_lfo_speedup',
                               _sysex_dt1(addr, [lfo_rate])))
@@ -148,7 +174,7 @@ def build_buildup_automation(part_idx, role, total_bars, bpm):
             # Reset LFO rate at drop
             addr = _addr_add(base, ZONE_BASE['lfo1_rate'])
             events.append((drop2_start, 'acid_lfo_reset',
-                          _sysex_dt1(addr, [6])))
+                          _sysex_dt1(addr, [5])))
         
         # ============================================================
         # LFO DEPTH MODULATION — Increase modulation intensity
@@ -157,7 +183,7 @@ def build_buildup_automation(part_idx, role, total_bars, bpm):
         # Breakdown: LFO depth increases gradually (subtle wobble)
         for bar in range(breakdown_start + 4, breakdown_start + 28):
             progress = (bar - breakdown_start - 4) / 23.0
-            depth = int(15 + progress * 20)  # 15 → 35 (subtle, not extreme)
+            depth = int(15 + (progress ** 0.5) * 40)  # 15 → 55 (subtle → pronounced)
             addr = _addr_add(base, ZONE_BASE['lfo1_depth'])
             events.append((bar, 'lfo_depth_build',
                           _sysex_dt1(addr, [depth])))
