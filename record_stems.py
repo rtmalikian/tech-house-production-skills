@@ -718,67 +718,50 @@ def _play_midi_and_record(midi_path: str, output_path: str,
     rec.start()
     time.sleep(0.3)  # Let recording stabilize
 
-    # Play MIDI with sleep-based timing (not busy-wait — avoids CPU throttling)
+    # Play MIDI with mido.play() — handles buffering internally
     outport = mido.open_output(port_name)
     mid = mido.MidiFile(midi_path)
-    print(f"    Playing MIDI (sleep-based timing)...")
+    print(f"    Playing MIDI (mido.play)...")
     
-    # Extract all messages with absolute times
-    tempo_us = mido.bpm2tempo(128)  # Default
-    for track in mid.tracks:
-        for msg in track:
-            if msg.type == 'set_tempo':
-                tempo_us = msg.tempo
-                break
-    
-    all_msgs = []
-    for track in mid.tracks:
-        abs_time = 0.0
-        for msg in track:
-            abs_time += mido.tick2second(msg.time, mid.ticks_per_beat, tempo_us)
-            if not msg.is_meta:
-                all_msgs.append((abs_time, msg))
-    
-    all_msgs.sort(key=lambda x: x[0])
-    
-    start_perf = time.perf_counter()
-    
-    # Build automation events for this pass
+    # Build automation events (skip track-dependent ones)
     try:
         from sysex_automation import AutomationScheduler, build_buildup_automation
+        
+        # Read tempo from MIDI file
+        tempo_us = 500000  # Default 128 BPM
+        for track in mid.tracks:
+            for msg in track:
+                if msg.type == 'set_tempo':
+                    tempo_us = msg.tempo
+                    break
+        
+        bpm = 60000000 / tempo_us
+        count_in_sec = 4 * 60.0 / bpm
+        
+        # Build automation for generic acid/bass/stab roles
         auto_events = []
-        for track_info in tracks:
-            part_idx = track_info.get('part_idx', 0)
-            category = track_info.get('category', 'other')
-            events = build_buildup_automation(part_idx, category, 128, bpm)
+        for role in ['acid', 'bass', 'stab', 'pad']:
+            events = build_buildup_automation(0, role, 128, bpm)
             auto_events.extend(events)
         
         if auto_events:
             scheduler = AutomationScheduler(outport, auto_events, bpm)
-            print(f"    Automation: {len(auto_events)} events scheduled")
+            print(f"    Automation: {len(auto_events)} events scheduled (bpm={bpm:.0f})")
         else:
             scheduler = None
     except Exception as e:
         print(f"    Automation skipped: {e}")
         scheduler = None
+        count_in_sec = 4 * 60.0 / 125  # Default
     
-    count_in_sec = 4 * 60.0 / bpm
+    start_perf = time.perf_counter()
     
-    for abs_time, msg in all_msgs:
-        target = start_perf + abs_time
-        now = time.perf_counter()
-        sleep_time = target - now - 0.001  # Wake 1ms early for precision
-        if sleep_time > 0:
-            time.sleep(sleep_time)
-        
-        # Fine-tune with short busy-wait (max 2ms)
-        while time.perf_counter() < target:
-            pass
-        
-        # Fire automation events
+    # Play with mido.play() — handles timing and buffering
+    for msg in mid.play():
+        # Fire automation events periodically
         if scheduler:
-            scheduler.check_and_fire(time.perf_counter(), count_in_sec)
-        
+            elapsed = time.perf_counter() - start_perf
+            scheduler.check_and_fire(elapsed, count_in_sec)
         outport.send(msg)
     
     elapsed = time.perf_counter() - start_perf
@@ -786,7 +769,7 @@ def _play_midi_and_record(midi_path: str, output_path: str,
         stats = scheduler.get_stats()
         print(f"    Automation: {stats['fired_events']}/{stats['total_events']} events fired")
     outport.close()
-    print(f"    MIDI done ({elapsed:.1f}s, {len(all_msgs)} messages)")
+    print(f"    MIDI done ({elapsed:.1f}s)")
 
     # Wait for recording to finish
     rec.join(timeout=duration + 10)

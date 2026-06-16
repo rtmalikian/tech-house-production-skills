@@ -273,6 +273,8 @@ def main():
             # Tech house bass styles per section
             if bt in ['drop1', 'drop2']:
                 bass_style = random.choice(['active', 'syncopated', 'standard'])
+            else:
+                bass_style = 'standard'  # Intro/breakdown preview: simple pattern
 
             next_harmony = harmony_plan[bar + 1] if bar + 1 < len(harmony_plan) else None
             bcell = generate_bass(root, qual, scale_notes, gvc, None,
@@ -795,10 +797,8 @@ def main():
         track.append(mido.Message('control_change', channel=channel, control=74, value=64, time=drop_t))
         track.append(mido.Message('control_change', channel=channel, control=71, value=40, time=drop_t))
 
-    # Add filter builds to bass, acid, and stab tracks
-    add_filter_build_automation(bass_tr, 0, bar_length)      # Channel 0 = bass
-    add_filter_build_automation(acid_tr, 2, bar_length)      # Channel 2 = acid
-    add_filter_build_automation(stab_tr, 3, bar_length)      # Channel 3 = stab
+    # Filter build automation is handled by SysEx automation during playback
+    # (not embedded in MIDI to avoid huge delta times)
 
     # === EXPLODED DRUMS ===
     DRUM_NAME_MAP = {
