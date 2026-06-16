@@ -205,6 +205,13 @@ def apply_sound_design(fc: FantomController, part_idx: int, track_info: Dict):
     role = track_info['role']
     base = fc._zcore_base(part_idx)
 
+    # === Apply to ALL melodic patches (not just specific roles) ===
+    # LFO modulation (LFO1 + LFO2 + matrix) — subtle 5-9%
+    _apply_lfo_modulation(fc, part_idx, role)
+    
+    # MFX — always present on melodic patches
+    _apply_mfx_for_role(fc, part_idx, role)
+
     if role in ('bass', 'sub_bass', 'acid_bass', 'acid'):
         # Bass tone: HPF filter type (type 3) to cut sub rumble
         # Use HPF instead of LPF for bass — lets mids/highs through
@@ -216,11 +223,6 @@ def apply_sound_design(fc: FantomController, part_idx: int, track_info: Dict):
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x01]), [random.randint(35, 55)])
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x02]), [random.randint(55, 80)])
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x03]), [random.randint(15, 35)])
-        # Step LFO matrix
-        _apply_step_lfo(fc, part_idx, role)
-        # Super Filter MFX for acid (303-style resonant filter)
-        if role == 'acid':
-            _apply_super_filter_mfx(fc, part_idx)
         # EQ: Aggressive low cut, boost mids and highs
         fc.set_zone_eq_switch(part_idx + 1, True)
         fc.set_zone_eq_gain(part_idx + 1, 'low', -12.0)   # Heavy low cut
@@ -233,8 +235,6 @@ def apply_sound_design(fc: FantomController, part_idx: int, track_info: Dict):
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x01]), [random.randint(40, 55)])
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x02]), [0])
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x03]), [random.randint(10, 20)])
-        # Chorus MFX
-        _apply_chorus_mfx(fc, part_idx)
         # EQ: Boost presence
         fc.set_zone_eq_switch(part_idx + 1, True)
         fc.set_zone_eq_gain(part_idx + 1, 'low', -3.0)    # Cut lows
@@ -242,67 +242,129 @@ def apply_sound_design(fc: FantomController, part_idx: int, track_info: Dict):
         fc.set_zone_eq_gain(part_idx + 1, 'high', +3.0)   # Boost highs for air
 
     elif role == 'pad':
-        # Long envelope, slow LFO
+        # Long envelope
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x00]), [random.randint(20, 50)])
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x01]), [random.randint(60, 90)])
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x02]), [random.randint(70, 100)])
         fc._send_dt1(_addr_add(base, [0x00, 0x24, 0x03]), [random.randint(40, 70)])
-        # Slow S&H LFO for evolution
-        _apply_pad_lfo(fc, part_idx)
         # EQ: Cut lows, boost highs
         fc.set_zone_eq_switch(part_idx + 1, True)
         fc.set_zone_eq_gain(part_idx + 1, 'low', -4.0)
         fc.set_zone_eq_gain(part_idx + 1, 'high', +2.0)
 
 
-def _apply_step_lfo(fc, part_idx, role):
-    """Apply S&H step LFO matrix — psychedelic filter modulation."""
-    block = _addr_add(fc._zcore_base(part_idx), [0x00, 0x30, 0x00])
+def _apply_lfo_modulation(fc, part_idx, role):
+    """Apply subtle LFO1 + LFO2 + matrix modulation to every melodic patch.
+    
+    Rules:
+    - LFO1 + LFO2 both modulate filter, resonance, amp, pan (NOT pitch)
+    - Matrix routes LFO to MFX parameters
+    - All depths 5-9% (subtle, not extreme)
+    - Always use sync ON (tempo-synced)
+    """
+    import random
+    base = fc._zcore_base(part_idx)
+    partial_base = _addr_add(base, [0x00, 0x30, 0x00])  # Partial 0
+    
+    # Depth range: 5-9% mapped to signed 0-127 (center=64)
+    # 5% ≈ ±6, 9% ≈ ±11
+    def subtle_depth():
+        return _signed_63(random.randint(5, 9))
+    
+    def subtle_depth_neg():
+        return _signed_63(-random.randint(5, 9))
+    
+    # === LFO1: Primary movement (faster, S&H or smooth) ===
+    lfo1_wave = random.choice([0, 1, 2, 6])  # Sin, Tri, Saw, or S&H
+    lfo1_rate = random.choice([9, 12, 15])  # 1/8, 1/4, 1/2 (tempo-synced)
+    
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x00]), [lfo1_wave])  # Wave
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x01]), [1])          # Sync ON
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x02]), [lfo1_rate])  # Rate
+    
+    # LFO1 → Filter cutoff (5-9%)
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x19]),
+                 _nibbles(subtle_depth(), 2))
+    
+    # LFO1 → Amp/TVA (5-9%) — subtle tremolo
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x1B]),
+                 _nibbles(subtle_depth(), 2))
+    
+    # === LFO2: Secondary texture (slower, smooth) ===
+    lfo2_wave = random.choice([0, 1, 2])  # Sin, Tri, Saw (always smooth)
+    lfo2_rate = random.choice([15, 18, 21])  # 1/2, 1bar, 2bar (slower)
+    
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x4F]), [lfo2_wave])  # Wave
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x50]), [1])          # Sync ON
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x51]), [lfo2_rate])  # Rate
+    
+    # LFO2 → Filter cutoff (5-9%)
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x68]),
+                 _nibbles(subtle_depth(), 2))
+    
+    # LFO2 → Amp/TVA (5-9%)
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x6A]),
+                 _nibbles(subtle_depth(), 2))
+    
+    # === MATRIX 1: LFO1 → Filter cutoff + Resonance ===
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x56]), [104])  # Source: LFO1
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x57]), [2])    # Dest 1: CUT
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x58]), _signed_63(subtle_depth()))  # Sens 1
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x59]), [3])    # Dest 2: RES
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x5A]), _signed_63(subtle_depth()))  # Sens 2
+    
+    # === MATRIX 2: LFO2 → Pan + Level ===
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x5F]), [105])  # Source: LFO2
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x60]), [5])    # Dest 1: PAN
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x61]), _signed_63(subtle_depth()))  # Sens 1
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x62]), [4])    # Dest 2: LEV
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x63]), _signed_63(subtle_depth_neg()))  # Sens 2 (inverse)
+    
+    # === FXM (Color) — low intensity 2-15% ===
+    fxm_color = random.randint(0, 3)  # Different color styles
+    fxm_depth = random.randint(2, 15)  # Low intensity
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x06]), [1])  # FXM ON
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x07]), [fxm_color])  # Color
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x08]), [fxm_depth])  # Depth
+
+
+def _apply_mfx_for_role(fc, part_idx, role):
+    """Apply appropriate MFX to every melodic patch."""
+    import random
+    
+    if role in ('acid', 'acid_bass'):
+        # Super Filter (type 5) — 303-style resonant sweep
+        _apply_super_filter_mfx(fc, part_idx)
+    elif role == 'bass':
+        # Enhancer (type 7) — bass presence
+        fc._set_mfx_type_and_params(fc._tone_mfx_base(part_idx), 7, {
+            0: random.randint(20, 30),  # Sensitivity
+            1: random.randint(15, 25),  # Mix
+        })
+    elif role == 'sub_bass':
+        # Enhancer (type 7) — sub presence
+        fc._set_mfx_type_and_params(fc._tone_mfx_base(part_idx), 7, {
+            0: random.randint(15, 25),
+            1: random.randint(10, 20),
+        })
+    elif role == 'stab':
+        # Chorus (type 23) — width
+        _apply_chorus_mfx(fc, part_idx)
+    elif role == 'pad':
+        # Phaser (type 11) — movement
+        fc._set_mfx_type_and_params(fc._tone_mfx_base(part_idx), 11, {
+            0: random.randint(20, 40),  # Rate
+            1: random.randint(30, 50),  # Depth
+        })
+    else:
+        # Default: Chorus (type 23) — subtle width
+        fc._set_mfx_type_and_params(fc._tone_mfx_base(part_idx), 23, {
+            0: 1,                        # Pre-delay
+            1: random.randint(15, 25),   # Depth
+            2: random.randint(10, 20),   # Wet
+        })
 
     # LFO1: S&H — tempo-synced for rhythmic filter patterns
-    # Rate determines how fast the filter sweeps (lower = slower, more psychedelic)
-    if role in ('acid_bass', 'acid'):
-        rate1 = 7  # Slower for acid — more hypnotic
-    elif role in ('pad', 'stab'):
-        rate1 = 10  # Medium for pads — evolving texture
-    else:
-        rate1 = 12  # Faster for bass — rhythmic pump
-    
-    fc._send_dt1(_addr_add(block, [0x00, 0x00]), [6])  # S&H waveform
-    fc._send_dt1(_addr_add(block, [0x00, 0x01]), [1])  # Sync ON (tempo-synced)
-    fc._send_dt1(_addr_add(block, [0x00, 0x02]), [rate1])  # Rate (tempo division)
-    
-    # LFO1 depth — AGGRESSIVE for psychedelic filter sweep
-    # This controls how much the filter opens/closes
-    fc._send_dt1(_addr_add(block, [0x00, 0x19]), _nibbles(_signed_100(random.randint(25, 45)), 2))  # Filter depth
-    fc._send_dt1(_addr_add(block, [0x00, 0x1B]), _nibbles(_signed_100(random.randint(8, 15)), 2))  # Resonance depth
-
-    # LFO2: Smooth — for subtle movement
-    fc._send_dt1(_addr_add(block, [0x00, 0x4F]), [random.choice([0, 1, 2])])  # Sin/Tri/Saw
-    fc._send_dt1(_addr_add(block, [0x00, 0x50]), [1])  # Sync ON
-    fc._send_dt1(_addr_add(block, [0x00, 0x51]), [random.choice([15, 18, 21])])  # Slower rate
-    fc._send_dt1(_addr_add(block, [0x00, 0x68]), _nibbles(_signed_100(random.randint(10, 20)), 2))  # Depth
-    fc._send_dt1(_addr_add(block, [0x00, 0x6A]), _nibbles(_signed_100(random.randint(4, 10)), 2))
-
-    # Matrix — AGGRESSIVE modulation routing for psychedelic flavor
-    # LFO1 → CUTOFF (main filter sweep)
-    fc._send_dt1(_addr_add(block, [0x00, 0x56]), [104])  # LFO1 source
-    fc._send_dt1(_addr_add(block, [0x00, 0x57]), [2])    # → CUT (filter cutoff)
-    fc._send_dt1(_addr_add(block, [0x00, 0x58]), [_signed_63(random.randint(25, 45))])  # AGGRESSIVE depth
-    
-    # LFO1 → LFO2 RATE (cross-modulation for evolving patterns)
-    fc._send_dt1(_addr_add(block, [0x00, 0x59]), [17])   # → LFO2-RATE
-    fc._send_dt1(_addr_add(block, [0x00, 0x5A]), [_signed_63(random.randint(10, 20))])  # Cross-mod depth
-
-    # LFO2 → FAT (harmonic richness)
-    fc._send_dt1(_addr_add(block, [0x00, 0x5F]), [105])  # LFO2 source
-    fc._send_dt1(_addr_add(block, [0x00, 0x60]), [36])   # → FAT
-    fc._send_dt1(_addr_add(block, [0x00, 0x61]), [_signed_63(random.randint(8, 18))])  # Depth
-    
-    # LFO2 → PAN (stereo movement)
-    fc._send_dt1(_addr_add(block, [0x00, 0x62]), [5])    # → PAN
-    fc._send_dt1(_addr_add(block, [0x00, 0x63]), [_signed_63(random.randint(6, 14))])  # Pan depth
-    fc._send_dt1(_addr_add(block, [0x00, 0x63]), [_signed_63(random.randint(4, 8))])
 
 
 def _apply_chorus_mfx(fc, part_idx):
