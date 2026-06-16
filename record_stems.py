@@ -201,11 +201,22 @@ def select_patch_for_track(track_info: Dict) -> Dict:
 # ============================================================================
 
 def apply_sound_design(fc: FantomController, part_idx: int, track_info: Dict):
-    """Apply tech house sound design to a Fantom Part."""
+    """Apply tech house sound design to a Fantom Part.
+    
+    SKIP for drums — drum kit patches don't have LFO/MFX/FXM parameters.
+    Sending these SysEx commands to drum Parts corrupts the kit settings.
+    """
     role = track_info['role']
     base = fc._zcore_base(part_idx)
-
-    # === Apply to ALL melodic patches (not just specific roles) ===
+    
+    # Skip ALL sound design for drums — drum kit is a single patch
+    if track_info.get('channel_type') == 'drum':
+        # Only set zone EQ for drums (gain staging)
+        fc.set_zone_eq_switch(part_idx + 1, True)
+        fc.set_zone_eq_gain(part_idx + 1, 'input', 0.0)  # No gain boost
+        return
+    
+    # === Apply to melodic patches ONLY ===
     # LFO modulation (LFO1 + LFO2 + matrix) — subtle 5-9%
     _apply_lfo_modulation(fc, part_idx, role)
     
