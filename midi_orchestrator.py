@@ -554,8 +554,8 @@ def main():
                 # BUILD PHASE 1 (bars 64-71): Gradual kick + snare fade-in
                 build_progress = (bar_in_breakdown - 16) / 8.0  # 0.0 to 1.0
                 
-                # Exponential curve for more gradual feel (not linear)
-                kick_vel = int(30 + (build_progress ** 0.6) * 97)  # 30 → 127, slow start
+                # Exponential curve for more gradual feel — starts very quiet (vel 5)
+                kick_vel = int(5 + (build_progress ** 0.5) * 122)  # 5 → 127, very slow start
                 
                 # Kick on quarter notes — starts quiet, gets louder
                 for beat in range(4):
@@ -567,7 +567,7 @@ def main():
                                  'time': beat * 480})
                 
                 # Hats on 8th notes — starts quiet, builds with kick
-                hat_vel = int(25 + (build_progress ** 0.7) * 75)  # 25 → 100
+                hat_vel = int(5 + (build_progress ** 0.6) * 95)  # 5 → 100
                 for i in range(8):
                     beat_pos = i / 8.0
                     vel = int(hat_vel + beat_pos * 8)
@@ -578,7 +578,7 @@ def main():
                 # Clap enters bar 68 (bar_in_breakdown=20) — starts quiet
                 if bar_in_breakdown >= 20:
                     clap_build = (bar_in_breakdown - 20) / 4.0  # 0.0 to 1.0
-                    clap_vel = int(40 + (clap_build ** 0.5) * 87)  # 40 → 127
+                    clap_vel = int(5 + (clap_build ** 0.5) * 122)  # 5 → 127
                     dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': clap_vel,
                                  'time': 1 * 480})
                     dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': clap_vel,
@@ -587,7 +587,7 @@ def main():
                 # Snare roll enters bar 70 (bar_in_breakdown=22) — starts very quiet
                 if bar_in_breakdown >= 22:
                     snare_build = (bar_in_breakdown - 22) / 2.0  # 0.0 to 1.0
-                    snare_vel = int(30 + (snare_build ** 0.5) * 97)  # 30 → 127
+                    snare_vel = int(5 + (snare_build ** 0.5) * 122)  # 5 → 127
                     # Half-note snare roll, getting denser
                     if bar_in_breakdown >= 23:
                         # 8th note snare roll
@@ -605,7 +605,7 @@ def main():
                 build_progress = (bar_in_breakdown - 24) / 8.0  # 0.0 to 1.0
                 
                 # Kick on 16ths — exponential velocity ramp WITHIN each bar
-                kick_vel_base = int(70 + (build_progress ** 0.5) * 57)  # 70 → 127
+                kick_vel_base = int(5 + (build_progress ** 0.4) * 122)  # 5 → 127
                 for i in range(16):
                     within_bar = i / 16.0
                     vel = int(kick_vel_base + (within_bar ** 0.7) * (127 - kick_vel_base))
@@ -614,7 +614,7 @@ def main():
                                  'time': i * 120})
                 
                 # Snare roll on 16ths — builds from quiet to full
-                snare_vel_base = int(50 + (build_progress ** 0.6) * 77)  # 50 → 127
+                snare_vel_base = int(5 + (build_progress ** 0.5) * 122)  # 5 → 127
                 for i in range(16):
                     within_bar = i / 16.0
                     vel = int(snare_vel_base + (within_bar ** 0.5) * (127 - snare_vel_base))
@@ -623,7 +623,7 @@ def main():
                                  'time': i * 120})
                 
                 # Hats on 16ths — crescendo
-                hat_vel_base = int(60 + (build_progress ** 0.7) * 67)  # 60 → 127
+                hat_vel_base = int(5 + (build_progress ** 0.5) * 122)  # 5 → 127
                 for i in range(16):
                     within_bar = i / 16.0
                     vel = int(hat_vel_base + (within_bar ** 0.5) * (127 - hat_vel_base))

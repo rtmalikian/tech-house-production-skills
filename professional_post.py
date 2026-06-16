@@ -70,8 +70,8 @@ def create_delay_effect(signal, sr, delay_ms=250, feedback=0.3, wet=0.25):
     
     return output
 
-def parallel_compress(signal, sr, ratio=10.0, threshold_db=-20, 
-                      attack_ms=1, release_ms=50, blend=0.4):
+def parallel_compress(signal, sr, ratio=6.0, threshold_db=-20, 
+                      attack_ms=5, release_ms=80, blend=0.35):
     """Apply parallel (NY) compression."""
     # Envelope follower on mono sum
     if signal.ndim == 2:
@@ -114,10 +114,10 @@ def multiband_compress(signal, sr, bands=None):
     """Apply multiband compression — aggressive for tech house."""
     if bands is None:
         bands = [
-            {'low': 20, 'high': 120, 'ratio': 6.0, 'threshold': -20, 'attack': 10, 'release': 100},
-            {'low': 120, 'high': 800, 'ratio': 4.0, 'threshold': -18, 'attack': 5, 'release': 80},
-            {'low': 800, 'high': 5000, 'ratio': 4.0, 'threshold': -16, 'attack': 3, 'release': 60},
-            {'low': 5000, 'high': 20000, 'ratio': 3.0, 'threshold': -14, 'attack': 1, 'release': 40},
+            {'low': 20, 'high': 120, 'ratio': 3.0, 'threshold': -20, 'attack': 10, 'release': 100},
+            {'low': 120, 'high': 800, 'ratio': 3.0, 'threshold': -18, 'attack': 5, 'release': 80},
+            {'low': 800, 'high': 5000, 'ratio': 3.0, 'threshold': -16, 'attack': 3, 'release': 60},
+            {'low': 5000, 'high': 20000, 'ratio': 2.0, 'threshold': -14, 'attack': 1, 'release': 40},
         ]
     
     output = np.zeros_like(signal)
