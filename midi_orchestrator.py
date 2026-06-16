@@ -534,9 +534,14 @@ def main():
             for beat in range(4):
                 dbar.append({'note': GM_DRUM_MAP['KICK'], 'velocity': 125,
                              'time': beat * 480})
-            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 115,
+            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 120,
                          'time': 1 * 480})
-            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 115,
+            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 120,
+                         'time': 3 * 480})
+            # Snare on beats 2&4 (layered with clap)
+            dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': 115,
+                         'time': 1 * 480})
+            dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': 115,
                          'time': 3 * 480})
             # Full hats on 16ths
             for i in range(16):
@@ -583,7 +588,7 @@ def main():
                 
                 # Snare roll on 16ths (enters at bar 76, last 4 bars)
                 if bar_in_breakdown >= 28:
-                    snare_vel = int(5 + ((bar_in_breakdown - 28) / 3.0) * 122)  # 5 → 127
+                    snare_vel = int(50 + ((bar_in_breakdown - 28) / 3.0) * 77)  # 50 → 127
                     for i in range(16):
                         dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': snare_vel,
                                      'time': i * 120})
@@ -594,15 +599,20 @@ def main():
                     dbar.append({'note': GM_DRUM_MAP['CLOSED_HAT'], 'velocity': hat_vel,
                                  'time': i * 240})
         elif bt == 'intro':
-            # Intro: 4-on-the-floor kick + clap + hats from bar 0
+            # Intro: 4-on-the-floor kick + clap + snare + hats from bar 0
             dbar = []
             for beat in range(4):
                 dbar.append({'note': GM_DRUM_MAP['KICK'], 'velocity': 122,
                              'time': beat * 480})
             # Clap on beats 2&4
-            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 110,
+            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 115,
                          'time': 1 * 480})
-            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 110,
+            dbar.append({'note': GM_DRUM_MAP['CLAP'], 'velocity': 115,
+                         'time': 3 * 480})
+            # Snare on beats 2&4 (layered)
+            dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': 110,
+                         'time': 1 * 480})
+            dbar.append({'note': GM_DRUM_MAP['SNARE'], 'velocity': 110,
                          'time': 3 * 480})
             # Hats on 16ths
             for i in range(16):
