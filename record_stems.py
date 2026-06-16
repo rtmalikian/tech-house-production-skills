@@ -766,19 +766,13 @@ def _play_midi_and_record(midi_path: str, output_path: str,
                 all_msgs.append((abs_time, msg))
     all_msgs.sort(key=lambda x: x[0])
     
-    # High-precision playback using perf_counter busy-wait
-    print(f"    Playing {len(all_msgs)} messages (high-precision)...")
+    # High-precision playback using pure busy-wait (like v21)
+    # This uses 100% CPU but gives the most precise timing
+    print(f"    Playing {len(all_msgs)} messages (busy-wait)...")
     for abs_time, msg in all_msgs:
         target = start_perf + abs_time
-        # Sleep until 1ms before target, then busy-wait
-        while True:
-            now = time.perf_counter()
-            remaining = target - now
-            if remaining <= 0:
-                break
-            elif remaining > 0.001:
-                time.sleep(0.0005)  # Sleep 500us at a time (tight loop)
-            # else: busy-wait (sub-500us precision)
+        while time.perf_counter() < target:
+            pass  # Pure busy-wait — no sleep, no jitter
         
         # Fire automation events
         if scheduler:
