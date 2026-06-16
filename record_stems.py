@@ -309,16 +309,16 @@ def _apply_lfo_modulation(fc, part_idx, role):
     # === MATRIX 1: LFO1 → Filter cutoff + Resonance ===
     fc._send_dt1(_addr_add(partial_base, [0x00, 0x56]), [104])  # Source: LFO1
     fc._send_dt1(_addr_add(partial_base, [0x00, 0x57]), [2])    # Dest 1: CUT
-    fc._send_dt1(_addr_add(partial_base, [0x00, 0x58]), [_signed_63(subtle_depth())])  # Sens 1
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x58]), [subtle_depth()])  # Sens 1
     fc._send_dt1(_addr_add(partial_base, [0x00, 0x59]), [3])    # Dest 2: RES
-    fc._send_dt1(_addr_add(partial_base, [0x00, 0x5A]), [_signed_63(subtle_depth())])  # Sens 2
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x5A]), [subtle_depth()])  # Sens 2
     
     # === MATRIX 2: LFO2 → Pan + Level ===
     fc._send_dt1(_addr_add(partial_base, [0x00, 0x5F]), [105])  # Source: LFO2
     fc._send_dt1(_addr_add(partial_base, [0x00, 0x60]), [5])    # Dest 1: PAN
-    fc._send_dt1(_addr_add(partial_base, [0x00, 0x61]), [_signed_63(subtle_depth())])  # Sens 1
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x61]), [subtle_depth()])  # Sens 1
     fc._send_dt1(_addr_add(partial_base, [0x00, 0x62]), [4])    # Dest 2: LEV
-    fc._send_dt1(_addr_add(partial_base, [0x00, 0x63]), [_signed_63(subtle_depth())])  # Sens 2
+    fc._send_dt1(_addr_add(partial_base, [0x00, 0x63]), [subtle_depth()])  # Sens 2
     
     # === FXM (Color) — low intensity 2-15% ===
     fxm_color = random.randint(0, 3)  # Different color styles
