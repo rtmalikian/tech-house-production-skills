@@ -5,7 +5,7 @@ A complete, automated tech house production pipeline — from MIDI generation to
 ## What This Does
 
 ```
-MIDI Generation → Roland Fantom Recording → Stem QC → Mixing → Mastering → MP3
+MIDI Generation → Roland Fantom Recording → Stem EQ → QC → Professional Chain → Mastering → MP3
 ```
 
 Every step is automated. Run one command, get a mastered tech house track.
@@ -13,14 +13,19 @@ Every step is automated. Run one command, get a mastered tech house track.
 ## Quick Start
 
 ```bash
+cd "/Volumes/Raphael/Tech House" && source venv/bin/activate
+
 # Generate MIDI
 python3 midi_orchestrator.py
 
-# Record stems from Fantom
-python3 record_stems.py output/<song>.mid --bpm 128
+# Get song name
+SONG=$(python3 -c "import os; mids=sorted([f.replace('.mid','') for f in os.listdir('output') if f.endswith('.mid')],key=lambda f:os.path.getmtime(f'output/{f}.mid'),reverse=True);print(mids[0])")
 
-# Master with QC, professional chain, and A/B comparison
-python3 run_pipeline.py --stems output/<song>/recordings/ --song-name <song> --bpm 128 --output-dir output/<song>/mastered/
+# Record stems from Fantom (auto-detects device index)
+python3 record_stems.py "output/${SONG}.mid" --bpm 128
+
+# Master with EQ, QC, professional chain, and A/B comparison
+python3 run_pipeline.py --stems "output/${SONG}/recordings/" --song-name "$SONG" --bpm 128 --output-dir "output/${SONG}/mastered"
 ```
 
 ## Architecture
@@ -29,17 +34,20 @@ python3 run_pipeline.py --stems output/<song>/recordings/ --song-name <song> --b
 
 | File | Purpose |
 |------|---------|
-| `midi_orchestrator.py` | Main MIDI generator — creates all tracks (bass, acid, stabs, pads, drums, FX) |
-| `midi_config.py` | Configuration — BPM, keys, swing, humanization, register ranges |
-| `midi_song_structure.py` | Arrangement — 128-bar DJ-friendly structure |
-| `midi_drum_sequences.py` | 8 drum pattern families (909-style) |
+| `midi_orchestrator.py` | Main MIDI generator — bass, acid, stabs, pads, drums, FX, arpeggios |
+| `midi_config.py` | Configuration — BPM, keys, zero swing/humanization, register ranges |
+| `midi_song_structure.py` | 80-bar DJ-friendly arrangement (all 16-bar sections) |
+| `midi_drum_sequences.py` | 8 drum pattern families (909-style, kick vel 122-127 only) |
 | `midi_composition.py` | Bass and melody generation |
 | `midi_engine.py` | MIDI utilities — swing, humanization, spatial processing |
-| `record_stems.py` | Multi-pass stem recording with Fantom SysEx control |
-| `run_pipeline.py` | Master orchestrator — QC → mix → master → EQ → A/B → MP3 |
+| `sysex_automation.py` | Real-time SysEx automation (filter sweeps, LFO spikes on B bars) |
+| `record_stems.py` | Multi-pass stem recording with Fantom SysEx control + auto-detect |
+| `run_pipeline.py` | Master orchestrator — EQ → QC → mix → master → EQ → A/B → MP3 |
 | `professional_post.py` | Professional post-production chain |
-| `stem_qc_v2.py` | Transient-aware stem QC system |
-| `stem_qc.py` | RMS-based stem balance QC |
+| `stem_eq.py` | Tech house specific EQ curves for each stem category |
+| `stem_qc_v3.py` | Full balance correction (kick reference, ±20 dB) |
+| `stem_qc_v2.py` | Transient-aware stem QC (catches per-transient spikes) |
+| `stem_qc.py` | RMS-based stem balance QC (legacy) |
 
 ### Skills Documentation (`skills/`)
 
@@ -49,7 +57,7 @@ python3 run_pipeline.py --stems output/<song>/recordings/ --song-name <song> --b
 | `02_drum_programming.md` | 4-on-floor, 16th hats, swing, velocity, section layering |
 | `03_bass_design.md` | Oscillator→filter→saturation, sidechain, patterns |
 | `04_synth_elements.md` | Chord stabs, 303 acid lines, pads |
-| `05_arrangement.md` | 8-bar rule, energy curve, filter automation |
+| `05_arrangement.md` | 16-bar DJ-friendly sections, energy curve, filter automation |
 | `06_mixing.md` | Gain staging, EQ chains, compression, stereo width |
 | `07_mastering.md` | Multiband, limiting, LUFS targeting |
 | `08_reference_comparison.md` | A/B methodology, spectral overlay |
@@ -57,9 +65,117 @@ python3 run_pipeline.py --stems output/<song>/recordings/ --song-name <song> --b
 | `assessment.py` | CLI for LUFS, crest factor, spectral balance, stereo correlation |
 | `tech_house_fantom_patches.json` | 56 bass, 10 drum kits, 9 stabs, 5 acid leads, 10 pads |
 
+## Key Design Decisions
+
+### MIDI Playback Timing
+- **Pure busy-wait** — `while time.perf_counter() < target: pass`
+- NO `time.sleep()` — introduces ±120ms jitter on macOS
+- Uses 100% CPU but gives ±3ms accuracy
+- This is what made v21 and v28 sound tight
+
+### Kick Velocity
+- Range: **122-127 only** (no ghost kicks, no syncopated kicks)
+- Ghost kicks at velocity 56-70 cause galloping — removed
+- Groove comes from hat velocity variation (120/110/100)
+
+### A-A-A-B Melody Structure
+- Bars 0-2: standard pattern (A)
+- Bar 3: switch-up with chromatic notes, higher octave (B)
+- SysEx automation: filter cutoff + LFO depth spikes on B bars
+- 6 rhythm patterns: dotted, long-short, sparse, triplet, reverse, offbeat
+
+### Chord Progressions
+- **i-VII-VI-VII** — THE classic tech house loop
+- Minor 7th chords as default
+- 90% minor keys (A minor, D minor, E minor)
+
+### DJ-Friendly Arrangement (80 bars)
+- Intro (16 bars): Kick + hats only (bars 0-7), + clap (bars 8-15)
+- Drop 1 (16 bars): Staggered entry (kick+bass → stabs → acid)
+- Breakdown (16 bars): No kick, no bass, pad only, filter sweeps
+- Drop 2 (16 bars): Full energy
+- Outro (16 bars): Drums fading
+
+### Stem EQ (tech house curves)
+- Kick: HPF 30Hz, +3dB@60Hz, -3dB@300Hz, +2.5dB@3.5kHz
+- Open hat: HPF 350Hz, **-4dB@5.5kHz**, -2dB@7kHz (tame harshness)
+- Bass: HPF 25Hz, +2dB@50Hz, +2.5dB@100Hz, -3dB@250Hz
+- Pad: HPF 250Hz, -4dB@350Hz
+
+### QC v3 (balance correction)
+- Kick = reference (0 dB)
+- Bass: -2 dB, Clap: -4 dB, Hats: -6/-8 dB, Pad: -8 dB
+- Max correction: ±20 dB
+
+### Professional Chain
+1. Parallel compression (10:1, 60% blend)
+2. Reverb on claps (300ms, 40% wet)
+3. Reverb on melodic (1.5s, 45% wet)
+4. Delay on acid (1/8 note, 30% feedback)
+5. 4-band multiband compression
+6. Stereo imaging (mono bass <120Hz)
+7. Harmonic excitation (tape saturation 5%)
+8. Presence boost (+4dB@3kHz)
+9. Mud cut (-4dB@400Hz)
+10. Hard clip at -9 dBFS
+11. Brick-wall limiter
+12. Final loudness match to -9 LUFS
+
 ## Version History
 
-### v18 — Transient-Aware QC (Latest)
+### v28 — Auto-Detect Device + Busy-Wait (Latest, confirmed good)
+
+**Fixes:**
+- Auto-detect Fantom audio device index (was hardcoded, broke on reconnect)
+- Reverted to v21-style pure busy-wait (no sleep jitter)
+- Kick timing: ±3ms accuracy (was ±120ms with sleep-based timing)
+
+**Files changed:** `record_stems.py` (auto-detect, busy-wait)
+
+---
+
+### v25 — High-Precision Timing + MIDI Duration Fix
+
+**Fixes:**
+- MIDI duration bug: 301 minutes → 4 minutes (filter_build_automation was creating huge deltas)
+- Bass style default for intro/breakdown sections
+- Drum gain +6dB → 0dB (prevents clipping)
+
+**Files changed:** `midi_orchestrator.py`, `record_stems.py`
+
+---
+
+### v20 — Stem EQ + QC v3
+
+**Problem:** Open hat drowning mix, pad 13dB too loud, no EQ on stems.
+
+**Solution:**
+- Built `stem_eq.py` — tech house specific EQ curves for each stem category
+- Built `stem_qc_v3.py` — full balance correction against kick reference
+- Integrated into `run_pipeline.py` (runs automatically before mastering)
+
+**Key EQ curve:** Open hat gets -4dB at 5.5kHz and -2dB at 7kHz to tame harshness.
+
+**Files changed:** `stem_eq.py` (new), `stem_qc_v3.py` (new), `run_pipeline.py` (integrated)
+
+---
+
+### v19 — Full Balance QC
+
+**Problem:** Pad was 13dB too loud relative to kick.
+
+**Solution:** Built `stem_qc_v3.py` that measures active RMS of each stem and corrects to target levels (kick = 0dB reference).
+
+**Results:**
+- Pad: -3.0 → -15.1 dBFS (-12.0 dB correction)
+- Bass: -32.9 → -14.7 dBFS (+20.0 dB boost)
+- 19 stems corrected total
+
+**Files changed:** `stem_qc_v3.py` (new), `run_pipeline.py` (integrated)
+
+---
+
+### v18 — Transient-Aware QC
 
 **Problem:** Open hi-hat at 31 seconds was drowning out the entire mix. Previous QC system (RMS-based) missed per-transient spikes.
 
@@ -152,34 +268,31 @@ python3 run_pipeline.py --stems output/<song>/recordings/ --song-name <song> --b
 
 ### v12 — Reference-Optimized Mastering
 
-**Problem:** Spectral balance didn't match professional tech house.
+**Problem:** Mastering was generic — not optimized for tech house.
 
-**Solution:** Analyzed 4 reference tracks (John Summit, MK, Dennis Ferrer, AuRa). Discovered our skills documentation had wrong targets.
+**Solution:** Analyzed reference tracks (John Summit, MK, Dennis Ferrer, AuRa) and adjusted:
+- Target LUFS: -9.2 (club loudness, not streaming -14)
+- Sub boost: +4 dB at 60 Hz
+- Mud cut: -6 dB at 400 Hz
+- Stereo widening: 2x
 
-**Key findings from references:**
-- LUFS: -9.2 (not -14)
-- Sub bass: 38% (not 15-20%)
-- Low-mid: 12.6% (not 15-25%)
-- Presence: 3.9% (not 10-20%)
-
-**Files changed:** `run_pipeline.py` (targets, EQ), `professional_post.py` (mastering chain)
+**Files changed:** `professional_post.py`, `run_pipeline.py`
 
 ---
 
 ### v8 — Professional Post-Production Chain
 
-**Problem:** Track sounded amateur compared to references.
+**Problem:** Mix sounded amateur — no depth, no punch, no width.
 
-**Solution:** Built comprehensive post-production chain:
-1. Parallel compression on drums (10:1, 40% blend)
-2. Reverb on claps (120ms decay)
-3. Delay on acid (1/8 note, 30% feedback)
-4. 4-band multiband compression
-5. Stereo imaging (mono bass <120Hz, wide highs)
-6. Harmonic excitation (tape saturation)
-7. EQ: mud cut, presence boost, air boost
-8. Hard clip + limiter
-9. Final loudness match
+**Solution:** Built complete professional chain:
+- Parallel compression (NY-style, 40% blend)
+- Reverb on claps (120ms decay, plate)
+- Delay on acid (1/8 note, 30% feedback)
+- 4-band multiband compression
+- Stereo imaging (mono bass <120Hz)
+- Harmonic excitation (tape saturation)
+- Presence boost (+4dB at 3kHz)
+- Hard clip + brick-wall limiter
 
 **Files changed:** `professional_post.py` (new), `run_pipeline.py` (integrated)
 
@@ -187,97 +300,53 @@ python3 run_pipeline.py --stems output/<song>/recordings/ --song-name <song> --b
 
 ### v5 — Kick Velocity Fix
 
-**Problem:** Kick sounded "galloping" — inconsistent timing between hits.
+**Problem:** Kicks sounded like galloping — inconsistent rhythm.
 
-**Root cause:** Kick velocity ranged from 56-127 (std=17). Ghost kicks at velocity 56 were 12 dB quieter than main kicks at 127.
+**Root cause:** Velocity range was 56-127. Ghost kicks at velocity 56 were much quieter than main kicks at 127, creating a loud-soft-loud-soft pattern.
 
-**Solution:** Fixed kick velocity to 122-127 (std=2). Removed all ghost kicks, syncopated kicks, push kicks.
+**Solution:** Fixed all kick velocity to 122-127. Removed ghost kicks, syncopated kicks, push kicks. Groove now comes from hat velocity variation only.
 
-**Analysis:** Measured inter-kick intervals — 99% within 460-500ms (expected 480ms at 125 BPM). Standard deviation: 0.92ms.
-
-**Files changed:** `midi_drum_sequences.py` (all 8 drum patterns), `midi_config.py` (swing=0, humanization=0)
+**Files changed:** `midi_drum_sequences.py` (all 8 pattern families)
 
 ---
 
 ### v1 — Initial Pipeline
 
-Copied from `crate-dig/final_pipeline_june2026/` and adapted for tech house:
-- BPM: 124-128 (was 80-95)
-- Swing: 0% (was 5-10%)
-- Arrangement: 88-bar tech house structure
-- Drum patterns: 909-style (was lofi)
-- Bass: syncopated tech house patterns
+Adapted the lofi hip hop pipeline (crate-dig/june2026) for tech house:
+- BPM: 80 → 128
+- Keys: 90% minor
+- Swing: 0% (fully quantized)
+- Humanization: 0 (zero timing jitter)
 
-## Key Design Decisions
+**Files changed:** All files adapted from crate-dig pipeline.
 
-1. **Sidechain in post-production only** — Clean signal for mixing flexibility
-2. **Parameter ranges over fixed values** — Randomized within tech house sweet spot
-3. **Dual LFO with S&H** — Creates evolving, non-repeating filter textures
-4. **Short file names + JSON sidecar** — `TH_MMDD_HHMM_BPM_Key.mid` + `.json`
-5. **Multi-pass stem recording** — 15 parts per pass (Fantom has 16 USB pairs)
-6. **Level calibration** — Target -6 dBFS per part via zone EQ
-7. **Sync click detection** — Sample-accurate trim via USB 31/32
+---
 
-## Hardware Requirements
+## Pitfalls Discovered
 
-- **Roland Fantom-6** (or Fantom 7/8) — Synthesizer with USB audio
-- **Mac** — For Python pipeline
-- **External drive** — For output storage
-
-## Software Requirements
-
-```bash
-pip install mido python-rtmidi soundfile pyloudnorm numpy scipy librosa pedalboard matplotlib
-```
-
-## File Naming Convention
-
-```
-TH_<MMDD>_<HHMM>_<bpm>_<key><type>.mid
-TH_0613_1929_128_Fmin.mid
-```
-
-JSON sidecar with full metadata:
-```json
-{
-  "song_name": "TH_0613_1929_128_Fmin",
-  "bpm": 128,
-  "key": "F# Minor",
-  "scale": "harmonic_minor",
-  "total_bars": 88,
-  "duration_estimate_sec": 165
-}
-```
-
-## GitHub Topics
-
-`tech-house` `music-production` `midi` `audio-engineering` `mixing` `mastering` `909` `roland-fantom` `sysex` `python` `automation` `dsp` `audio-analysis`
+| Issue | Root Cause | Fix |
+|-------|-----------|-----|
+| Galloping kicks | Velocity 56-70 ghost kicks | Velocity 122-127 only |
+| Open hat drowning mix | 5-7kHz harshness | -4dB@5.5kHz EQ cut |
+| Pad 13dB too loud | No balance QC | stem_qc_v3 auto-correction |
+| ±120ms timing jitter | `time.sleep()` on macOS | Pure busy-wait (no sleep) |
+| 301-minute MIDI files | filter_build_automation huge deltas | Removed (SysEx handles it) |
+| Fantom device not found | Hardcoded index changes on reconnect | Auto-detect by name |
+| Silent stems | Wrong audio device index | Auto-detect `_find_fantom_device()` |
+| Bash SONG extraction fails | `basename .mid` produces empty | Python-based extraction |
+| Sidechain pumping | 15ms release too fast | 150ms release |
+| Master compressor pumping | `/4` divisor on release kernel | Full release time |
 
 ## Reference Tracks
 
 The pipeline was optimized against these reference tracks (not included — copyright protected):
 
-| Track | Artist | BPM | Duration | Key Insight |
-|-------|--------|-----|----------|-------------|
-| Deep End | John Summit | 126 | 2:30 | 32-bar breakdown, bass drops out, "other" enters before drop |
-| Hey Hey (Original Mix) | Dennis Ferrer | 124 | 5:50 | Bass enters late (bar 42!), consistent energy, vocal-driven |
-| Panic Room (Jonas Rathsman Remix) | AuRa | 122 | 7:40 | 56-bar breakdown, pads increase during breakdown, sub 66%→26% |
-| 17 (Remixes) | MK | — | — | Spectral balance reference |
-
-**Spectral profile (average from stem separation analysis):**
-- LUFS: -9.2 (much louder than streaming standard)
-- Sub 20-60 Hz: 38%
-- Bass 60-250 Hz: 42%
-- Low-Mid 250-2k Hz: 13%
-- Presence 2k-6k Hz: 4%
-- Air 6k-20k Hz: 4%
-
-**Arrangement patterns discovered:**
-- Bass drops out during breakdown (creates tension)
-- Pads increase 50% during breakdown (fill the space)
-- Atmospheric elements enter just before drop (primes listener)
-- Breakdowns are 16-32 bars, not 8
-- Energy drops of 6-12 dB during breakdowns
+| Track | Artist | BPM | Key | Insight |
+|-------|--------|-----|-----|---------|
+| Deep End | John Summit | 126 | C# Minor | Bass drops out in breakdown, "other" enters before drop |
+| Hey Hey | Dennis Ferrer | 126 | Eb Minor | Bass enters LATE (bar 42!), vocal-driven |
+| Panic Room (Jonas Rathsman Remix) | AuRa | 124 | — | 56-bar breakdown, drums drop 20-50 dB |
+| 17 (Remixes) | MK | 124 | — | Spectral reference, club loudness |
 
 ## License
 
@@ -285,6 +354,4 @@ MIT
 
 ## Author
 
-Raphael T. Malikian
-- GitHub: [rtmalikian](https://github.com/rtmalikian)
-- Email: rtmalikian@gmail.com
+Raphael T. Malikian — [github.com/rtmalikian](https://github.com/rtmalikian)
