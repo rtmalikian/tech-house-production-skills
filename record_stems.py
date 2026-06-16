@@ -45,7 +45,19 @@ from fantom_midi_control import (
 # CONFIGURATION
 # ============================================================================
 
-FANTOM_DEVICE_INDEX = 6       # sounddevice index for FANTOM-6 7 8
+# Auto-detect Fantom audio device index
+def _find_fantom_device():
+    """Find the Fantom audio device index by name."""
+    import sounddevice as sd
+    for i, d in enumerate(sd.query_devices()):
+        if 'fantom' in d['name'].lower() and d['max_input_channels'] >= 16:
+            print(f"    Fantom audio: device [{i}] {d['name']} (in:{d['max_input_channels']})")
+            return i
+    # Fallback to configured index
+    print("    WARNING: Fantom not found by name, using default index 6")
+    return 6
+
+FANTOM_DEVICE_INDEX = _find_fantom_device()
 SAMPLE_RATE = 48000            # Fantom USB audio sample rate
 CHANNELS = 32                  # 16 stereo pairs
 SYNC_CH = 15                   # Channel 15 (Part 16) for sync click
