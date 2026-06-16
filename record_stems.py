@@ -45,7 +45,7 @@ from fantom_midi_control import (
 # CONFIGURATION
 # ============================================================================
 
-FANTOM_DEVICE_INDEX = 7       # sounddevice index for FANTOM-6 7 8
+FANTOM_DEVICE_INDEX = 6       # sounddevice index for FANTOM-6 7 8
 SAMPLE_RATE = 48000            # Fantom USB audio sample rate
 CHANNELS = 32                  # 16 stereo pairs
 SYNC_CH = 15                   # Channel 15 (Part 16) for sync click
@@ -770,15 +770,15 @@ def _play_midi_and_record(midi_path: str, output_path: str,
     print(f"    Playing {len(all_msgs)} messages (high-precision)...")
     for abs_time, msg in all_msgs:
         target = start_perf + abs_time
-        # Busy-wait with 1ms sleep for precision
+        # Sleep until 1ms before target, then busy-wait
         while True:
             now = time.perf_counter()
             remaining = target - now
             if remaining <= 0:
                 break
-            elif remaining > 0.002:
-                time.sleep(remaining * 0.5)  # Sleep for half the remaining time
-            # else: busy-wait (sub-millisecond precision)
+            elif remaining > 0.001:
+                time.sleep(0.0005)  # Sleep 500us at a time (tight loop)
+            # else: busy-wait (sub-500us precision)
         
         # Fire automation events
         if scheduler:
