@@ -74,27 +74,27 @@ def build_buildup_automation(part_idx, role, total_bars, bpm):
         
         for bar in range(drop1_start, drop2_start + 32):  # Drop1 + Drop2 only
             bar_in_phrase = bar % 4
-            if bar_in_phrase == 3:  # B bar — switch-up
-                # Filter cutoff spike
-                cutoff_spike = random.randint(100, 120)
+            if bar_in_phrase == 3:  # B bar — switch-up (subtle, not aggressive)
+                # Filter cutoff: gentle increase (not spike)
+                cutoff_val = random.randint(80, 95)
                 addr = _addr_add(base, ZONE_BASE['tvf_cutoff'])
                 events.append((bar, 'switchup_cutoff',
-                              _sysex_dt1(addr, [cutoff_spike])))
+                              _sysex_dt1(addr, [cutoff_val])))
                 
-                # LFO depth spike
-                depth_spike = random.randint(40, 60)
+                # LFO depth: subtle increase (not extreme)
+                depth_val = random.randint(25, 35)
                 addr = _addr_add(base, ZONE_BASE['lfo1_depth'])
                 events.append((bar, 'switchup_lfo',
-                              _sysex_dt1(addr, [depth_spike])))
+                              _sysex_dt1(addr, [depth_val])))
             
-            elif bar_in_phrase == 0:  # Back to A — reset
+            elif bar_in_phrase == 0:  # Back to A — reset to normal
                 addr = _addr_add(base, ZONE_BASE['tvf_cutoff'])
                 events.append((bar, 'reset_cutoff',
-                              _sysex_dt1(addr, [random.randint(70, 90)])))
+                              _sysex_dt1(addr, [random.randint(70, 80)])))
                 
                 addr = _addr_add(base, ZONE_BASE['lfo1_depth'])
                 events.append((bar, 'reset_lfo',
-                              _sysex_dt1(addr, [random.randint(15, 25)])))
+                              _sysex_dt1(addr, [random.randint(15, 20)])))
         
         # ============================================================
         # FILTER CUTOFF SWEEP — Opening filter during builds
@@ -154,10 +154,10 @@ def build_buildup_automation(part_idx, role, total_bars, bpm):
         # LFO DEPTH MODULATION — Increase modulation intensity
         # ============================================================
         
-        # Breakdown: LFO depth increases (more filter wobble)
+        # Breakdown: LFO depth increases gradually (subtle wobble)
         for bar in range(breakdown_start + 4, breakdown_start + 28):
             progress = (bar - breakdown_start - 4) / 23.0
-            depth = int(15 + progress * 35)  # 15 → 50
+            depth = int(15 + progress * 20)  # 15 → 35 (subtle, not extreme)
             addr = _addr_add(base, ZONE_BASE['lfo1_depth'])
             events.append((bar, 'lfo_depth_build',
                           _sysex_dt1(addr, [depth])))
