@@ -724,11 +724,11 @@ def _play_midi_and_record(midi_path: str, output_path: str,
     print(f"    Playing MIDI (mido.play)...")
     
     # Build automation events (skip track-dependent ones)
+    tempo_us = 500000  # Default 128 BPM
     try:
         from sysex_automation import AutomationScheduler, build_buildup_automation
         
         # Read tempo from MIDI file
-        tempo_us = 500000  # Default 128 BPM
         for track in mid.tracks:
             for msg in track:
                 if msg.type == 'set_tempo':
@@ -756,9 +756,31 @@ def _play_midi_and_record(midi_path: str, output_path: str,
     
     start_perf = time.perf_counter()
     
-    # Play with mido.play() — handles timing and buffering
-    for msg in mid.play():
-        # Fire automation events periodically
+    # Extract all messages with absolute times for precise playback
+    all_msgs = []
+    for track in mid.tracks:
+        abs_time = 0.0
+        for msg in track:
+            abs_time += mido.tick2second(msg.time, mid.ticks_per_beat, tempo_us)
+            if not msg.is_meta:
+                all_msgs.append((abs_time, msg))
+    all_msgs.sort(key=lambda x: x[0])
+    
+    # High-precision playback using perf_counter busy-wait
+    print(f"    Playing {len(all_msgs)} messages (high-precision)...")
+    for abs_time, msg in all_msgs:
+        target = start_perf + abs_time
+        # Busy-wait with 1ms sleep for precision
+        while True:
+            now = time.perf_counter()
+            remaining = target - now
+            if remaining <= 0:
+                break
+            elif remaining > 0.002:
+                time.sleep(remaining * 0.5)  # Sleep for half the remaining time
+            # else: busy-wait (sub-millisecond precision)
+        
+        # Fire automation events
         if scheduler:
             elapsed = time.perf_counter() - start_perf
             scheduler.check_and_fire(elapsed, count_in_sec)
